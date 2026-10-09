@@ -1,0 +1,6 @@
+dev.androiddock.prototype.AutomaticStoreTest: tests=4, failures=0, errors=0
+dev.androiddock.prototype.DockRepositoryTest: tests=2, failures=0, errors=0
+dev.androiddock.core.model.ClockStateHolderTest: tests=6, failures=0, errors=0
+dev.androiddock.core.model.DockModelTest: tests=9, failures=0, errors=0
+dev.androiddock.core.model.DockEditorTest: tests=1, failures=0, errors=0
+dev.androiddock.core.model.ChargingStateHolderTest: tests=36, failures=0, errors=0

@@ -1,0 +1,22 @@
+{
+  "top": [
+    "topResumedActivity=ActivityRecord{103507632 u0 dev.androiddock.prototype/.DockActivity t9195}"
+  ],
+  "power": [
+    "mWakefulness=Awake",
+    "mIsPowered=true",
+    "mIsPowered=true"
+  ],
+  "keyguard": [
+    "showing=true",
+    "inputRestricted=true",
+    "secure=true"
+  ],
+  "dock_settings_sha256": "57acb1b47114883ed7d96b455e77ea9a7b5fbdac1def4bafe3a5c14473856c0d",
+  "automatic_on_power": true,
+  "system": {
+    "accelerometer_rotation": "0",
+    "user_rotation": "0",
+    "screen_off_timeout": "600000"
+  }
+}

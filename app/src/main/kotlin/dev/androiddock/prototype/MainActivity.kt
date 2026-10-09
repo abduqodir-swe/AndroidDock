@@ -26,8 +26,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.onClick
+import androidx.compose.ui.semantics.onLongClick
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import dev.androiddock.core.model.*
 import kotlinx.coroutines.CancellationException
@@ -36,6 +40,7 @@ import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
     private val clock: ClockViewModel by lazy { ViewModelProvider(this)[ClockViewModel::class.java] }
+    private var dockDisplayActive = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,7 +53,7 @@ class MainActivity : ComponentActivity() {
             val draft by clock.editor.state.collectAsStateWithLifecycle()
             val busy by clock.busy.collectAsStateWithLifecycle()
             val error by clock.error.collectAsStateWithLifecycle()
-            var controlsVisible by rememberSaveable { mutableStateOf(true) }
+            var controlsVisible by rememberSaveable { mutableStateOf(false) }
             var monthOffset by rememberSaveable { mutableIntStateOf(0) }
             val orientation = currentDockOrientation()
             val picker = rememberLauncherForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri ->
@@ -56,8 +61,13 @@ class MainActivity : ComponentActivity() {
             }
             DockTheme {
                 val settings = (configuration as? SettingsState.Ready)?.settings
+                LaunchedEffect(draft != null) {
+                    dockDisplayActive = draft == null
+                    window.setDockImmersiveMode(dockDisplayActive)
+                }
                 WindowBrightness(window, if (draft != null) -1f else settings?.profile()?.windowBrightness() ?: -1f)
                 BackHandler(enabled = draft != null) { if (!busy) cancelEditor() }
+                BackHandler(enabled = draft == null && controlsVisible) { controlsVisible = false }
                 if (draft != null) {
                     DockEditor(draft!!, time, battery, busy, error,
                         onChange = clock.editor::change, onOrientation = clock.editor::selectOrientation,
@@ -65,18 +75,35 @@ class MainActivity : ComponentActivity() {
                         onSave = { clock.saveEditor(appContainer) },
                         onPhoto = { picker.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly)) })
                 } else if (settings != null) {
-                    fun openEditor() { clock.clearError(); clock.editor.open(settings, orientation) }
+                    fun openEditor() {
+                        controlsVisible = false
+                        clock.clearError()
+                        clock.editor.open(settings, orientation)
+                    }
                     LaunchedEffect(controlsVisible, settings.mode) {
                         if (controlsVisible) { delay(8_000); controlsVisible = false }
                     }
                     Box(Modifier.fillMaxSize()) {
-                        DockScreen(time, Modifier.padding(bottom = if (controlsVisible && orientation == DockOrientation.PORTRAIT) 104.dp else 56.dp).pointerInput(settings, orientation) {
-                            detectTapGestures(onTap = { controlsVisible = true }, onLongPress = { openEditor() })
-                        },
+                        val controlsPadding = when {
+                            !controlsVisible -> 0.dp
+                            orientation == DockOrientation.PORTRAIT -> 104.dp
+                            else -> 56.dp
+                        }
+                        DockScreen(time, Modifier.testTag("dock-display").padding(bottom = controlsPadding)
+                            .semantics {
+                                onClick(label = if (controlsVisible) "Скрыть меню" else "Показать меню") {
+                                    controlsVisible = !controlsVisible
+                                    true
+                                }
+                                onLongClick(label = "Настроить экран") { openEditor(); true }
+                            }
+                            .pointerInput(settings, orientation) {
+                                detectTapGestures(onTap = { controlsVisible = !controlsVisible }, onLongPress = { openEditor() })
+                            },
                             settings, battery, monthOffset = monthOffset,
                             onMonthChange = if (controlsVisible) ({ monthOffset = it.coerceIn(-120, 120) }) else null)
                         if (controlsVisible) Surface(
-                            modifier = Modifier.align(Alignment.BottomCenter).safeDrawingPadding().padding(horizontal = 12.dp, vertical = 8.dp),
+                            modifier = Modifier.testTag("dock-controls").align(Alignment.BottomCenter).safeDrawingPadding().padding(horizontal = 12.dp, vertical = 8.dp),
                             color = MaterialTheme.colorScheme.surface,
                             shape = androidx.compose.foundation.shape.RoundedCornerShape(16.dp),
                         ) {
@@ -88,6 +115,7 @@ class MainActivity : ComponentActivity() {
                                         }
                                     }
                                     TextButton(onClick = { openEditor() }) { Text("Настроить") }
+                                    TextButton(onClick = { startActivity(Intent(this@MainActivity, AutomaticSettingsActivity::class.java)) }) { Text("Автозапуск") }
                                     if (orientation == DockOrientation.LANDSCAPE) {
                                         if (monthOffset != 0) TextButton(onClick = { monthOffset = 0 }) { Text("Сегодня") }
                                         TextButton(onClick = ::openScreensaverSettings) { Text(stringResource(R.string.screensaver_settings)) }
@@ -100,7 +128,7 @@ class MainActivity : ComponentActivity() {
                                 }
                                 }
                             }
-                        } else TextButton(onClick = { controlsVisible = true }, modifier = Modifier.align(Alignment.BottomCenter).safeDrawingPadding()) { Text("Управление") }
+                        }
                     }
                 } else if (configuration == SettingsState.Error) {
                     Box(Modifier.fillMaxSize().padding(24.dp), contentAlignment = Alignment.Center) {
@@ -132,7 +160,25 @@ class MainActivity : ComponentActivity() {
     }
 
     override fun onStart() { super.onStart(); clock.start() }
+    override fun onResume() {
+        super.onResume()
+        lifecycleScope.launch {
+            try {
+                if (appContainer.automatic.consent() && Settings.canDrawOverlays(this@MainActivity)) {
+                    ChargingWatchService.start(this@MainActivity)
+                }
+            } catch (error: CancellationException) { throw error }
+            catch (error: Exception) {
+                Log.e(ChargingWatchService.TAG, "Unable to restore consent from visible Activity", error)
+            }
+        }
+    }
     override fun onStop() { clock.stop(); super.onStop() }
+
+    override fun onWindowFocusChanged(hasFocus: Boolean) {
+        super.onWindowFocusChanged(hasFocus)
+        if (hasFocus) window.setDockImmersiveMode(dockDisplayActive)
+    }
 
     private fun openScreensaverSettings() {
         try { startActivity(Intent(Settings.ACTION_DREAM_SETTINGS).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)) }

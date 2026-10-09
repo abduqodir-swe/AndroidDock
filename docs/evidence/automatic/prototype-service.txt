@@ -1,0 +1,36 @@
+ACTIVITY MANAGER SERVICES (dumpsys activity services)
+  User 0 active services:
+  * ServiceRecord{3c76a1d u0 dev.androiddock.prototype/.ChargingWatchService c:dev.androiddock.prototype}
+    intent={cmp=dev.androiddock.prototype/.ChargingWatchService}
+    packageName=dev.androiddock.prototype
+    processName=dev.androiddock.prototype
+    targetSdkVersion=36
+    baseDir=/data/app/~~y2gLOCxv0UwPl2o6v7KPiQ==/dev.androiddock.prototype-k62oTY2kydkpyyY7UWG2BA==/base.apk
+    dataDir=/data/user/0/dev.androiddock.prototype
+    app=ProcessRecord{53228e 2721:dev.androiddock.prototype/u0a566}
+    useNewWiuLogic_forCapabilities()=true
+    useNewWiuLogic_forStart()=true
+    useNewBfslLogic()=true
+    mAllowWiu_noBinding=PROC_STATE_TOP
+    mAllowWiu_inBindService=DENIED
+    mAllowWiu_byBindings=DENIED
+    getFgsAllowWiu_legacy=PROC_STATE_TOP
+    getFgsAllowWiu_new=PROC_STATE_TOP
+    getFgsAllowWiu_forStart=PROC_STATE_TOP
+    getFgsAllowWiu_forCapabilities=PROC_STATE_TOP
+    allowUiJobScheduling=true
+    recentCallingPackage=dev.androiddock.prototype
+    recentCallingUid=10566
+    mAllowStart_noBinding=PROC_STATE_TOP
+    mAllowStart_inBindService=DENIED
+    mAllowStart_byBindings=DENIED
+    getFgsAllowStart_legacy=PROC_STATE_TOP
+    getFgsAllowStart_new=PROC_STATE_TOP
+    getFgsAllowStart=PROC_STATE_TOP
+    startForegroundCount=1
+    infoAllowStartForeground=[callingPackage: dev.androiddock.prototype; callingUid: 10566; uidState: TOP ; uidBFSL: [BFSL]; intent: Intent { xflg=0x4 cmp=dev.androiddock.prototype/.ChargingWatchService }; code:PROC_STATE_TOP; tempAllowListReason:<,reasonCode:SYSTEM_ALLOW_LISTED,duration:9223372036854775807,callingUid:-1>; allowWiu:12; targetSdkVersion:36; callerTargetSdkVersion:36; startForegroundCount:0; bindFromPackage:null: isBindService:false]
+    isForeground=true foregroundId=42 types=0x40000000 foregroundNoti=Notification(channel=automatic shortcut=null contentView=null vibrate=null sound=null defaults=0 flags=ONGOING_EVENT|ONLY_ALERT_ONCE|NO_CLEAR|FOREGROUND_SERVICE color=0x00000000 actions=1 vis=PRIVATE focusType=null)
+    createTime=-39s944ms startingBgTimeout=--
+    lastActivity=-39s943ms restartTime=-39s943ms createdFromFg=true
+    startRequested=true delayedStop=false stopIfKilled=false callStart=true lastStartId=1
+ startCommandResult=1

@@ -13,8 +13,8 @@ android {
         // Temporary prototype values; the final decision belongs in ADR-002.
         minSdk = 26
         targetSdk = 36
-        versionCode = 2
-        versionName = "0.1.0"
+        versionCode = 6
+        versionName = "0.3.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 

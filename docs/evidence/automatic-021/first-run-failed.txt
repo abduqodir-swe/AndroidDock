@@ -1,0 +1,188 @@
+--------- beginning of main
+10-09 16:08:52.194 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 16:08:55.204 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 16:08:58.208 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 16:09:01.227 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 16:09:04.232 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 16:09:07.235 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 16:09:10.245 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 16:09:13.249 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 16:09:17.564 27966 27966 I AndroidDockAuto: Consent-based restore: android.intent.action.MY_PACKAGE_REPLACED
+10-09 16:09:17.599 27966 27966 I AndroidDockAuto: Foreground observer ready; restored=ChargingSession(connected=true, suppressed=true, pause=RECOVERY); boot=30
+10-09 16:09:17.632 27966 27966 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:09:17.633 27966 27966 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:09:18.100 27966 27966 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 16:09:18.101 27966 27966 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:09:21.107 27966 27966 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:09:24.112 27966 27966 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:09:27.117 27966 27966 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:09:30.124 27966 27966 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:09:32.561 27966 27966 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 16:09:32.565 27966 27966 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:09:35.569 27966 27966 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:09:38.577 27966 27966 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:09:39.946 27966 27966 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 16:09:39.951 27966 27966 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:09:42.956 27966 27966 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:09:45.959 27966 27966 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:09:48.965 27966 27966 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:09:51.974 27966 27966 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:09:54.981 27966 27966 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:09:57.988 27966 27966 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:10:00.996 27966 27966 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:10:03.998 27966 27966 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:10:07.005 27966 27966 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:10:10.009 27966 27966 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:10:13.019 27966 27966 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:10:16.027 27966 27966 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:10:19.031 27966 27966 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:10:22.041 27966 27966 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:10:25.066 27966 27966 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:10:27.931 31832 31832 I AndroidDockAuto: Foreground observer ready; restored=ChargingSession(connected=true, suppressed=false, pause=null); boot=30
+10-09 16:10:27.943 31832 31832 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:10:27.944 31832 31832 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:10:28.431 31832 31832 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 16:10:28.432 31832 31832 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:10:29.677 31832 31832 I AndroidDockAuto: event=android.intent.action.SCREEN_OFF
+10-09 16:10:29.688 31832 31832 I AndroidDockAuto: state=PENDING; pause=null; connected=true; display=null; status=Готовимся открыть StandBy
+10-09 16:10:30.394 31832 31832 I AndroidDockAuto: Launching DockActivity from service; session=465114960536730; plugged=true
+10-09 16:10:30.445 31832 31832 I AndroidDockAuto: state=LAUNCHING; pause=null; connected=true; display=465114960536730; status=Открываем StandBy
+10-09 16:10:30.495 31832 31832 I AndroidDockAuto: DockActivity created; locked=true
+10-09 16:10:30.844 31832 31832 I AndroidDockAuto: event=android.intent.action.SCREEN_ON
+10-09 16:10:31.196 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:10:31.196 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:10:31.267 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:10:33.896 31832 31832 I AndroidDockAuto: event=android.intent.action.SCREEN_OFF
+10-09 16:10:33.897 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:10:36.903 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:10:39.912 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:10:42.921 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:10:44.630 31832 31832 I AndroidDockAuto: event=android.intent.action.SCREEN_ON
+10-09 16:10:44.635 31832 31832 I AndroidDockAuto: event=android.intent.action.USER_PRESENT
+10-09 16:10:44.648 31832 31832 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:10:44.651 31832 31832 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:10:46.000 31832 31832 I AndroidDockAuto: event=android.intent.action.SCREEN_OFF
+10-09 16:10:46.008 31832 31832 I AndroidDockAuto: state=PENDING; pause=null; connected=true; display=null; status=Готовимся открыть StandBy
+10-09 16:10:46.713 31832 31832 I AndroidDockAuto: Launching DockActivity from service; session=465131279674039; plugged=true
+10-09 16:10:46.741 31832 31832 I AndroidDockAuto: state=LAUNCHING; pause=null; connected=true; display=465131279674039; status=Открываем StandBy
+10-09 16:10:46.750 31832 31832 I AndroidDockAuto: DockActivity created; locked=true
+10-09 16:10:47.018 31832 31832 I AndroidDockAuto: event=android.intent.action.SCREEN_ON
+10-09 16:10:47.037 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:10:47.038 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:10:47.200 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:10:50.016 31832 31832 I AndroidDockAuto: event=android.intent.action.SCREEN_OFF
+10-09 16:10:50.017 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:10:53.025 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:10:56.065 31832 31832 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:10:56.215 31832 31832 I AndroidDockAuto: event=android.intent.action.SCREEN_ON
+10-09 16:10:56.217 31832 31832 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:10:56.220 31832 31832 I AndroidDockAuto: event=android.intent.action.USER_PRESENT
+10-09 16:10:56.224 31832 31832 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:10:57.668 31832 31832 I AndroidDockAuto: event=android.intent.action.SCREEN_OFF
+10-09 16:10:57.674 31832 31832 I AndroidDockAuto: state=PENDING; pause=null; connected=true; display=null; status=Готовимся открыть StandBy
+10-09 16:10:58.381 31832 31832 I AndroidDockAuto: Launching DockActivity from service; session=465142947677962; plugged=true
+10-09 16:10:58.409 31832 31832 I AndroidDockAuto: state=LAUNCHING; pause=null; connected=true; display=465142947677962; status=Открываем StandBy
+10-09 16:10:58.421 31832 31832 I AndroidDockAuto: DockActivity created; locked=true
+10-09 16:10:58.682 31832 31832 I AndroidDockAuto: event=android.intent.action.SCREEN_ON
+10-09 16:10:58.753 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:10:58.753 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:10:58.820 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:11:01.824 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:11:04.828 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:11:07.833 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:11:10.034 31832 31832 I AndroidDockAuto: event=android.intent.action.SCREEN_OFF
+10-09 16:11:10.035 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:11:13.047 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:11:16.059 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:11:19.070 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:11:22.079 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:11:25.088 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:11:28.097 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:11:31.105 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:11:34.117 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:11:37.128 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:11:40.134 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:11:43.147 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:11:46.156 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:11:49.168 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:11:52.178 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:11:55.188 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:11:58.198 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:12:01.207 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:12:04.217 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:12:07.228 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:12:10.233 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:12:13.238 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:12:16.247 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:12:19.256 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:12:22.265 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:12:25.273 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:12:28.284 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:12:31.291 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:12:34.302 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:12:37.314 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:12:40.325 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:12:43.338 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:12:46.350 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:12:49.360 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:12:52.372 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:12:55.383 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:12:58.393 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:13:01.405 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:13:04.414 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:13:05.732 31832 31832 I AndroidDockAuto: event=android.intent.action.SCREEN_ON
+10-09 16:13:05.733 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:13:07.423 31832 31832 I AndroidDockAuto: event=android.intent.action.USER_PRESENT
+10-09 16:13:07.444 31832 31832 I AndroidDockAuto: state=WAITING; pause=null; connected=true; display=null; status=Питание подключено; ждём выключения экрана
+10-09 16:13:08.692 31832 31832 I AndroidDockAuto: event=android.intent.action.SCREEN_OFF
+10-09 16:13:08.707 31832 31832 I AndroidDockAuto: state=PENDING; pause=null; connected=true; display=null; status=Готовимся открыть StandBy
+10-09 16:13:09.409 31832 31832 I AndroidDockAuto: Launching DockActivity from service; session=465273972835509; plugged=true
+10-09 16:13:09.432 31832 31832 I AndroidDockAuto: state=LAUNCHING; pause=null; connected=true; display=465273972835509; status=Открываем StandBy
+10-09 16:13:09.439 31832 31832 I AndroidDockAuto: DockActivity created; locked=true
+10-09 16:13:09.708 31832 31832 I AndroidDockAuto: event=android.intent.action.SCREEN_ON
+10-09 16:13:09.727 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:13:09.727 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:13:09.844 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:13:12.847 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:13:15.851 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:13:18.857 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:13:21.100 31832 31832 I AndroidDockAuto: event=android.intent.action.SCREEN_OFF
+10-09 16:13:21.102 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:13:24.111 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:13:27.121 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:13:30.132 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:13:32.559 31832 31832 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 16:13:32.564 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:13:35.575 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:13:38.584 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:13:41.594 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:13:44.603 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:13:47.613 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:13:50.624 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:13:53.633 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:13:56.641 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:13:59.650 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:14:02.661 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:14:05.670 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:14:08.681 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:14:11.690 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:14:14.700 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:14:17.709 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:14:20.722 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:14:23.734 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:14:26.745 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:14:29.756 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:14:32.763 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:14:35.774 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:14:38.785 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:14:41.797 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:14:44.806 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:14:47.149 31832 31832 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 16:14:47.152 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:14:50.161 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:14:53.171 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:14:56.184 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:14:59.194 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:15:02.204 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:15:05.213 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки
+10-09 16:15:08.223 31832 31832 I AndroidDockAuto: state=WAIT_FOR_USE; pause=USER_EXIT; connected=true; display=null; status=Ждём использования телефона и следующей блокировки

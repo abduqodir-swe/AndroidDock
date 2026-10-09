@@ -1,0 +1,29 @@
+{
+  "top": "none",
+  "power": [
+    "mWakefulness=Dozing"
+  ],
+  "keyguard": [
+    "showing=true",
+    "inputRestricted=true",
+    "secure=true"
+  ],
+  "log": [
+    "10-09 15:34:39.123  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке",
+    "10-09 15:34:42.125  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке",
+    "10-09 15:34:45.127  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке",
+    "10-09 15:34:48.131  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке",
+    "10-09 15:34:51.134  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке",
+    "10-09 15:34:54.136  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке",
+    "10-09 15:34:57.140  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке",
+    "10-09 15:35:00.143  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке",
+    "10-09 15:35:03.145  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке",
+    "10-09 15:35:06.149  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке",
+    "10-09 15:35:09.152  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке",
+    "10-09 15:35:12.155  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке",
+    "10-09 15:35:15.159  9650  9650 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания",
+    "10-09 15:35:15.478  9650  9650 I AndroidDockAuto: event=android.intent.action.SCREEN_OFF",
+    "10-09 15:35:15.479  9650  9650 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания",
+    "10-09 15:35:18.486  9650  9650 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания"
+  ]
+}

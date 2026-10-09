@@ -9,6 +9,8 @@ import android.os.SystemClock
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.semantics.SemanticsProperties
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
@@ -58,6 +60,7 @@ class DockActivityTest {
     @Test fun clockRunsInPortraitAndViewModelSurvivesLandscapeRotation() {
         val scenario = compose.activityRule.scenario
         val clockNode = compose.onNodeWithTag("clock")
+        assertCleanDock()
         clockNode.assertIsDisplayed()
         compose.onNodeWithTag("calendar").assertIsDisplayed()
         compose.onNodeWithTag("today").assertIsDisplayed()
@@ -65,21 +68,32 @@ class DockActivityTest {
         assertTrue(clockNode.fetchSemanticsNode().boundsInRoot.center.y < compose.onNodeWithTag("calendar").fetchSemanticsNode().boundsInRoot.center.y)
         val firstText = clockNode.fetchSemanticsNode().config[SemanticsProperties.Text].single().text
         compose.waitUntil(3_000) { clockNode.fetchSemanticsNode().config[SemanticsProperties.Text].single().text != firstText }
+        compose.onNodeWithTag("dock-display").performTouchInput { click() }
+        compose.onNodeWithTag("dock-controls").assertIsDisplayed()
         compose.onNodeWithContentDescription("Следующий месяц").performClick()
         compose.onNodeWithTag("today").assertDoesNotExist()
         compose.onNodeWithContentDescription("Предыдущий месяц").performClick()
         compose.onNodeWithTag("today").assertIsDisplayed()
+        compose.onNodeWithTag("dock-display").performTouchInput { click() }
+        assertCleanDock()
         lateinit var original: ClockViewModel
         lateinit var portraitActivity: MainActivity
         scenario.onActivity { portraitActivity = it; original = ViewModelProvider(it)[ClockViewModel::class.java] }
         capture("stage2-activity-portrait.png")
         rotate(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE, Configuration.ORIENTATION_LANDSCAPE)
+        assertCleanDock()
         scenario.onActivity { assertNotSame(portraitActivity, it); assertSame(original, ViewModelProvider(it)[ClockViewModel::class.java]) }
         compose.onNodeWithTag("calendar").assertIsDisplayed()
         assertTrue(clockNode.fetchSemanticsNode().boundsInRoot.center.x < compose.onNodeWithTag("calendar").fetchSemanticsNode().boundsInRoot.center.x)
         capture("stage2-activity-landscape.png")
         rotate(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT, Configuration.ORIENTATION_PORTRAIT)
         scenario.onActivity { assertSame(original, ViewModelProvider(it)[ClockViewModel::class.java]) }
+        openEditor()
+        compose.waitUntil(5_000) { systemBarsVisible() }
+        compose.onNodeWithText("Отмена").performClick()
+        assertCleanDock()
+        scenario.recreate()
+        assertCleanDock()
     }
 
     @Test fun savedPortraitSoloAndFirstWeekdaySurviveRecreationAndDoNotChangeLandscape() {
@@ -161,9 +175,26 @@ class DockActivityTest {
 
     private fun saved() = (container.repository.state.value as SettingsState.Ready).settings
     private fun openEditor() {
-        if (compose.onAllNodesWithText("Настроить").fetchSemanticsNodes().isEmpty()) compose.onNodeWithText("Управление").performClick()
-        compose.onNodeWithText("Настроить").performClick()
+        compose.onNodeWithTag("dock-display").performTouchInput { longClick() }
         compose.onNodeWithText("Мой экран").assertIsDisplayed()
+    }
+
+    private fun assertCleanDock() {
+        compose.onNodeWithTag("dock-display").assertIsDisplayed()
+        compose.onNodeWithTag("dock-controls").assertDoesNotExist()
+        compose.onNodeWithText("Управление").assertDoesNotExist()
+        compose.waitUntil(5_000) { !systemBarsVisible() }
+    }
+
+    private fun systemBarsVisible(): Boolean {
+        var visible = true
+        compose.activityRule.scenario.onActivity { activity ->
+            ViewCompat.getRootWindowInsets(activity.window.decorView)?.let { insets ->
+                visible = insets.isVisible(WindowInsetsCompat.Type.statusBars()) ||
+                    insets.isVisible(WindowInsetsCompat.Type.navigationBars())
+            }
+        }
+        return visible
     }
 
     private fun rotate(requested: Int, expected: Int) {

@@ -43,11 +43,13 @@ class DockDreamService : DreamService() {
         }
         composeView = view
         setContentView(view)
+        window.setDockImmersiveMode(true)
         Log.i("AndroidDock", "Dream window attached; Compose owners installed")
     }
 
     override fun onDreamingStarted() {
         super.onDreamingStarted()
+        window.setDockImmersiveMode(true)
         owners?.resume()
         clock?.start()
         Log.i("AndroidDock", "Dream started")

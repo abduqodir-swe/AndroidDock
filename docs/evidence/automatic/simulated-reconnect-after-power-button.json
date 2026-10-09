@@ -1,0 +1,29 @@
+{
+  "top": "topResumedActivity=ActivityRecord{214231294 u0 dev.androiddock.prototype/.DockActivity t9088}",
+  "power": [
+    "mWakefulness=Awake"
+  ],
+  "keyguard": [
+    "showing=true",
+    "inputRestricted=true",
+    "secure=true"
+  ],
+  "log": [
+    "10-09 15:35:21.114  9650  9650 I AndroidDockAuto: event=android.intent.action.SCREEN_ON",
+    "10-09 15:35:21.121  9650  9650 I AndroidDockAuto: event=android.intent.action.ACTION_POWER_DISCONNECTED",
+    "10-09 15:35:21.121  9650  9650 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED",
+    "10-09 15:35:21.125  9650  9650 I AndroidDockAuto: state=SUPPRESSED; connected=false; display=null; status=Показ приостановлен до нового подключения питания",
+    "10-09 15:35:21.126  9650  9650 I AndroidDockAuto: state=SUPPRESSED; connected=false; display=null; status=Показ приостановлен до нового подключения питания",
+    "10-09 15:35:21.127  9650  9650 I AndroidDockAuto: state=SUPPRESSED; connected=false; display=null; status=Показ приостановлен до нового подключения питания",
+    "10-09 15:35:22.650  9650  9650 I AndroidDockAuto: state=WAITING; connected=false; display=null; status=Ждём подключения питания",
+    "10-09 15:35:23.382  9650  9650 I AndroidDockAuto: event=android.intent.action.ACTION_POWER_CONNECTED",
+    "10-09 15:35:23.388  9650  9650 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED",
+    "10-09 15:35:23.402  9650  9650 I AndroidDockAuto: state=PENDING; connected=true; display=null; status=Готовимся открыть StandBy",
+    "10-09 15:35:23.404  9650  9650 I AndroidDockAuto: state=PENDING; connected=true; display=null; status=Готовимся открыть StandBy",
+    "10-09 15:35:24.098  9650  9650 I AndroidDockAuto: Launching DockActivity from service; session=463008673933528; plugged=true",
+    "10-09 15:35:24.119  9650  9650 I AndroidDockAuto: state=LAUNCHING; connected=true; display=463008673933528; status=Открываем StandBy",
+    "10-09 15:35:24.130  9650  9650 I AndroidDockAuto: DockActivity created; locked=true",
+    "10-09 15:35:24.562  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463008673933528; status=StandBy на зарядке",
+    "10-09 15:35:24.562  9650  9650 I AndroidDockAuto: Dock window focused; session=463008673933528; orientation=1"
+  ]
+}

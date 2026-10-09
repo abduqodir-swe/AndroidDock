@@ -1,0 +1,5 @@
+--------- beginning of main
+10-09 15:28:06.083  2721  2721 I AndroidDockAuto: Foreground observer ready
+10-09 15:28:20.668  2721  2721 I AndroidDockAuto: event=android.intent.action.SCREEN_OFF
+10-09 15:28:21.373  2721  2721 I AndroidDockAuto: Launching DockActivity from service
+10-09 15:28:21.408  2721  2721 I AndroidDockAuto: DockActivity created; locked=true

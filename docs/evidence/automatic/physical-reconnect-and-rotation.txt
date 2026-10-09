@@ -1,0 +1,179 @@
+--------- beginning of main
+10-09 15:28:06.083  2721  2721 I AndroidDockAuto: Foreground observer ready
+10-09 15:28:20.668  2721  2721 I AndroidDockAuto: event=android.intent.action.SCREEN_OFF
+10-09 15:28:21.373  2721  2721 I AndroidDockAuto: Launching DockActivity from service
+10-09 15:28:21.408  2721  2721 I AndroidDockAuto: DockActivity created; locked=true
+10-09 15:32:33.214  2721  2721 I AndroidDockAuto: event=android.intent.action.SCREEN_OFF
+10-09 15:32:41.105  2721  2721 I AndroidDockAuto: event=android.intent.action.SCREEN_OFF
+10-09 15:32:47.252  2721  2721 I AndroidDockAuto: event=android.intent.action.ACTION_POWER_CONNECTED
+10-09 15:32:47.959  2721  2721 I AndroidDockAuto: Launching DockActivity from service
+10-09 15:33:44.418  5301  5301 I AndroidDockAuto: Consent-based restore: android.intent.action.MY_PACKAGE_REPLACED
+10-09 15:33:44.436  5301  5301 I AndroidDockAuto: Foreground observer ready; restored=ChargingSession(connected=false, suppressed=false); boot=30
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: Observer failed
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: kotlinx.serialization.SerializationException: Serializer for class 'SavedChargingSession' is not found.
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: Please ensure that class is marked as '@Serializable' and that the serialization compiler plugin is applied.
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: 
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: 	at kotlinx.serialization.internal.Platform_commonKt.serializerNotRegistered(Platform.common.kt:90)
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: 	at kotlinx.serialization.internal.PlatformKt.platformSpecificSerializerNotRegistered(Platform.kt:33)
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: 	at kotlinx.serialization.SerializersKt__SerializersKt.serializer(Serializers.kt:153)
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: 	at kotlinx.serialization.SerializersKt.serializer(dex-id-a5e0dbba8bf8d2c53bfeb54afbd44f843c703d13:1)
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: 	at dev.androiddock.prototype.AutomaticStore$saveSession$2.invokeSuspend(AutomaticStore.kt:39)
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: 	at dev.androiddock.prototype.AutomaticStore$saveSession$2.invoke(AutomaticStore.kt:8)
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: 	at dev.androiddock.prototype.AutomaticStore$saveSession$2.invoke(AutomaticStore.kt:4)
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: 	at androidx.datastore.preferences.core.PreferencesKt$edit$2.invokeSuspend(Preferences.kt:343)
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: 	at androidx.datastore.preferences.core.PreferencesKt$edit$2.invoke(Preferences.kt:8)
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: 	at androidx.datastore.preferences.core.PreferencesKt$edit$2.invoke(Preferences.kt:4)
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: 	at androidx.datastore.preferences.core.PreferenceDataStore$updateData$2.invokeSuspend(PreferenceDataStoreFactory.kt:90)
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: 	at androidx.datastore.preferences.core.PreferenceDataStore$updateData$2.invoke(PreferenceDataStoreFactory.kt:8)
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: 	at androidx.datastore.preferences.core.PreferenceDataStore$updateData$2.invoke(PreferenceDataStoreFactory.kt:4)
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: 	at androidx.datastore.preferences.core.PreferenceDataStore$updateData$2.invokeSuspend(PreferenceDataStoreFactory.kt:90)
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: 	at androidx.datastore.preferences.core.PreferenceDataStore$updateData$2.invoke(PreferenceDataStoreFactory.kt:8)
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: 	at androidx.datastore.preferences.core.PreferenceDataStore$updateData$2.invoke(PreferenceDataStoreFactory.kt:4)
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: 	at androidx.datastore.core.DataStoreImpl$transformAndWrite$2$newData$1.invokeSuspend(DataStoreImpl.kt:351)
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: 	at android.os.Handler.handleCallback(Handler.java:1029)
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: 	at android.os.Looper.loopOnce(Looper.java:274)
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: 	at android.os.Looper.loop(Looper.java:369)
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: 	at android.app.ActivityThread.main(ActivityThread.java:10090)
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: 	at java.lang.reflect.Method.invoke(Native Method)
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:616)
+10-09 15:33:44.454  5301  5301 E AndroidDockAuto: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1137)
+10-09 15:34:25.086  9650  9650 I AndroidDockAuto: Consent-based restore: android.intent.action.MY_PACKAGE_REPLACED
+10-09 15:34:25.106  9650  9650 I AndroidDockAuto: Foreground observer ready; restored=ChargingSession(connected=false, suppressed=false); boot=30
+10-09 15:34:25.126  9650  9650 I AndroidDockAuto: state=PENDING; connected=true; display=null; status=Готовимся открыть StandBy
+10-09 15:34:25.127  9650  9650 I AndroidDockAuto: state=PENDING; connected=true; display=null; status=Готовимся открыть StandBy
+10-09 15:34:25.608  9650  9650 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 15:34:25.611  9650  9650 I AndroidDockAuto: state=PENDING; connected=true; display=null; status=Готовимся открыть StandBy
+10-09 15:34:25.819  9650  9650 I AndroidDockAuto: Launching DockActivity from service; session=462950394896063; plugged=true
+10-09 15:34:25.839  9650  9650 I AndroidDockAuto: state=LAUNCHING; connected=true; display=462950394896063; status=Открываем StandBy
+10-09 15:34:25.871  9650  9650 I AndroidDockAuto: DockActivity created; locked=true
+10-09 15:34:26.103  9650  9650 I AndroidDockAuto: event=android.intent.action.SCREEN_ON
+10-09 15:34:26.105  9650  9650 I AndroidDockAuto: state=LAUNCHING; connected=true; display=462950394896063; status=Открываем StandBy
+10-09 15:34:26.617  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке
+10-09 15:34:26.617  9650  9650 I AndroidDockAuto: Dock window focused; session=462950394896063; orientation=1
+10-09 15:34:27.108  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке
+10-09 15:34:27.108  9650  9650 I AndroidDockAuto: Dock window focused; session=462950394896063; orientation=1
+10-09 15:34:30.111  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке
+10-09 15:34:33.117  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке
+10-09 15:34:36.120  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке
+10-09 15:34:39.123  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке
+10-09 15:34:42.125  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке
+10-09 15:34:45.127  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке
+10-09 15:34:48.131  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке
+10-09 15:34:51.134  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке
+10-09 15:34:54.136  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке
+10-09 15:34:57.140  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке
+10-09 15:35:00.143  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке
+10-09 15:35:03.145  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке
+10-09 15:35:06.149  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке
+10-09 15:35:09.152  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке
+10-09 15:35:12.155  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке
+10-09 15:35:15.159  9650  9650 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:35:15.478  9650  9650 I AndroidDockAuto: event=android.intent.action.SCREEN_OFF
+10-09 15:35:15.479  9650  9650 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:35:18.486  9650  9650 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:35:21.114  9650  9650 I AndroidDockAuto: event=android.intent.action.SCREEN_ON
+10-09 15:35:21.121  9650  9650 I AndroidDockAuto: event=android.intent.action.ACTION_POWER_DISCONNECTED
+10-09 15:35:21.121  9650  9650 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 15:35:21.125  9650  9650 I AndroidDockAuto: state=SUPPRESSED; connected=false; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:35:21.126  9650  9650 I AndroidDockAuto: state=SUPPRESSED; connected=false; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:35:21.127  9650  9650 I AndroidDockAuto: state=SUPPRESSED; connected=false; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:35:22.650  9650  9650 I AndroidDockAuto: state=WAITING; connected=false; display=null; status=Ждём подключения питания
+10-09 15:35:23.382  9650  9650 I AndroidDockAuto: event=android.intent.action.ACTION_POWER_CONNECTED
+10-09 15:35:23.388  9650  9650 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 15:35:23.402  9650  9650 I AndroidDockAuto: state=PENDING; connected=true; display=null; status=Готовимся открыть StandBy
+10-09 15:35:23.404  9650  9650 I AndroidDockAuto: state=PENDING; connected=true; display=null; status=Готовимся открыть StandBy
+10-09 15:35:24.098  9650  9650 I AndroidDockAuto: Launching DockActivity from service; session=463008673933528; plugged=true
+10-09 15:35:24.119  9650  9650 I AndroidDockAuto: state=LAUNCHING; connected=true; display=463008673933528; status=Открываем StandBy
+10-09 15:35:24.130  9650  9650 I AndroidDockAuto: DockActivity created; locked=true
+10-09 15:35:24.562  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463008673933528; status=StandBy на зарядке
+10-09 15:35:24.562  9650  9650 I AndroidDockAuto: Dock window focused; session=463008673933528; orientation=1
+10-09 15:35:26.764  9650  9650 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:35:26.799  9650  9650 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:35:29.804  9650  9650 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:35:32.458  9650  9650 I AndroidDockAuto: event=android.intent.action.ACTION_POWER_DISCONNECTED
+10-09 15:35:32.460  9650  9650 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 15:35:32.476  9650  9650 I AndroidDockAuto: state=SUPPRESSED; connected=false; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:35:32.476  9650  9650 I AndroidDockAuto: state=SUPPRESSED; connected=false; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:35:33.996  9650  9650 I AndroidDockAuto: state=WAITING; connected=false; display=null; status=Ждём подключения питания
+10-09 15:35:34.532  9650  9650 I AndroidDockAuto: event=android.intent.action.ACTION_POWER_CONNECTED
+10-09 15:35:34.540  9650  9650 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 15:35:34.554  9650  9650 I AndroidDockAuto: state=PENDING; connected=true; display=null; status=Готовимся открыть StandBy
+10-09 15:35:34.554  9650  9650 I AndroidDockAuto: state=PENDING; connected=true; display=null; status=Готовимся открыть StandBy
+10-09 15:35:35.252  9650  9650 I AndroidDockAuto: Launching DockActivity from service; session=463019827008297; plugged=true
+10-09 15:35:35.281  9650  9650 I AndroidDockAuto: state=LAUNCHING; connected=true; display=463019827008297; status=Открываем StandBy
+10-09 15:35:35.295  9650  9650 I AndroidDockAuto: DockActivity created; locked=true
+10-09 15:35:35.733  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463019827008297; status=StandBy на зарядке
+10-09 15:35:35.741  9650  9650 I AndroidDockAuto: Dock window focused; session=463019827008297; orientation=1
+10-09 15:35:37.831  9650  9650 I AndroidDockAuto: event=android.intent.action.ACTION_POWER_DISCONNECTED
+10-09 15:35:37.833  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463019827008297; status=StandBy на зарядке
+10-09 15:35:37.839  9650  9650 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 15:35:37.865  9650  9650 I AndroidDockAuto: state=WAITING; connected=false; display=null; status=Ждём подключения питания
+10-09 15:35:37.892  9650  9650 I AndroidDockAuto: state=WAITING; connected=false; display=null; status=Ждём подключения питания
+10-09 15:35:39.345  9650  9650 I AndroidDockAuto: state=WAITING; connected=false; display=null; status=Ждём подключения питания
+10-09 15:35:41.393  9650  9650 I AndroidDockAuto: event=android.intent.action.ACTION_POWER_CONNECTED
+10-09 15:35:41.399  9650  9650 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 15:35:41.425  9650  9650 I AndroidDockAuto: state=PENDING; connected=true; display=null; status=Готовимся открыть StandBy
+10-09 15:35:41.426  9650  9650 I AndroidDockAuto: state=PENDING; connected=true; display=null; status=Готовимся открыть StandBy
+10-09 15:35:42.116  9650  9650 I AndroidDockAuto: Launching DockActivity from service; session=463026691101606; plugged=true
+10-09 15:35:42.144  9650  9650 I AndroidDockAuto: state=LAUNCHING; connected=true; display=463026691101606; status=Открываем StandBy
+10-09 15:35:42.172  9650  9650 I AndroidDockAuto: DockActivity created; locked=true
+10-09 15:35:42.574  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463026691101606; status=StandBy на зарядке
+10-09 15:35:42.575  9650  9650 I AndroidDockAuto: Dock window focused; session=463026691101606; orientation=1
+10-09 15:35:45.578  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463026691101606; status=StandBy на зарядке
+10-09 15:35:48.582  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463026691101606; status=StandBy на зарядке
+10-09 15:35:51.585  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463026691101606; status=StandBy на зарядке
+10-09 15:35:54.590  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463026691101606; status=StandBy на зарядке
+10-09 15:35:57.594  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463026691101606; status=StandBy на зарядке
+10-09 15:36:00.598  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463026691101606; status=StandBy на зарядке
+10-09 15:36:03.601  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463026691101606; status=StandBy на зарядке
+10-09 15:36:04.615  9650  9650 I AndroidDockAuto: DockActivity created; locked=true
+10-09 15:36:04.854  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463026691101606; status=StandBy на зарядке
+10-09 15:36:04.854  9650  9650 I AndroidDockAuto: Dock window focused; session=463026691101606; orientation=2
+10-09 15:36:07.857  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463026691101606; status=StandBy на зарядке
+10-09 15:36:10.861  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463026691101606; status=StandBy на зарядке
+10-09 15:36:13.863  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463026691101606; status=StandBy на зарядке
+10-09 15:36:14.638  9650  9650 I AndroidDockAuto: DockActivity created; locked=true
+10-09 15:36:14.857  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463026691101606; status=StandBy на зарядке
+10-09 15:36:14.857  9650  9650 I AndroidDockAuto: Dock window focused; session=463026691101606; orientation=1
+10-09 15:36:16.638  9650  9650 I AndroidDockAuto: DockActivity created; locked=true
+10-09 15:36:16.831  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463026691101606; status=StandBy на зарядке
+10-09 15:36:16.831  9650  9650 I AndroidDockAuto: Dock window focused; session=463026691101606; orientation=2
+10-09 15:36:19.835  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463026691101606; status=StandBy на зарядке
+10-09 15:36:20.026  9650  9650 I AndroidDockAuto: DockActivity created; locked=true
+10-09 15:36:20.221  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463026691101606; status=StandBy на зарядке
+10-09 15:36:20.221  9650  9650 I AndroidDockAuto: Dock window focused; session=463026691101606; orientation=1
+10-09 15:36:23.224  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463026691101606; status=StandBy на зарядке
+10-09 15:36:23.949  9650  9650 I AndroidDockAuto: event=android.intent.action.ACTION_POWER_DISCONNECTED
+10-09 15:36:23.953  9650  9650 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 15:36:23.999  9650  9650 I AndroidDockAuto: state=WAITING; connected=false; display=null; status=Ждём подключения питания
+10-09 15:36:24.000  9650  9650 I AndroidDockAuto: state=WAITING; connected=false; display=null; status=Ждём подключения питания
+10-09 15:36:24.143  9650  9650 I AndroidDockAuto: state=WAITING; connected=false; display=null; status=Ждём подключения питания
+10-09 15:36:25.452  9650  9650 I AndroidDockAuto: state=WAITING; connected=false; display=null; status=Ждём подключения питания
+10-09 15:36:30.055  9650  9650 I AndroidDockAuto: event=android.intent.action.ACTION_POWER_CONNECTED
+10-09 15:36:30.064  9650  9650 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 15:36:30.075  9650  9650 I AndroidDockAuto: state=PENDING; connected=true; display=null; status=Готовимся открыть StandBy
+10-09 15:36:30.077  9650  9650 I AndroidDockAuto: state=PENDING; connected=true; display=null; status=Готовимся открыть StandBy
+10-09 15:36:30.770  9650  9650 I AndroidDockAuto: Launching DockActivity from service; session=463075345559685; plugged=true
+10-09 15:36:30.795  9650  9650 I AndroidDockAuto: state=LAUNCHING; connected=true; display=463075345559685; status=Открываем StandBy
+10-09 15:36:30.809  9650  9650 I AndroidDockAuto: DockActivity created; locked=true
+10-09 15:36:31.257  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:36:31.258  9650  9650 I AndroidDockAuto: Dock window focused; session=463075345559685; orientation=1
+10-09 15:36:34.261  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:36:37.266  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:36:40.270  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:36:43.275  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:36:46.278  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:36:49.283  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:36:52.286  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:36:55.290  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:36:58.293  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:37:01.297  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:37:04.302  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:37:07.305  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:37:10.309  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:37:13.313  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:37:16.316  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:37:19.319  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке

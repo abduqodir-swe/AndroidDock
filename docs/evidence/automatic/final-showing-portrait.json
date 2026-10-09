@@ -1,0 +1,29 @@
+{
+  "top": "topResumedActivity=ActivityRecord{75139089 u0 dev.androiddock.prototype/.DockActivity t9086}",
+  "power": [
+    "mWakefulness=Awake"
+  ],
+  "keyguard": [
+    "showing=true",
+    "inputRestricted=true",
+    "secure=true"
+  ],
+  "log": [
+    "10-09 15:34:27.108  9650  9650 I AndroidDockAuto: Dock window focused; session=462950394896063; orientation=1",
+    "10-09 15:34:30.111  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке",
+    "10-09 15:34:33.117  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке",
+    "10-09 15:34:36.120  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке",
+    "10-09 15:34:39.123  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке",
+    "10-09 15:34:42.125  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке",
+    "10-09 15:34:45.127  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке",
+    "10-09 15:34:48.131  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке",
+    "10-09 15:34:51.134  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке",
+    "10-09 15:34:54.136  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке",
+    "10-09 15:34:57.140  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке",
+    "10-09 15:35:00.143  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке",
+    "10-09 15:35:03.145  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке",
+    "10-09 15:35:06.149  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке",
+    "10-09 15:35:09.152  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке",
+    "10-09 15:35:12.155  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=462950394896063; status=StandBy на зарядке"
+  ]
+}

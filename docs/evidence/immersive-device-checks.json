@@ -1,0 +1,25 @@
+{
+  "app_version": "0.1.1",
+  "ui_tests": {
+    "passed": 4,
+    "duration_seconds": 40.606
+  },
+  "settings_restored": true,
+  "settings_before": {
+    "secure/screensaver_enabled": "0",
+    "secure/screensaver_components": "com.google.android.apps.photos/com.google.android.apps.photos.daydream.PhotosDreamService",
+    "secure/screensaver_activate_on_sleep": "1",
+    "secure/screensaver_activate_on_dock": "0",
+    "system/accelerometer_rotation": "0",
+    "system/user_rotation": "0"
+  },
+  "settings_after": {
+    "secure/screensaver_enabled": "0",
+    "secure/screensaver_components": "com.google.android.apps.photos/com.google.android.apps.photos.daydream.PhotosDreamService",
+    "secure/screensaver_activate_on_sleep": "1",
+    "secure/screensaver_activate_on_dock": "0",
+    "system/accelerometer_rotation": "0",
+    "system/user_rotation": "0"
+  },
+  "dream_preview": "Not rechecked: foreground changed during preparation; further UI input stopped."
+}

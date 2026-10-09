@@ -1,0 +1,204 @@
+--------- beginning of main
+10-09 15:36:04.854  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463026691101606; status=StandBy на зарядке
+10-09 15:36:04.854  9650  9650 I AndroidDockAuto: Dock window focused; session=463026691101606; orientation=2
+10-09 15:36:07.857  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463026691101606; status=StandBy на зарядке
+10-09 15:36:10.861  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463026691101606; status=StandBy на зарядке
+10-09 15:36:13.863  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463026691101606; status=StandBy на зарядке
+10-09 15:36:14.638  9650  9650 I AndroidDockAuto: DockActivity created; locked=true
+10-09 15:36:14.857  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463026691101606; status=StandBy на зарядке
+10-09 15:36:14.857  9650  9650 I AndroidDockAuto: Dock window focused; session=463026691101606; orientation=1
+10-09 15:36:16.638  9650  9650 I AndroidDockAuto: DockActivity created; locked=true
+10-09 15:36:16.831  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463026691101606; status=StandBy на зарядке
+10-09 15:36:16.831  9650  9650 I AndroidDockAuto: Dock window focused; session=463026691101606; orientation=2
+10-09 15:36:19.835  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463026691101606; status=StandBy на зарядке
+10-09 15:36:20.026  9650  9650 I AndroidDockAuto: DockActivity created; locked=true
+10-09 15:36:20.221  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463026691101606; status=StandBy на зарядке
+10-09 15:36:20.221  9650  9650 I AndroidDockAuto: Dock window focused; session=463026691101606; orientation=1
+10-09 15:36:23.224  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463026691101606; status=StandBy на зарядке
+10-09 15:36:23.949  9650  9650 I AndroidDockAuto: event=android.intent.action.ACTION_POWER_DISCONNECTED
+10-09 15:36:23.953  9650  9650 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 15:36:23.999  9650  9650 I AndroidDockAuto: state=WAITING; connected=false; display=null; status=Ждём подключения питания
+10-09 15:36:24.000  9650  9650 I AndroidDockAuto: state=WAITING; connected=false; display=null; status=Ждём подключения питания
+10-09 15:36:24.143  9650  9650 I AndroidDockAuto: state=WAITING; connected=false; display=null; status=Ждём подключения питания
+10-09 15:36:25.452  9650  9650 I AndroidDockAuto: state=WAITING; connected=false; display=null; status=Ждём подключения питания
+10-09 15:36:30.055  9650  9650 I AndroidDockAuto: event=android.intent.action.ACTION_POWER_CONNECTED
+10-09 15:36:30.064  9650  9650 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 15:36:30.075  9650  9650 I AndroidDockAuto: state=PENDING; connected=true; display=null; status=Готовимся открыть StandBy
+10-09 15:36:30.077  9650  9650 I AndroidDockAuto: state=PENDING; connected=true; display=null; status=Готовимся открыть StandBy
+10-09 15:36:30.770  9650  9650 I AndroidDockAuto: Launching DockActivity from service; session=463075345559685; plugged=true
+10-09 15:36:30.795  9650  9650 I AndroidDockAuto: state=LAUNCHING; connected=true; display=463075345559685; status=Открываем StandBy
+10-09 15:36:30.809  9650  9650 I AndroidDockAuto: DockActivity created; locked=true
+10-09 15:36:31.257  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:36:31.258  9650  9650 I AndroidDockAuto: Dock window focused; session=463075345559685; orientation=1
+10-09 15:36:34.261  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:36:37.266  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:36:40.270  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:36:43.275  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:36:46.278  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:36:49.283  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:36:52.286  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:36:55.290  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:36:58.293  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:37:01.297  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:37:04.302  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:37:07.305  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:37:10.309  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:37:13.313  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:37:16.316  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:37:19.319  9650  9650 I AndroidDockAuto: state=SHOWING; connected=true; display=463075345559685; status=StandBy на зарядке
+10-09 15:37:22.107 13841 13841 I AndroidDockAuto: Foreground observer ready; restored=ChargingSession(connected=true, suppressed=true); boot=30
+10-09 15:37:22.128 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:37:22.129 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:37:22.610 13841 13841 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 15:37:22.612 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:37:25.619 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:37:28.624 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:37:31.497 13841 13841 I AndroidDockAuto: event=android.intent.action.SCREEN_OFF
+10-09 15:37:31.499 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:37:34.508 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:37:37.518 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:37:40.525 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:37:43.531 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:37:46.538 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:37:49.545 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:37:52.553 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:37:55.561 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:37:58.568 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:38:01.576 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:38:04.585 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:38:07.592 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:38:10.599 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:38:13.608 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:38:16.612 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:38:19.621 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:38:22.628 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:38:25.637 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:38:28.644 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:38:31.653 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:38:34.660 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:38:37.668 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:38:40.676 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:38:43.682 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:38:46.691 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:38:49.700 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:38:52.709 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:38:55.719 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:38:58.727 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:01.734 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:04.743 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:07.749 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:10.757 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:12.165 13841 13841 I AndroidDockAuto: event=android.intent.action.SCREEN_ON
+10-09 15:39:12.175 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:15.181 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:18.186 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:20.961 13841 13841 I AndroidDockAuto: event=android.intent.action.USER_PRESENT
+10-09 15:39:20.962 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:23.969 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:26.975 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:29.984 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:32.990 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:35.995 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:38.998 13841 13841 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:40.082 12268 12268 I AndroidDockAuto: Consent-based restore: android.intent.action.MY_PACKAGE_REPLACED
+10-09 15:39:40.102 12268 12268 I AndroidDockAuto: Foreground observer ready; restored=ChargingSession(connected=true, suppressed=true); boot=30
+10-09 15:39:40.113 12268 12268 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:40.114 12268 12268 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:40.603 12268 12268 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 15:39:40.604 12268 12268 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:41.691 12268 12268 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:44.695 12268 12268 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:47.699 12268 12268 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:50.704 12268 12268 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:53.708 12268 12268 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:56.710 12268 12268 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:58.152 14826 14826 I AndroidDockAuto: Foreground observer ready; restored=ChargingSession(connected=true, suppressed=true); boot=30
+10-09 15:39:58.155 14826 14826 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 15:39:58.166 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:58.167 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:58.168 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:58.328 14826 14826 I AndroidDockAuto: Observer stopped; receiver, jobs and wake lock released
+10-09 15:39:58.488 14826 14826 I AndroidDockAuto: Foreground observer ready; restored=ChargingSession(connected=true, suppressed=true); boot=30
+10-09 15:39:58.510 14826 14826 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 15:39:58.518 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:58.519 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:58.519 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:58.647 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:58.780 14826 14826 I AndroidDockAuto: Observer stopped; receiver, jobs and wake lock released
+10-09 15:39:58.817 14826 14826 I AndroidDockAuto: Foreground observer ready; restored=ChargingSession(connected=true, suppressed=true); boot=30
+10-09 15:39:58.819 14826 14826 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 15:39:58.824 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:58.824 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:58.825 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:39:59.529 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:00.123 14826 14826 I AndroidDockAuto: Observer stopped; receiver, jobs and wake lock released
+10-09 15:40:00.275 14826 14826 I AndroidDockAuto: Foreground observer ready; restored=ChargingSession(connected=true, suppressed=true); boot=30
+10-09 15:40:00.280 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:00.281 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:00.286 14826 14826 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 15:40:00.293 14826 14826 I AndroidDockAuto: Observer stopped; receiver, jobs and wake lock released
+10-09 15:40:00.392 14826 14826 I AndroidDockAuto: Foreground observer ready; restored=ChargingSession(connected=true, suppressed=true); boot=30
+10-09 15:40:00.398 14826 14826 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 15:40:00.402 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:00.404 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:00.405 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:00.896 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:01.413 14826 14826 I AndroidDockAuto: Observer stopped; receiver, jobs and wake lock released
+10-09 15:40:01.427 14826 14826 I AndroidDockAuto: Foreground observer ready; restored=ChargingSession(connected=true, suppressed=true); boot=30
+10-09 15:40:01.429 14826 14826 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 15:40:01.432 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:01.433 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:01.433 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:01.847 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:04.849 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:06.803 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:07.333 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:10.337 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:10.808 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:11.490 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:14.495 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:14.848 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:15.127 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:17.814 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:18.373 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:21.376 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:22.857 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:25.445 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:28.447 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:29.315 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:32.317 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:32.785 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:33.396 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:36.399 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:37.570 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:40.135 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:40:41.997 14826 14826 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:47:36.448 14030 14030 I AndroidDockAuto: Consent-based restore: android.intent.action.MY_PACKAGE_REPLACED
+10-09 15:47:36.480 14030 14030 I AndroidDockAuto: Foreground observer ready; restored=ChargingSession(connected=true, suppressed=true); boot=30
+10-09 15:47:36.490 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:47:36.491 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:47:36.983 14030 14030 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 15:47:36.984 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:47:39.989 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:47:42.995 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:47:46.003 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:47:49.012 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:47:52.020 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:47:55.031 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:47:58.040 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:48:01.045 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:48:04.051 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:48:07.060 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:48:10.066 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:48:13.073 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:48:16.081 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:48:19.089 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:48:22.096 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:48:25.103 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:48:28.112 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:48:31.117 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:48:34.125 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:48:37.135 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:48:40.144 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:48:43.154 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания
+10-09 15:48:46.159 14030 14030 I AndroidDockAuto: state=SUPPRESSED; connected=true; display=null; status=Показ приостановлен до нового подключения питания

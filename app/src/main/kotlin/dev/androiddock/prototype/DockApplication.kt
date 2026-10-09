@@ -18,6 +18,8 @@ class AppContainer(context: Context) {
     val repository = DockRepository(context.dockStore, scope)
     val battery = BatteryProvider(context.applicationContext, scope)
     val photos = PhotoStore(context.applicationContext)
+    val automatic = AutomaticStore(context.dockStore, scope)
+    val automaticRuntime = AutomaticRuntime()
 }
 
 val Context.appContainer: AppContainer

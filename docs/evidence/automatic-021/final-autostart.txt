@@ -1,0 +1,15 @@
+Final installed APK: 0.2.1 / versionCode 5
+MainActivity was opened only to restore the consented observer.
+DockActivity was NOT started via adb. Trigger: guarded KEYCODE_SLEEP from unlocked MainActivity, real system SCREEN_OFF. USB remained connected.
+topResumedActivity=ActivityRecord{128979854 u0 dev.androiddock.prototype/.MainActivity t9194}
+topResumedActivity=ActivityRecord{103507632 u0 dev.androiddock.prototype/.DockActivity t9195}
+10-09 16:35:05.586 12140 12140 I AndroidDockAuto: event=android.intent.action.SCREEN_OFF
+10-09 16:35:05.594 12140 12140 I AndroidDockAuto: source=ScreenChanged(signal=SCREEN_OFF, session=null, environment=ChargingEnvironment(plugged=true, interactive=false, keyguardLocked=true, allowed=true)); state=PENDING; pause=null; connected=true; display=null; status=Готовимся открыть StandBy
+10-09 16:35:06.314 12140 12140 I AndroidDockAuto: Launching DockActivity from service; session=466590866480280; plugged=true
+10-09 16:35:06.344 12140 12140 I AndroidDockAuto: source=Tick; state=LAUNCHING; pause=null; connected=true; display=466590866480280; status=Открываем StandBy
+10-09 16:35:06.357 12140 12140 I AndroidDockAuto: DockActivity created; locked=true
+10-09 16:35:06.367 12140 12140 I AndroidDockAuto: source=UserLeaveHint(session=466590866480280); state=LAUNCHING; pause=null; connected=true; display=466590866480280; status=Открываем StandBy
+10-09 16:35:06.580 12140 12140 I AndroidDockAuto: event=android.intent.action.SCREEN_ON
+10-09 16:35:06.582 12140 12140 I AndroidDockAuto: source=ScreenChanged(signal=SCREEN_ON, session=466590866480280, environment=ChargingEnvironment(plugged=true, interactive=true, keyguardLocked=true, allowed=true)); state=LAUNCHING; pause=null; connected=true; display=466590866480280; status=Открываем StandBy
+10-09 16:35:06.873 12140 12140 I AndroidDockAuto: source=Shown(session=466590866480280); state=SHOWING; pause=null; connected=true; display=466590866480280; status=StandBy на зарядке
+10-09 16:35:06.873 12140 12140 I AndroidDockAuto: Dock window focused; session=466590866480280; orientation=1
