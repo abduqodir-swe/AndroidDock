@@ -1,10 +1,12 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.compose)
 }
 
 android {
     namespace = "dev.androiddock.prototype"
     compileSdk = 36
+    buildFeatures { compose = true }
 
     defaultConfig {
         applicationId = "dev.androiddock.prototype"
@@ -29,5 +31,10 @@ kotlin {
 
 dependencies {
     implementation(project(":core:model"))
+    implementation(platform(libs.compose.bom))
+    implementation(libs.compose.foundation)
+    implementation(libs.compose.ui)
+    implementation(libs.coroutines.android)
+    implementation(libs.lifecycle.viewmodel)
     testImplementation(libs.junit)
 }
