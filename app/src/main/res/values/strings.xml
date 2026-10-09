@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AndroidDock</string>
+    <string name="screensaver_settings">Настройки заставки</string>
+    <string name="screensaver_settings_unavailable">Системные настройки заставки недоступны на этой прошивке.</string>
 </resources>

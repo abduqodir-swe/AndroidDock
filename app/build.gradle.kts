@@ -38,5 +38,8 @@ dependencies {
     implementation(libs.lifecycle.viewmodel)
     implementation(libs.activity.compose)
     implementation(libs.lifecycle.runtime.compose)
+    implementation(libs.lifecycle.runtime)
+    implementation(libs.savedstate)
+    implementation(libs.compose.material3)
     testImplementation(libs.junit)
 }
