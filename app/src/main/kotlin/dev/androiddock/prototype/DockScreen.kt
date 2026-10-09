@@ -11,7 +11,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.produceState
 import androidx.compose.foundation.Image
-import androidx.compose.material3.TextButton
+import androidx.compose.material3.IconButton
+import androidx.compose.foundation.Canvas
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
@@ -151,9 +154,9 @@ private fun MonthCalendar(month: YearMonth, today: java.time.LocalDate, firstDay
         val daySize = minOf(maxWidth.value / 7f, (maxHeight.value - 60f).coerceAtLeast(84f) / (grid.cells.size / 7 + 1))
         Column(Modifier.align(Alignment.Center), horizontalAlignment = Alignment.CenterHorizontally) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                if (onMonthChange != null) TextButton(onClick = { onMonthChange(monthOffset - 1) }, contentPadding = PaddingValues(0.dp), modifier = Modifier.size(48.dp).semantics { contentDescription = "Предыдущий месяц" }) { Text("−", color = color) }
+                if (onMonthChange != null) MonthButton(false, color) { onMonthChange(monthOffset - 1) }
                 BasicText(month.format(DateTimeFormatter.ofPattern("LLLL yyyy", Locale.getDefault())).replaceFirstChar { it.titlecase(Locale.getDefault()) }, Modifier.weight(1f).padding(bottom = 8.dp), style = TextStyle(color = color, fontWeight = FontWeight.Medium, textAlign = TextAlign.Center), maxLines = 1, autoSize = TextAutoSize.StepBased(8.sp, (20 * scale).sp))
-                if (onMonthChange != null) TextButton(onClick = { onMonthChange(monthOffset + 1) }, contentPadding = PaddingValues(0.dp), modifier = Modifier.size(48.dp).semantics { contentDescription = "Следующий месяц" }) { Text("+", color = color) }
+                if (onMonthChange != null) MonthButton(true, color) { onMonthChange(monthOffset + 1) }
             }
             Row {
                 grid.weekdays.forEach { weekday ->
@@ -172,6 +175,21 @@ private fun MonthCalendar(month: YearMonth, today: java.time.LocalDate, firstDay
                     }
                 }
             }
+        }
+    }
+}
+
+@Composable
+private fun MonthButton(next: Boolean, color: Color, onClick: () -> Unit) {
+    IconButton(onClick, Modifier.size(48.dp).semantics {
+        contentDescription = if (next) "Следующий месяц" else "Предыдущий месяц"
+    }) {
+        Canvas(Modifier.size(24.dp)) {
+            val edge = size.width * if (next) .4f else .6f
+            val tip = size.width * if (next) .65f else .35f
+            val middle = Offset(tip, size.height * .5f)
+            drawLine(color, Offset(edge, size.height * .25f), middle, 2.dp.toPx(), StrokeCap.Round)
+            drawLine(color, middle, Offset(edge, size.height * .75f), 2.dp.toPx(), StrokeCap.Round)
         }
     }
 }
