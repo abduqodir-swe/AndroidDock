@@ -1,0 +1,14 @@
+AndroidDock 0.1.0 / 2026-10-09
+Source commit: 475f625214034994529c5195249b363589986c6e
+Build: ./gradlew assembleDebug test assembleDebugAndroidTest — passed
+minSdk 26 / compileSdk 36 / targetSdk 36 (temporary)
+APK: app/build/outputs/apk/debug/app-debug.apk
+APK SHA256: f19525b657937bd8c8f8080621c82a7294796eb667918b468150d45ec4c7d643
+JVM test reports:
+dev.androiddock.core.model.ClockStateHolderTest: tests=6, failures=0, errors=0
+dev.androiddock.core.model.DockModelTest: tests=9, failures=0, errors=0
+dev.androiddock.core.model.DockEditorTest: tests=1, failures=0, errors=0
+dev.androiddock.prototype.DockRepositoryTest: tests=2, failures=0, errors=0
+Native Compose UI: 4 tests passed on POCO X7 Pro / Android 16 (stage2-ui-test.txt)
+Full process restart: saved Solo persisted (stage2-process-restart.json)
+DreamService: portrait -> landscape same token, Back/touch/lock verified; automatic charging launch remains firmware-limited

@@ -1,0 +1,21 @@
+{
+  "original": {
+    "system.font_scale": "1.0",
+    "system.accelerometer_rotation": "0",
+    "system.user_rotation": "0",
+    "secure.screensaver_enabled": "0",
+    "secure.screensaver_components": "com.google.android.apps.photos/com.google.android.apps.photos.daydream.PhotosDreamService"
+  },
+  "version": "0.1.0",
+  "device": "POCO X7 Pro / Android 16",
+  "font130": "Captured portrait then landscape",
+  "activity_back_focus": "mCurrentFocus=Window{b0262db u0 com.mi.android.globallauncher/com.miui.home.launcher.Launcher}",
+  "error": "Expected Dream settings, but WifiSettingsActivity was foreground; no tap performed. System settings restored.",
+  "restored": {
+    "system.font_scale": "1.0",
+    "system.accelerometer_rotation": "0",
+    "system.user_rotation": "0",
+    "secure.screensaver_enabled": "0",
+    "secure.screensaver_components": "com.google.android.apps.photos/com.google.android.apps.photos.daydream.PhotosDreamService"
+  }
+}

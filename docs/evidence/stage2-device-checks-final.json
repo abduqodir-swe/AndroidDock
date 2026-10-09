@@ -1,0 +1,26 @@
+{
+  "original": {
+    "system.font_scale": "1.0",
+    "system.accelerometer_rotation": "0",
+    "system.user_rotation": "0",
+    "secure.screensaver_enabled": "0",
+    "secure.screensaver_components": "com.google.android.apps.photos/com.google.android.apps.photos.daydream.PhotosDreamService"
+  },
+  "version": "0.1.0",
+  "device": "POCO X7 Pro / Android 16",
+  "font130": "Captured portrait then landscape",
+  "activity_back_focus": "mCurrentFocus=Window{15e7312 u0 com.android.settings/com.android.settings.Settings$DreamSettingsActivity}",
+  "dream_portrait": "mCurrentDream=DreamRecord{token=android.os.Binder@6a7c480, name=ComponentInfo{dev.androiddock.prototype/dev.androiddock.prototype.DockDreamService}, userId=0, isPreview=true, canDoze=false, isDozing=false, isWaking=false, dozeScreenState=0, dozeScreenBrightness=-1, dozeScreenBrightnessFloat=NaN}\nmDreamsEnabledSetting=true\n  mCurrentDream:",
+  "dream_landscape": "mCurrentDream=DreamRecord{token=android.os.Binder@6a7c480, name=ComponentInfo{dev.androiddock.prototype/dev.androiddock.prototype.DockDreamService}, userId=0, isPreview=true, canDoze=false, isDozing=false, isWaking=false, dozeScreenState=0, dozeScreenBrightness=-1, dozeScreenBrightnessFloat=NaN}\nmDreamsEnabledSetting=true\n  mCurrentDream:",
+  "dream_back": "mCurrentDream=null\nmDreamsEnabledSetting=true\n  mCurrentDream: null",
+  "dream_touch": "mCurrentDream=null\nmDreamsEnabledSetting=true\n  mCurrentDream: null",
+  "dream_sleep": "mCurrentDream=DreamRecord{token=android.os.Binder@cd11201, name=ComponentInfo{com.android.systemui/com.android.keyguard.doze.MiuiDozeService}, userId=0, isPreview=false, canDoze=true, isDozing=true, isWaking=false, dozeScreenState=3, dozeScreenBrightness=1, dozeScreenBrightnessFloat=NaN}\nmDreamsEnabledSetting=true\n  mCurrentDream:",
+  "keyguard": "Primary user: deviceLocked=1, trustState=UNTRUSTED, strongAuthRequired=0x0",
+  "restored": {
+    "system.font_scale": "1.0",
+    "system.accelerometer_rotation": "0",
+    "system.user_rotation": "0",
+    "secure.screensaver_enabled": "0",
+    "secure.screensaver_components": "com.google.android.apps.photos/com.google.android.apps.photos.daydream.PhotosDreamService"
+  }
+}

@@ -1,0 +1,8 @@
+
+dev.androiddock.prototype.DockActivityTest:....
+
+Time: 38,259
+
+OK (4 tests)
+
+

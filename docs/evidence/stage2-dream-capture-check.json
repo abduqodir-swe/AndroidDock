@@ -1,0 +1,24 @@
+{
+  "portrait": {
+    "image_size": [
+      1220,
+      2712
+    ],
+    "dream": "mCurrentDream=DreamRecord{token=android.os.Binder@1c877bf, name=ComponentInfo{dev.androiddock.prototype/dev.androiddock.prototype.DockDreamService}, userId=0, isPreview=true, canDoze=false, isDozing=false, isWaking=false, dozeScreenState=0, dozeScreenBrightness=-1, dozeScreenBrightnessFloat=NaN}\nmDreamsEnabledSetting=true\n  mCurrentDream:",
+    "display": "overrideConfig={1.0 434mcc4mnc [ru_RU] ldltr sw375dp w375dp h834dp 520dpi nrml long hdr widecg port night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1220, 2712) mAppBounds=Rect(0, 0 - 1220, 2712) mMaxBounds=Rect(0, 0 - 1220, 2712) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0 mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} as.7 s.27508 fontWeightAdjustment=0/d/0 themeChanged=0 themeChangedFlags=0 display=0 extraData = Bundle[{}] screenType=0/0}\noverrideConfig={0.0 ?mcc0mnc ?localeList ?layoutDir ?swdp ?wdp ?hdp ?density ?lsize ?long ?ldr ?wideColorGamut ?orien ?uimode ?night ?touch ?keyb/?/? ?nav/? winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=null mMaxBounds=Rect(0, 0 - 0, 0) mDisplayRotation=undefined mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=undefined mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} ?fontWeightAdjustment/0/0 themeChanged=0 themeChangedFlags=0 display=-1 extraData = Bundle[{}] screenType=-2/0}\nmCurrentAppOrientation=SCREEN_ORIENTATION_UNSPECIFIED\nmRotation=0 mDeferredRotationPauseCount=0\nmUserRotationMode=USER_ROTATION_LOCKED mUserRotation=ROTATION_0"
+  },
+  "landscape": {
+    "image_size": [
+      2712,
+      1220
+    ],
+    "dream": "mCurrentDream=DreamRecord{token=android.os.Binder@1c877bf, name=ComponentInfo{dev.androiddock.prototype/dev.androiddock.prototype.DockDreamService}, userId=0, isPreview=true, canDoze=false, isDozing=false, isWaking=false, dozeScreenState=0, dozeScreenBrightness=-1, dozeScreenBrightnessFloat=NaN}\nmDreamsEnabledSetting=true\n  mCurrentDream:",
+    "display": "overrideConfig={1.0 434mcc4mnc [ru_RU] ldltr sw375dp w834dp h375dp 520dpi nrml long hdr widecg land night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 2712, 1220) mAppBounds=Rect(0, 0 - 2712, 1220) mMaxBounds=Rect(0, 0 - 2712, 1220) mDisplayRotation=ROTATION_90 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_90 mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} as.7 s.27646 fontWeightAdjustment=0/d/0 themeChanged=0 themeChangedFlags=0 display=0 extraData = Bundle[{}] screenType=0/0}\noverrideConfig={0.0 ?mcc0mnc ?localeList ?layoutDir ?swdp ?wdp ?hdp ?density ?lsize ?long ?ldr ?wideColorGamut ?orien ?uimode ?night ?touch ?keyb/?/? ?nav/? winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=null mMaxBounds=Rect(0, 0 - 0, 0) mDisplayRotation=undefined mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=undefined mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} ?fontWeightAdjustment/0/0 themeChanged=0 themeChangedFlags=0 display=-1 extraData = Bundle[{}] screenType=-2/0}\nmCurrentAppOrientation=SCREEN_ORIENTATION_UNSPECIFIED\nmRotation=1 mDeferredRotationPauseCount=0\nmUserRotationMode=USER_ROTATION_LOCKED mUserRotation=ROTATION_90"
+  },
+  "restored": {
+    "system.accelerometer_rotation": "0",
+    "system.user_rotation": "0",
+    "secure.screensaver_enabled": "0",
+    "secure.screensaver_components": "com.google.android.apps.photos/com.google.android.apps.photos.daydream.PhotosDreamService"
+  }
+}
