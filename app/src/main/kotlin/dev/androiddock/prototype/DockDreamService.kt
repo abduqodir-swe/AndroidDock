@@ -31,7 +31,10 @@ class DockDreamService : DreamService() {
             setViewCompositionStrategy(ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
             setContent {
                 val state by holder.state.collectAsStateWithLifecycle()
-                DockScreen(state)
+                val configuration by appContainer.repository.state.collectAsStateWithLifecycle()
+                val battery by appContainer.battery.state.collectAsStateWithLifecycle()
+                val settings = (configuration as? SettingsState.Ready)?.settings
+                if (settings != null) DockScreen(state, settings = settings, battery = battery)
             }
         }
         composeView = view

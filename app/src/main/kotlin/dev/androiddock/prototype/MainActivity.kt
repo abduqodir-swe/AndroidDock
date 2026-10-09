@@ -13,6 +13,16 @@ import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.TextButton
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.material3.CircularProgressIndicator
+import dev.androiddock.core.model.DockSettings
+import kotlinx.coroutines.launch
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -42,17 +52,42 @@ class MainActivity : ComponentActivity() {
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         setContent {
             val state by clock.state.collectAsStateWithLifecycle()
+            val configuration by appContainer.repository.state.collectAsStateWithLifecycle()
+            val battery by appContainer.battery.state.collectAsStateWithLifecycle()
+            var editing by remember { mutableStateOf(false) }
             MaterialTheme(colorScheme = darkColorScheme()) {
                 Box(Modifier.fillMaxSize()) {
-                    DockScreen(state)
+                    val settings = (configuration as? SettingsState.Ready)?.settings
+                    if (settings != null) {
+                    DockScreen(state, settings = settings, battery = battery, modifier = Modifier.padding(bottom = 72.dp))
+                    Row(Modifier.align(Alignment.BottomCenter).safeDrawingPadding().padding(8.dp)) {
+                    TextButton(onClick = { editing = true }) { Text("Настроить") }
                     OutlinedButton(
                         onClick = ::openScreensaverSettings,
-                        modifier = Modifier.align(Alignment.BottomCenter)
-                            .safeDrawingPadding().padding(24.dp),
                     ) {
                         Text(stringResource(R.string.screensaver_settings))
                     }
+                    }
+                    if (editing) AlertDialog(onDismissRequest = { editing = false }, title = { Text("Первый день недели") }, text = {
+                        Column {
+                            TextButton(onClick = { save { it.withProfile(it.mode, it.profile().copy(firstDayOfWeek = 1)) }; editing = false }) { Text("Понедельник") }
+                            TextButton(onClick = { save { it.withProfile(it.mode, it.profile().copy(firstDayOfWeek = 7)) }; editing = false }) { Text("Воскресенье") }
+                        }
+                    }, confirmButton = { TextButton(onClick = { editing = false }) { Text("Закрыть") } })
+                    } else if (configuration == SettingsState.Error) {
+                        Text("Не удалось прочитать настройки. Данные сохранены; перезапустите приложение.", Modifier.align(Alignment.Center).padding(24.dp))
+                    } else CircularProgressIndicator(Modifier.align(Alignment.Center))
                 }
+            }
+        }
+    }
+
+    private fun save(transform: (DockSettings) -> DockSettings) {
+        appContainer.scope.launch {
+            try { appContainer.repository.update(transform) }
+            catch (error: Exception) {
+                Log.e("AndroidDock", "Settings write failed", error)
+                Toast.makeText(this@MainActivity, "Не удалось сохранить настройки", Toast.LENGTH_LONG).show()
             }
         }
     }

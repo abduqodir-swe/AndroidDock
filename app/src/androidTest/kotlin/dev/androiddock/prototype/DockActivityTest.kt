@@ -7,6 +7,7 @@ import android.os.SystemClock
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.SemanticsMatcher
 import androidx.compose.ui.semantics.SemanticsProperties
 import androidx.compose.ui.semantics.getOrNull
@@ -35,6 +36,9 @@ class DockActivityTest {
                 ?.matches(Regex("\\d{2}:\\d{2}:\\d{2}")) == true
         })
         clockNode.assertIsDisplayed()
+        compose.onNodeWithTag("calendar").assertIsDisplayed()
+        compose.onNodeWithTag("today").assertIsDisplayed()
+        compose.onNodeWithTag("battery").assertIsDisplayed()
         compose.onNodeWithText("Настройки заставки").assertIsDisplayed()
         val firstText = clockNode.fetchSemanticsNode().config[SemanticsProperties.Text].single().text
         compose.waitUntil(3_000) {
@@ -51,6 +55,7 @@ class DockActivityTest {
                 compose.activity.resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE
         }
         clockNode.assertIsDisplayed()
+        compose.onNodeWithTag("calendar").assertIsDisplayed()
         scenario.onActivity { assertSame(original, ViewModelProvider(it)[ClockViewModel::class.java]) }
         capture("activity-landscape.png")
         scenario.onActivity { it.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT }
