@@ -8,6 +8,17 @@ import androidx.compose.foundation.text.BasicText
 import androidx.compose.foundation.text.TextAutoSize
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.produceState
+import androidx.compose.foundation.Image
+import androidx.compose.material3.TextButton
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.unit.IntOffset
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import android.graphics.BitmapFactory
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -47,50 +58,78 @@ fun DockScreen(
     modifier: Modifier = Modifier,
     settings: DockSettings = DockSettings(),
     battery: Availability<BatteryState> = Availability.Unavailable,
+    orientationOverride: DockOrientation? = null,
+    preview: Boolean = false,
+    monthOffset: Int = 0,
+    onMonthChange: ((Int) -> Unit)? = null,
 ) {
     val profile = settings.profile()
-    val orientation = currentDockOrientation()
+    val orientation = orientationOverride ?: currentDockOrientation()
     val layout = profile.layout(orientation)
     val time = Instant.ofEpochMilli(state.epochMillis).atZone(ZoneId.systemDefault())
-    Box(modifier.fillMaxSize().background(Color.Black).safeDrawingPadding().padding(24.dp)) {
+    val shift = if (profile.pixelShift && !preview) pixelShiftOffset(state.epochMillis) else 0 to 0
+    Box(modifier.fillMaxSize()) {
+    DockBackdrop(profile)
+    Box(Modifier.fillMaxSize().then(if (preview) Modifier else Modifier.safeDrawingPadding()).padding(if (preview || orientation == DockOrientation.LANDSCAPE) 8.dp else 24.dp).offset { IntOffset(shift.first, shift.second) }) {
         if (layout.kind == LayoutKind.SOLO) {
-            DockPanel(layout.first, profile, time, battery, Modifier.fillMaxSize())
+            DockPanel(layout.first, profile, time, battery, Modifier.fillMaxSize(), monthOffset, onMonthChange)
         } else if (orientation == DockOrientation.PORTRAIT) {
             Column(Modifier.fillMaxSize(), verticalArrangement = Arrangement.spacedBy(layout.spacing.dp)) {
-                DockPanel(layout.first, profile, time, battery, Modifier.weight(layout.firstWeight).fillMaxWidth())
-                DockPanel(layout.second, profile, time, battery, Modifier.weight(1f - layout.firstWeight).fillMaxWidth())
+                DockPanel(layout.first, profile, time, battery, Modifier.weight(layout.firstWeight).fillMaxWidth(), monthOffset, onMonthChange)
+                DockPanel(layout.second, profile, time, battery, Modifier.weight(1f - layout.firstWeight).fillMaxWidth(), monthOffset, onMonthChange)
             }
         } else {
             Row(Modifier.fillMaxSize(), horizontalArrangement = Arrangement.spacedBy(layout.spacing.dp)) {
-                DockPanel(layout.first, profile, time, battery, Modifier.weight(layout.firstWeight).fillMaxHeight())
-                DockPanel(layout.second, profile, time, battery, Modifier.weight(1f - layout.firstWeight).fillMaxHeight())
+                DockPanel(layout.first, profile, time, battery, Modifier.weight(layout.firstWeight).fillMaxHeight(), monthOffset, onMonthChange)
+                DockPanel(layout.second, profile, time, battery, Modifier.weight(1f - layout.firstWeight).fillMaxHeight(), monthOffset, onMonthChange)
             }
         }
+    }
+    }
+}
+
+@Composable
+private fun DockBackdrop(profile: DockProfile) {
+    val color = when (profile.background) {
+        DockBackground.BLACK, DockBackground.PHOTO -> Color.Black
+        DockBackground.GRAPHITE -> Color(0xFF15191D)
+        DockBackground.BLUE -> Color(0xFF0C1A28)
+    }
+    Box(Modifier.fillMaxSize().background(color))
+    if (profile.background == DockBackground.PHOTO) {
+        val context = LocalContext.current
+        val bitmap by produceState<android.graphics.Bitmap?>(null, profile.photoPath) {
+            value = withContext(Dispatchers.IO) {
+                context.appContainer.photos.resolve(profile.photoPath)?.let { file ->
+                    try { BitmapFactory.decodeFile(file.path) } catch (_: Exception) { null }
+                }
+            }
+        }
+        bitmap?.let { Image(it.asImageBitmap(), contentDescription = null, Modifier.fillMaxSize().testTag("photo-background"), contentScale = ContentScale.Crop) }
+        // Fixed scrim keeps light numerals readable on arbitrary photographs.
+        Box(Modifier.fillMaxSize().background(Color.Black.copy(alpha = .72f)))
+        if (bitmap == null) Text("Фото недоступно", color = Color.White, modifier = Modifier.padding(24.dp))
     }
 }
 
 @Composable
 private fun DockPanel(
     config: PanelConfig, profile: DockProfile, time: java.time.ZonedDateTime,
-    battery: Availability<BatteryState>, modifier: Modifier,
+    battery: Availability<BatteryState>, modifier: Modifier, monthOffset: Int, onMonthChange: ((Int) -> Unit)?,
 ) {
     val color = config.accent.color()
     Box(modifier.background(
         if (config.surface) Color(0xFF17191C) else Color.Transparent,
         RoundedCornerShape(if (config.rounded) 16.dp else 0.dp),
-    ).padding(12.dp), contentAlignment = Alignment.Center) {
+    ).padding(8.dp), contentAlignment = Alignment.Center) {
         when (config.widget) {
-            WidgetKind.CLOCK -> Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(16.dp)) {
-                val format = (if (profile.use24Hour) "HH:mm" else "hh:mm") + (if (profile.showSeconds) ":ss" else "")
-                BasicText(time.format(DateTimeFormatter.ofPattern(format, Locale.getDefault())),
-                    Modifier.fillMaxWidth().testTag("clock"),
-                    style = TextStyle(color = color, fontFamily = FontFamily.Monospace, textAlign = TextAlign.Center),
-                    maxLines = 1, autoSize = TextAutoSize.StepBased(24.sp, (128 * config.textScale).sp))
+            WidgetKind.CLOCK -> Column(Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                ClockFace(time, profile, color, config.textScale, Modifier.weight(1f).fillMaxWidth())
                 if (!profile.use24Hour) Text(time.format(DateTimeFormatter.ofPattern("a", Locale.getDefault())), color = color, fontSize = 18.sp)
                 if (profile.showDate) Text(time.format(DateTimeFormatter.ofPattern("EEEE, d MMMM", Locale.getDefault())), color = color.copy(alpha = .8f), fontSize = 16.sp, textAlign = TextAlign.Center)
                 if (profile.showBattery) BatteryLabel(battery, color)
             }
-            WidgetKind.CALENDAR -> MonthCalendar(YearMonth.from(time), time.toLocalDate(), DayOfWeek.of(profile.firstDayOfWeek), color, config.textScale)
+            WidgetKind.CALENDAR -> MonthCalendar(YearMonth.from(time).plusMonths(monthOffset.toLong()), time.toLocalDate(), DayOfWeek.of(profile.firstDayOfWeek), color, config.textScale, monthOffset, onMonthChange)
             WidgetKind.BATTERY -> BatteryLabel(battery, color, large = true)
         }
     }
@@ -106,16 +145,20 @@ internal fun BatteryLabel(state: Availability<BatteryState>, color: Color, large
 }
 
 @Composable
-private fun MonthCalendar(month: YearMonth, today: java.time.LocalDate, firstDay: DayOfWeek, color: Color, scale: Float) {
+private fun MonthCalendar(month: YearMonth, today: java.time.LocalDate, firstDay: DayOfWeek, color: Color, scale: Float, monthOffset: Int, onMonthChange: ((Int) -> Unit)?) {
     val grid = monthGrid(month, firstDay)
     BoxWithConstraints(Modifier.fillMaxSize().testTag("calendar")) {
-        val daySize = minOf(maxWidth.value / 7f, (maxHeight.value - 52f).coerceAtLeast(84f) / (grid.cells.size / 7 + 1))
+        val daySize = minOf(maxWidth.value / 7f, (maxHeight.value - 60f).coerceAtLeast(84f) / (grid.cells.size / 7 + 1))
         Column(Modifier.align(Alignment.Center), horizontalAlignment = Alignment.CenterHorizontally) {
-            Text(month.format(DateTimeFormatter.ofPattern("LLLL yyyy", Locale.getDefault())).replaceFirstChar { it.titlecase(Locale.getDefault()) }, color = color, fontWeight = FontWeight.Medium, fontSize = (22 * scale).sp, modifier = Modifier.padding(bottom = 16.dp))
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                if (onMonthChange != null) TextButton(onClick = { onMonthChange(monthOffset - 1) }, contentPadding = PaddingValues(0.dp), modifier = Modifier.size(48.dp).semantics { contentDescription = "Предыдущий месяц" }) { Text("−", color = color) }
+                BasicText(month.format(DateTimeFormatter.ofPattern("LLLL yyyy", Locale.getDefault())).replaceFirstChar { it.titlecase(Locale.getDefault()) }, Modifier.weight(1f).padding(bottom = 8.dp), style = TextStyle(color = color, fontWeight = FontWeight.Medium, textAlign = TextAlign.Center), maxLines = 1, autoSize = TextAutoSize.StepBased(8.sp, (20 * scale).sp))
+                if (onMonthChange != null) TextButton(onClick = { onMonthChange(monthOffset + 1) }, contentPadding = PaddingValues(0.dp), modifier = Modifier.size(48.dp).semantics { contentDescription = "Следующий месяц" }) { Text("+", color = color) }
+            }
             Row {
                 grid.weekdays.forEach { weekday ->
                     Box(Modifier.size(daySize.dp), contentAlignment = Alignment.Center) {
-                        Text(weekday.getDisplayName(DateTextStyle.SHORT_STANDALONE, Locale.getDefault()), color = color.copy(alpha = .7f), fontSize = (12 * scale).sp)
+                        BasicText(weekday.getDisplayName(DateTextStyle.SHORT_STANDALONE, Locale.getDefault()), Modifier.fillMaxWidth(), style = TextStyle(color = color.copy(alpha = .7f), textAlign = TextAlign.Center), maxLines = 1, autoSize = TextAutoSize.StepBased(6.sp, (12 * scale).sp))
                     }
                 }
             }
@@ -124,7 +167,7 @@ private fun MonthCalendar(month: YearMonth, today: java.time.LocalDate, firstDay
                     week.forEach { date ->
                         Box(Modifier.size(daySize.dp).padding(2.dp).background(if (date == today) color else Color.Transparent, CircleShape)
                             .then(if (date == today) Modifier.testTag("today").semantics { contentDescription = "Сегодня, $date" } else Modifier), contentAlignment = Alignment.Center) {
-                            if (date != null) Text(date.dayOfMonth.toString(), color = if (date == today) Color.Black else color, fontSize = (16 * scale).sp)
+                            if (date != null) BasicText(date.dayOfMonth.toString(), Modifier.testTag("day-${date.dayOfMonth}"), style = TextStyle(color = if (date == today) Color.Black else color, textAlign = TextAlign.Center), maxLines = 1, autoSize = TextAutoSize.StepBased(6.sp, (16 * scale).sp))
                         }
                     }
                 }

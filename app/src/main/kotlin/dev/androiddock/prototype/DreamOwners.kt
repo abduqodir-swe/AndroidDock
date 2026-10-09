@@ -17,7 +17,7 @@ internal class DreamOwners : LifecycleOwner, SavedStateRegistryOwner {
 
     init {
         savedStateController.performAttach()
-        // The clock has no persisted UI configuration and derives its value from wall time.
+        // Persistent configuration comes from DataStore; this owner supplies Compose's contract.
         savedStateController.performRestore(null)
         registry.currentState = Lifecycle.State.CREATED
     }

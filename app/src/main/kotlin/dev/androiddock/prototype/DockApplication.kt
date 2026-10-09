@@ -17,6 +17,7 @@ class AppContainer(context: Context) {
     val scope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
     val repository = DockRepository(context.dockStore, scope)
     val battery = BatteryProvider(context.applicationContext, scope)
+    val photos = PhotoStore(context.applicationContext)
 }
 
 val Context.appContainer: AppContainer

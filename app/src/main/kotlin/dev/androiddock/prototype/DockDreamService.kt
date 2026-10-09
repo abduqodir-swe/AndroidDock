@@ -34,7 +34,11 @@ class DockDreamService : DreamService() {
                 val configuration by appContainer.repository.state.collectAsStateWithLifecycle()
                 val battery by appContainer.battery.state.collectAsStateWithLifecycle()
                 val settings = (configuration as? SettingsState.Ready)?.settings
-                if (settings != null) DockScreen(state, settings = settings, battery = battery)
+                DockTheme {
+                    WindowBrightness(window, settings?.profile()?.windowBrightness() ?: -1f)
+                    if (settings != null) DockScreen(state, settings = settings, battery = battery)
+                    else if (configuration == SettingsState.Error) androidx.compose.material3.Text("Не удалось прочитать настройки")
+                }
             }
         }
         composeView = view
