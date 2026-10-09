@@ -3,6 +3,7 @@ package dev.androiddock.prototype
 import android.content.pm.ActivityInfo
 import android.content.res.Configuration
 import android.graphics.Bitmap
+import android.os.SystemClock
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithText
@@ -40,11 +41,14 @@ class DockActivityTest {
             clockNode.fetchSemanticsNode().config[SemanticsProperties.Text].single().text != firstText
         }
         lateinit var original: ClockViewModel
+        lateinit var portraitActivity: MainActivity
+        scenario.onActivity { portraitActivity = it }
         scenario.onActivity { original = ViewModelProvider(it)[ClockViewModel::class.java] }
         capture("activity-portrait.png")
         scenario.onActivity { it.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE }
         compose.waitUntil(5_000) {
-            compose.activity.resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE
+            compose.activity !== portraitActivity &&
+                compose.activity.resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE
         }
         clockNode.assertIsDisplayed()
         scenario.onActivity { assertSame(original, ViewModelProvider(it)[ClockViewModel::class.java]) }
@@ -59,6 +63,8 @@ class DockActivityTest {
 
     private fun capture(name: String) {
         compose.waitForIdle()
+        // Compose idleness does not include WindowManager's rotation animation.
+        SystemClock.sleep(800)
         val instrumentation = InstrumentationRegistry.getInstrumentation()
         val screenshot = instrumentation.uiAutomation.takeScreenshot()
         val file = File(instrumentation.targetContext.getExternalFilesDir(null), name)
