@@ -1,0 +1,13 @@
+--------- beginning of main
+10-09 12:11:40.663 19356 19356 I AndroidDock: Dream window attached; Compose owners installed
+10-09 12:11:40.667 19356 19356 I AndroidDock: Dream started
+10-09 12:12:23.024 19356 19356 I AndroidDock: Dream stopped
+10-09 12:12:23.029 19356 19356 I AndroidDock: Dream window detached; composition and scope released
+10-09 12:13:14.913 19356 19356 I AndroidDock: Dream window attached; Compose owners installed
+10-09 12:13:14.913 19356 19356 I AndroidDock: Dream started
+10-09 12:13:49.486 19356 19356 I AndroidDock: Dream stopped
+10-09 12:13:49.493 19356 19356 I AndroidDock: Dream window detached; composition and scope released
+10-09 12:24:55.987 21463 21463 I AndroidDock: Dream window attached; Compose owners installed
+10-09 12:24:55.987 21463 21463 I AndroidDock: Dream started
+10-09 12:25:29.528 21463 21463 I AndroidDock: Dream stopped
+10-09 12:25:29.563 21463 21463 I AndroidDock: Dream window detached; composition and scope released

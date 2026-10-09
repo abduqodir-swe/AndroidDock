@@ -1,0 +1,11 @@
+{
+  "initial_focus": "mCurrentFocus=Window{9ed588a u0 dev.androiddock.prototype/dev.androiddock.prototype.MainActivity}",
+  "activity_after_20_seconds": {
+    "power": "mWakefulness=Awake\nmIsPowered=true\nmPlugType=1\nmIsPowered=true",
+    "focus": "mCurrentFocus=Window{9ed588a u0 dev.androiddock.prototype/dev.androiddock.prototype.MainActivity}"
+  },
+  "focus_after_back": "mCurrentFocus=Window{60f0a60 u0 com.android.settings/com.android.settings.Settings$DreamSettingsActivity}",
+  "idle_dreams": "DREAM MANAGER (dumpsys dreams)\n\nmCurrentDream=DreamRecord{token=android.os.Binder@dd3b6a7, name=ComponentInfo{com.android.systemui/com.android.keyguard.doze.MiuiDozeService}, userId=0, isPreview=false, canDoze=true, isDozing=true, isWaking=false, dozeScreenState=3, dozeScreenBrightness=255, dozeScreenBrightnessFloat=NaN}\nmForceAmbientDisplayEnabled=false\nmDreamsOnlyEnabledForDockUser=false\nmDreamsEnabledSetting=true\nmDreamsActivatedOnDockByDefault=true\nmDreamsActivatedOnChargeByDefault=false\nmDreamsActivatedOnPosturedByDefault=false\nmIsDocked=false\nmIsCharging=true\nmWhenToDream=2\nmKeepDreamingWhenUnpluggingDefault=false\ngetDozeComponent()=ComponentInfo{com.android.systemui/com.android.keyguard.doze.MiuiDozeService}\nmDreamOverlayServiceName=null\n\nDreamland:\n  mCurrentDream:\n    mToken=android.os.Binder@dd3b6a7\n    mName=ComponentInfo{com.android.systemui/com.android.keyguard.doze.MiuiDozeService}\n    mIsPreviewMode=false\n    mCanDoze=true\n    mUserId=0\n    mBound=true\n    mService=android.service.dreams.IDreamService$Stub$Proxy@93c50cb\n    mWakingGently=false\n  mSentStartBroadcast=true\n",
+  "idle_power": "mWakefulness=Dozing",
+  "restored_screen_off_timeout": "600000"
+}

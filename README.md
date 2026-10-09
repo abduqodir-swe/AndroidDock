@@ -27,3 +27,56 @@ AGP использует встроенную поддержку Kotlin; отд�
 Результаты проверки POCO X7 Pro / Android 16 записываются в
 [docs/platform-findings.md](docs/platform-findings.md). Подключение устройства
 и успешная сборка сами по себе не подтверждают работоспособность заставки.
+
+На проверенной HyperOS OS3.0.302.0.WOJMIXM работают Activity и штатный предпросмотр
+DreamService. Автоматический запуск на зарядке ограничен конфигурацией прошивки
+`mDreamsSupportedConfig=false`: в проверенном простое включается системный AOD.
+Прототип это ограничение не обходит. Подробности и доказательства — в findings.
+
+## Запуск прототипа
+
+```sh
+adb -s <serial> install -r app/build/outputs/apk/debug/app-debug.apk
+adb -s <serial> shell am start -n dev.androiddock.prototype/.MainActivity
+```
+
+В приложении нажмите «Настройки заставки», включите системную заставку и
+выберите AndroidDock. Предпросмотр и автоматический запуск при простое на
+зарядке — отдельные проверки. При нескольких записях одного беспроводного
+телефона выбирайте один конкретный serial.
+
+Activity выходит через системный Back, часы не перехватывают касание. Заставка
+неинтерактивна и завершается при первом событии ввода. Настроек часов нет:
+24 часа с секундами, чёрный фон, обе ориентации.
+
+## Compose в DreamService
+
+Каждое подключение окна получает DreamOwners с LifecycleRegistry и
+SavedStateRegistryController. `performAttach()` и `performRestore(null)` вызываются
+до создания композиции. На ComposeView установлены ViewTreeLifecycleOwner и
+ViewTreeSavedStateRegistryOwner; ViewModelStoreOwner не нужен, потому что DockScreen
+не создаёт ViewModel. Activity использует тонкий ClockViewModel, переживающий поворот.
+
+Lifecycle заставки: CREATED при подключении, RESUMED при старте, CREATED при
+остановке, DESTROYED при отсоединении. Стратегия
+DisposeOnViewTreeLifecycleDestroyed и явный disposeComposition освобождают
+композицию; ClockStateHolder закрывает собственный coroutine scope. Saved-state
+registry здесь обеспечивает контракт Compose, а не сохранение настроек: их нет,
+и время каждый раз берётся из системных часов. Документы и Dock Packs пока не
+сериализуются, поэтому DataStore и kotlinx.serialization в этап 0 не добавлены.
+
+## Проверки
+
+6 JVM-тестов state holder: `./gradlew :core:model:test`.
+UI-тест на одном конкретном устройстве:
+
+```sh
+./gradlew assembleDebugAndroidTest
+adb -s <serial> install -r app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk
+adb -s <serial> shell am instrument -w dev.androiddock.prototype.test/androidx.test.runner.AndroidJUnitRunner
+```
+
+На HyperOS может потребоваться подтверждение установки тестового APK на телефоне.
+UI-тест проверяет ход часов, портрет первым, ландшафт вторым, фактическое
+пересоздание Activity и сохранение ViewModel. Результаты и нативные снимки —
+в [docs/evidence](docs/evidence). Предложение по SDK — [ADR-002](docs/decisions/ADR-002.md).
