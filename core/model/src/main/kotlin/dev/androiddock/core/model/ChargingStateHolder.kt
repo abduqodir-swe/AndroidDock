@@ -17,7 +17,7 @@ data class ChargingSession(
 data class SavedChargingSession(val boot: Int, val session: ChargingSession)
 
 enum class ChargingPhase { WAITING, PENDING, LAUNCHING, SHOWING, WAIT_FOR_USE, BLOCKED, DISABLED }
-enum class ChargingEffect { LAUNCH, CLOSE, LAUNCH_TIMEOUT }
+enum class ChargingEffect { LAUNCH, CLOSE, LAUNCH_TIMEOUT, RESTORE_WINDOW }
 enum class ChargingScreenSignal { NONE, SCREEN_ON, SCREEN_OFF, USER_PRESENT }
 data class ChargingEnvironment(val plugged: Boolean, val interactive: Boolean, val keyguardLocked: Boolean, val allowed: Boolean, val alwaysOn: Boolean = false)
 
@@ -42,12 +42,14 @@ class ChargingStateHolder(
     private var lastClosedSession: Long? = null
     private var launchAt: Long? = null
     private var timeoutAt: Long? = null
+    private var restoreAt: Long? = null
+    private var lastRestoreAt: Long? = null
     private val powerEligible get() = connected || environment.alwaysOn
     val observing get() = powerEligible
     val displayAllowed get() = powerEligible && environment.allowed && activeSession != null && phase in setOf(ChargingPhase.LAUNCHING, ChargingPhase.SHOWING)
     // A lost visible window never immediately wakes the phone again after a process restart.
     val session get() = ChargingSession(connected, pause != null || activeSession != null, pause ?: if (activeSession != null) ChargingPause.RECOVERY else null)
-    val deadline get() = listOfNotNull(launchAt, timeoutAt).minOrNull()
+    val deadline get() = listOfNotNull(launchAt, timeoutAt, restoreAt).minOrNull()
 
     fun update(
         current: ChargingEnvironment,
@@ -139,6 +141,14 @@ class ChargingStateHolder(
                 return listOf(ChargingEffect.LAUNCH)
             }
         }
+        if (restoreAt?.let { now >= it } == true) {
+            restoreAt = null
+            if (phase == ChargingPhase.SHOWING && activeSession != null &&
+                environment.interactive && environment.keyguardLocked && displayAllowed) {
+                lastRestoreAt = now
+                return listOf(ChargingEffect.RESTORE_WINDOW)
+            }
+        }
         return emptyList()
     }
 
@@ -146,6 +156,7 @@ class ChargingStateHolder(
         if (token == activeSession && displayAllowed) {
             phase = ChargingPhase.SHOWING
             timeoutAt = null
+            restoreAt = null
             presentationWasInteractive = presentationWasInteractive || interactive
         }
     }
@@ -156,8 +167,15 @@ class ChargingStateHolder(
     fun userLeaveHint(token: Long): List<ChargingEffect> =
         if (phase == ChargingPhase.SHOWING) exit(token) else emptyList()
 
-    /** Visibility is not intent. An explicit exit, screen event or unlock determines the policy. */
-    fun windowStopped(token: Long): List<ChargingEffect> = emptyList()
+    /** Reclaim a covered clock, but yield to a persistent system window instead of fighting it. */
+    fun windowStopped(token: Long, interactive: Boolean = false, keyguardLocked: Boolean = false, now: Long = 0): List<ChargingEffect> {
+        if (token == activeSession && phase == ChargingPhase.SHOWING && interactive &&
+            keyguardLocked && restoreAt == null &&
+            (lastRestoreAt?.let { now - it >= RESTORE_COOLDOWN_MS } ?: true)) {
+            restoreAt = now + RESTORE_DELAY_MS
+        }
+        return emptyList()
+    }
 
     fun launchFailed(token: Long): List<ChargingEffect> =
         if (token == activeSession) waitForUse(ChargingPause.LAUNCH_ERROR) else emptyList()
@@ -179,6 +197,8 @@ class ChargingStateHolder(
         if (activeSession == null) return emptyList()
         lastClosedSession = activeSession
         activeSession = null
+        restoreAt = null
+        lastRestoreAt = null
         return listOf(ChargingEffect.CLOSE)
     }
     private fun waitForUse(reason: ChargingPause): List<ChargingEffect> {
@@ -188,9 +208,11 @@ class ChargingStateHolder(
         phase = ChargingPhase.WAIT_FOR_USE
         return effects
     }
-    private fun cancelLaunch() { launchAt = null; timeoutAt = null }
+    private fun cancelLaunch() { launchAt = null; timeoutAt = null; restoreAt = null }
     companion object {
         const val LAUNCH_DELAY_MS = 700L
         const val LAUNCH_ACK_MS = 5_000L
+        const val RESTORE_DELAY_MS = 500L
+        const val RESTORE_COOLDOWN_MS = 30_000L
     }
 }

@@ -14,7 +14,7 @@ sealed interface ChargingEvent {
     data class Shown(val session: Long) : ChargingEvent
     data class Exit(val session: Long) : ChargingEvent
     data class UserLeaveHint(val session: Long) : ChargingEvent
-    data class WindowStopped(val session: Long) : ChargingEvent
+    data class WindowStopped(val session: Long, val interactive: Boolean, val keyguardLocked: Boolean) : ChargingEvent
 }
 
 /** Process-local bridge; persisted power-cycle policy lives in AutomaticStore. */
@@ -27,5 +27,7 @@ class AutomaticRuntime {
     fun shown(session: Long) { send?.invoke(ChargingEvent.Shown(session)) }
     fun exit(session: Long) { send?.invoke(ChargingEvent.Exit(session)) }
     fun userLeaveHint(session: Long) { send?.invoke(ChargingEvent.UserLeaveHint(session)) }
-    fun windowStopped(session: Long) { send?.invoke(ChargingEvent.WindowStopped(session)) }
+    fun windowStopped(session: Long, interactive: Boolean, keyguardLocked: Boolean) {
+        send?.invoke(ChargingEvent.WindowStopped(session, interactive, keyguardLocked))
+    }
 }

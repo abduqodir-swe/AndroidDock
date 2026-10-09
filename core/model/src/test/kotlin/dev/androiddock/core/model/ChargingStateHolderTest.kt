@@ -180,6 +180,42 @@ class ChargingStateHolderTest {
         assertEquals(id, h.activeSession); assertNull(h.pause)
         assertTrue(h.tick(10_000).isEmpty())
     }
+    @Test fun coveredLockedWindowGetsOneBoundedRestoreBeforeSystemTimeout() {
+        val h = showing(); val id = h.activeSession!!
+        h.update(awakeLocked, 800)
+        h.windowStopped(id, interactive = true, keyguardLocked = true, now = 1_000)
+        assertEquals(1_500L, h.deadline)
+        assertTrue(h.tick(1_499).isEmpty())
+        assertEquals(listOf(ChargingEffect.RESTORE_WINDOW), h.tick(1_500))
+        assertTrue(h.tick(2_000).isEmpty())
+        assertEquals(id, h.activeSession)
+        assertEquals(ChargingPhase.SHOWING, h.phase)
+        h.shown(id)
+        h.windowStopped(id, interactive = true, keyguardLocked = true, now = 3_000)
+        assertNull(h.deadline)
+        assertTrue(h.tick(3_500).isEmpty())
+        // A persistent call window can retake focus; do not fight it in a loop.
+        h.shown(id)
+        h.windowStopped(id, interactive = true, keyguardLocked = true, now = 31_500)
+        assertEquals(listOf(ChargingEffect.RESTORE_WINDOW), h.tick(32_000))
+    }
+    @Test fun restoredFocusOrPowerOffCancelsCoveredWindowRecovery() {
+        val focused = showing(); val id = focused.activeSession!!
+        focused.update(awakeLocked, 800)
+        focused.windowStopped(id, interactive = true, keyguardLocked = true, now = 1_000)
+        focused.shown(id)
+        assertNull(focused.deadline)
+        assertTrue(focused.tick(1_500).isEmpty())
+
+        val power = showing(); val powerId = power.activeSession!!
+        power.update(awakeLocked, 800)
+        power.windowStopped(powerId, interactive = true, keyguardLocked = true, now = 1_000)
+        assertEquals(listOf(ChargingEffect.CLOSE), power.update(asleep, 1_100, ChargingScreenSignal.SCREEN_OFF, powerId))
+        assertTrue(power.tick(1_500).isEmpty())
+        assertEquals(ChargingPause.DISPLAY_OFF, power.pause)
+        assertTrue(power.windowStopped(powerId, interactive = true, keyguardLocked = true, now = 2_000).isEmpty())
+        assertNull(power.deadline)
+    }
     @Test fun displayTurnScreenOnDoesNotCountAsUseOnPhoneWithoutKeyguard() {
         val h = ChargingStateHolder()
         h.update(asleep.copy(keyguardLocked = false), 0); h.tick(700)

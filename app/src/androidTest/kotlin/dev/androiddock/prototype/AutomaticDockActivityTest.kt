@@ -2,6 +2,7 @@ package dev.androiddock.prototype
 
 import android.content.Intent
 import android.provider.Settings
+import android.view.WindowManager
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.createEmptyComposeRule
 import androidx.lifecycle.Lifecycle
@@ -68,11 +69,17 @@ class AutomaticDockActivityTest {
     }
 
     @Test fun touchRecreationAndTemporaryStopDoNotSendExit() {
+        scenario!!.onActivity { activity ->
+            assertTrue(activity.window.attributes.flags and WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON != 0)
+        }
         compose.onNodeWithTag("automatic-dock").performTouchInput { click() }
         scenario!!.recreate()
         compose.onNodeWithTag("automatic-dock").assertIsDisplayed()
+        scenario!!.onActivity { activity ->
+            assertTrue(activity.window.attributes.flags and WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON != 0)
+        }
         scenario!!.moveToState(Lifecycle.State.CREATED)
-        assertTrue(events.any { it == ChargingEvent.WindowStopped(token) })
+        assertTrue(events.any { it is ChargingEvent.WindowStopped && it.session == token })
         assertFalse(events.any { it is ChargingEvent.Exit })
         assertEquals(token, container.automaticRuntime.displaySession.value)
         scenario!!.moveToState(Lifecycle.State.RESUMED)

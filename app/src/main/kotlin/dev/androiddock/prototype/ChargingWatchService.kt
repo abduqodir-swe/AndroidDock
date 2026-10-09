@@ -3,6 +3,7 @@ package dev.androiddock.prototype
 import android.app.*
 import android.content.*
 import android.content.pm.ServiceInfo
+import android.media.AudioManager
 import android.os.*
 import android.provider.Settings
 import android.util.Log
@@ -26,7 +27,6 @@ class ChargingWatchService : Service() {
     private var watchingOverlay = false
     private val receiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
-            Log.i(TAG, "event=${intent.action}")
             val signal = when (intent.action) {
                 Intent.ACTION_SCREEN_OFF -> ChargingScreenSignal.SCREEN_OFF
                 Intent.ACTION_SCREEN_ON -> ChargingScreenSignal.SCREEN_ON
@@ -34,12 +34,16 @@ class ChargingWatchService : Service() {
                 else -> ChargingScreenSignal.NONE
             }
             // Capture origin and screen state at delivery, before suspend/persistence can reorder windows.
-            events.trySend(ChargingEvent.ScreenChanged(signal, runtime.display.value, readEnvironment()))
+            val environment = readEnvironment()
+            val session = runtime.display.value
+            trace("broadcast=${intent.action} session=$session environment=$environment")
+            events.trySend(ChargingEvent.ScreenChanged(signal, session, environment))
         }
     }
 
     override fun onCreate() {
         super.onCreate()
+        trace("service onCreate")
         val manager = getSystemService(NotificationManager::class.java)
         manager.createNotificationChannel(NotificationChannel(CHANNEL, "Автопоказ StandBy", NotificationManager.IMPORTANCE_LOW).apply {
             setSound(null, null); enableVibration(false); setShowBadge(false)
@@ -48,10 +52,11 @@ class ChargingWatchService : Service() {
             val notification = notification("Проверка сохранённого согласия")
             if (Build.VERSION.SDK_INT >= 34) startForeground(ID, notification, ServiceInfo.FOREGROUND_SERVICE_TYPE_SPECIAL_USE)
             else startForeground(ID, notification)
+            trace("service foreground started")
         } catch (error: RuntimeException) {
             Log.e(TAG, "Foreground promotion rejected", error)
             runtime.mutableStatus.value = "Система запретила запуск наблюдения; откройте AndroidDock"
-            stopSelf()
+            stopFor("foreground_rejected")
             return
         }
         runtime.send = { events.trySend(it) }
@@ -62,10 +67,10 @@ class ChargingWatchService : Service() {
         scope.launch {
             try {
                 modes = appContainer.automatic.modes()
-                if (!modes.active) { stopSelf(); return@launch }
+                if (!modes.active) { stopFor("modes_inactive_at_start"); return@launch }
                 if (!Settings.canDrawOverlays(this@ChargingWatchService)) {
                     runtime.mutableStatus.value = "Разрешение показа поверх приложений отозвано"
-                    stopSelf(); return@launch
+                    stopFor("overlay_denied_at_start"); return@launch
                 }
                 val boot = Settings.Global.getInt(contentResolver, Settings.Global.BOOT_COUNT, -1)
                 val holder = ChargingStateHolder(appContainer.automatic.restoreSession(boot), nextSessionId = SystemClock::elapsedRealtimeNanos, alwaysOn = modes.alwaysOn)
@@ -79,13 +84,16 @@ class ChargingWatchService : Service() {
                 if (Build.VERSION.SDK_INT >= 33) registerReceiver(receiver, filter, RECEIVER_EXPORTED)
                 else registerReceiver(receiver, filter)
                 registered = true
-                Log.i(TAG, "Foreground observer ready; restored=${holder.session}; boot=$boot")
+                trace("observer ready restored=${holder.session} boot=$boot")
                 events.trySend(ChargingEvent.Refresh)
                 launch {
                     appContainer.automatic.modeChanges.collect { events.send(ChargingEvent.ModesChanged(it)) }
                 }
                 for (event in events) {
                     val now = SystemClock.elapsedRealtime()
+                    val previousPhase = holder.phase
+                    val previousPause = holder.pause
+                    val previousDisplay = holder.activeSession
                     val effects = when (event) {
                         ChargingEvent.Disable -> {
                             appContainer.automatic.disableAll()
@@ -102,10 +110,13 @@ class ChargingWatchService : Service() {
                         }
                         is ChargingEvent.Exit -> holder.exit(event.session)
                         is ChargingEvent.UserLeaveHint -> holder.userLeaveHint(event.session)
-                        is ChargingEvent.WindowStopped -> holder.windowStopped(event.session)
+                        is ChargingEvent.WindowStopped -> holder.windowStopped(event.session, event.interactive, event.keyguardLocked, now)
                         is ChargingEvent.ScreenChanged -> holder.update(event.environment.copy(alwaysOn = modes.alwaysOn), now, event.signal, event.session)
                         ChargingEvent.Refresh -> holder.update(readEnvironment(), now)
                         ChargingEvent.Tick -> holder.update(readEnvironment(), now) + holder.tick(now)
+                    }
+                    if (previousDisplay != null && previousDisplay != holder.activeSession) {
+                        trace("displaySession closed reason=$event session=$previousDisplay next=${holder.activeSession}")
                     }
                     // Persist before any window launch/close, so process death cannot erase a manual exit.
                     if (savedSession != holder.session) {
@@ -117,6 +128,23 @@ class ChargingWatchService : Service() {
                         ChargingEffect.CLOSE -> Unit // The holder has already released the matching token.
                         ChargingEffect.LAUNCH_TIMEOUT -> {
                             Log.e(TAG, "Launch not acknowledged by a focused window; check ActivityTaskManager and OEM lockscreen/background permissions")
+                        }
+                        ChargingEffect.RESTORE_WINDOW -> {
+                            val session = holder.activeSession
+                            val current = readEnvironment()
+                            val audioMode = getSystemService(AudioManager::class.java).mode
+                            val callActive = audioMode == AudioManager.MODE_RINGTONE ||
+                                audioMode == AudioManager.MODE_IN_CALL || audioMode == AudioManager.MODE_IN_COMMUNICATION
+                            if (session != null && current.interactive && current.keyguardLocked &&
+                                current.allowed && (current.plugged || current.alwaysOn) && !callActive) {
+                                try {
+                                    trace("restoring covered DockActivity once session=$session environment=$current")
+                                    startActivity(Intent(this@ChargingWatchService, DockActivity::class.java)
+                                        .putExtra(EXTRA_SESSION, session).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
+                                } catch (error: RuntimeException) {
+                                    Log.e(TAG, "Covered DockActivity restore rejected; session=$session", error)
+                                }
+                            } else trace("covered DockActivity restore cancelled session=$session environment=$current audioMode=$audioMode")
                         }
                         ChargingEffect.LAUNCH -> {
                             val session = checkNotNull(holder.activeSession)
@@ -150,7 +178,10 @@ class ChargingWatchService : Service() {
                     if (lastNotification != notificationKey) {
                         manager.notify(ID, notification(status)); lastNotification = notificationKey
                     }
-                    if (!modes.active || !Settings.canDrawOverlays(this@ChargingWatchService)) { stopSelf(); break }
+                    if (!modes.active || !Settings.canDrawOverlays(this@ChargingWatchService)) {
+                        stopFor(if (!modes.active) "modes_inactive" else "overlay_denied")
+                        break
+                    }
                     deadlineJob?.cancel()
                     val deadline = holder.deadline
                     // No permanent CPU lock: only a bounded lock while scheduling/confirming a launch.
@@ -164,22 +195,26 @@ class ChargingWatchService : Service() {
                         val wait = if (deadline == null) 3_000L else (deadline - SystemClock.elapsedRealtime()).coerceIn(1, 3_000)
                         delay(wait); events.send(ChargingEvent.Tick)
                     }
-                    Log.i(TAG, "source=$event; state=${holder.phase}; pause=${holder.pause}; connected=${holder.connected}; display=${runtime.display.value}; status=$status")
+                    if (event != ChargingEvent.Tick || previousPhase != holder.phase || previousPause != holder.pause || previousDisplay != holder.activeSession) {
+                        trace("source=$event phase=$previousPhase->${holder.phase} pause=$previousPause->${holder.pause} connected=${holder.connected} display=$previousDisplay->${holder.activeSession} deadline=${holder.deadline} effects=$effects")
+                    }
                 }
             } catch (error: CancellationException) { throw error }
             catch (error: Exception) {
                 Log.e(TAG, "Observer failed", error)
                 runtime.mutableStatus.value = "Ошибка наблюдения; откройте AndroidDock для повторного запуска"
-                stopSelf()
+                stopFor("observer_failed")
             }
         }
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        trace("service onStartCommand action=${intent?.action} startId=$startId")
         events.trySend(if (intent?.action == DISABLE) ChargingEvent.Disable else ChargingEvent.Refresh)
         return START_STICKY
     }
     override fun onDestroy() {
+        trace("service onDestroy displaySession=${runtime.display.value}")
         runtime.send = null
         runtime.display.value = null
         if (registered) unregisterReceiver(receiver)
@@ -187,7 +222,7 @@ class ChargingWatchService : Service() {
         releaseWakeLock()
         events.close(); scope.cancel()
         stopForeground(STOP_FOREGROUND_REMOVE)
-        if (lastNotification != null) Log.i(TAG, "Observer stopped; receiver, jobs and wake lock released")
+        trace("service stopped receiver jobs and wake lock released")
         super.onDestroy()
     }
     private fun readEnvironment(): ChargingEnvironment {
@@ -201,6 +236,8 @@ class ChargingWatchService : Service() {
         )
     }
     private fun releaseWakeLock() { wakeLock?.let { if (it.isHeld) it.release() }; wakeLock = null }
+    private fun stopFor(reason: String) { trace("service stopSelf reason=$reason session=${runtime.display.value}"); stopSelf() }
+    private fun trace(message: String) { Log.i(TAG, "t=${SystemClock.elapsedRealtime()} $message") }
     override fun onBind(intent: Intent?): IBinder? = null
 
     private fun notification(status: String): Notification {

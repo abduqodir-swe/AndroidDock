@@ -1,0 +1,8 @@
+POCO 0.3.4: owner physically unplugged USB, StandBy closed, then reconnected USB; no notification contents.
+10-09 19:22:37.161 17273 17273 I AndroidDockAuto: t=476641736 broadcast=android.intent.action.ACTION_POWER_DISCONNECTED session=476610663399337 environment=ChargingEnvironment(plugged=true, interactive=true, keyguardLocked=true, allowed=true, alwaysOn=false)
+10-09 19:22:37.173 17273 17273 I AndroidDockAuto: t=476641748 broadcast=android.intent.action.BATTERY_CHANGED session=476610663399337 environment=ChargingEnvironment(plugged=false, interactive=true, keyguardLocked=true, allowed=true, alwaysOn=false)
+10-09 19:22:37.173 17273 17273 I AndroidDockAuto: t=476641748 displaySession closed reason=ScreenChanged(signal=NONE, session=476610663399337, environment=ChargingEnvironment(plugged=false, interactive=true, keyguardLocked=true, allowed=true, alwaysOn=false)) session=476610663399337 next=null
+10-09 19:22:57.625 17273 17273 I AndroidDockAuto: t=476662200 broadcast=android.intent.action.ACTION_POWER_CONNECTED session=null environment=ChargingEnvironment(plugged=true, interactive=true, keyguardLocked=true, allowed=true, alwaysOn=false)
+10-09 19:22:57.626 17273 17273 I AndroidDockAuto: t=476662201 broadcast=android.intent.action.BATTERY_CHANGED session=null environment=ChargingEnvironment(plugged=true, interactive=true, keyguardLocked=true, allowed=true, alwaysOn=false)
+10-09 19:22:58.329 17273 17273 I AndroidDockAuto: Launching DockActivity from service; session=476662896413802; plugged=true
+10-09 19:22:58.850 17273 17273 I AndroidDockAuto: t=476663425 source=Shown(session=476662896413802) phase=LAUNCHING->SHOWING pause=null->null connected=true display=476662896413802->476662896413802 deadline=null effects=[]

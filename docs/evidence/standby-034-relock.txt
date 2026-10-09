@@ -1,0 +1,5 @@
+POCO 0.3.4: owner unlocked normally, pressed physical power again; StandBy returned on the same USB connection.
+10-09 19:21:59.797 17273 17273 I AndroidDockAuto: t=476604372 broadcast=android.intent.action.USER_PRESENT session=null environment=ChargingEnvironment(plugged=true, interactive=true, keyguardLocked=false, allowed=true, alwaysOn=false)
+10-09 19:22:04.565  2155  2246 I PowerManagerService: Going to sleep due to power_button (uid 1000, screenOffTimeout=600000, activityTimeoutWM=-1, maxDimRatio=0.29999995, maxDimDur=18000, details=null)...
+10-09 19:22:06.099 17273 17273 I AndroidDockAuto: Launching DockActivity from service; session=476610663399337; plugged=true
+10-09 19:22:06.667 17273 17273 I AndroidDockAuto: t=476611242 source=Shown(session=476610663399337) phase=LAUNCHING->SHOWING pause=null->null connected=true display=476610663399337->476610663399337 deadline=null effects=[]

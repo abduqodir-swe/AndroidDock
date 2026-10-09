@@ -1,0 +1,20 @@
+10-09 16:58:08.117 15979 15979 I AndroidDockAuto: event=android.intent.action.SCREEN_OFF
+10-09 16:58:08.136 15979 15979 I AndroidDockAuto: source=ScreenChanged(signal=SCREEN_OFF, session=null, environment=ChargingEnvironment(plugged=true, interactive=false, keyguardLocked=true, allowed=true, alwaysOn=false)); state=PENDING; pause=null; connected=true; display=null; status=Готовимся открыть StandBy
+10-09 16:58:08.840 15979 15979 I AndroidDockAuto: Launching DockActivity from service; session=467973400132362; plugged=true
+10-09 16:58:08.916 15979 15979 I AndroidDockAuto: DockActivity created; locked=true
+10-09 16:58:08.983 15979 15979 I AndroidDockAuto: source=UserLeaveHint(session=467973400132362); state=LAUNCHING; pause=null; connected=true; display=467973400132362; status=Открываем StandBy
+10-09 16:58:09.185 15979 15979 I AndroidDockAuto: event=android.intent.action.SCREEN_ON
+10-09 16:58:09.189 15979 15979 I AndroidDockAuto: source=ScreenChanged(signal=SCREEN_ON, session=467973400132362, environment=ChargingEnvironment(plugged=true, interactive=true, keyguardLocked=true, allowed=true, alwaysOn=false)); state=LAUNCHING; pause=null; connected=true; display=467973400132362; status=Открываем StandBy
+10-09 16:58:09.560 15979 15979 I AndroidDockAuto: source=Shown(session=467973400132362); state=SHOWING; pause=null; connected=true; display=467973400132362; status=StandBy на зарядке
+10-09 16:58:09.560 15979 15979 I AndroidDockAuto: Dock window focused; session=467973400132362; orientation=1
+10-09 16:58:17.841 15979 15979 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 16:58:17.843 15979 15979 I AndroidDockAuto: source=ScreenChanged(signal=NONE, session=467973400132362, environment=ChargingEnvironment(plugged=true, interactive=true, keyguardLocked=true, allowed=true, alwaysOn=false)); state=SHOWING; pause=null; connected=true; display=467973400132362; status=StandBy на зарядке
+10-09 17:02:54.324 15979 15979 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 17:02:54.326 15979 15979 I AndroidDockAuto: source=ScreenChanged(signal=NONE, session=467973400132362, environment=ChargingEnvironment(plugged=true, interactive=true, keyguardLocked=true, allowed=true, alwaysOn=false)); state=SHOWING; pause=null; connected=true; display=467973400132362; status=StandBy на зарядке
+10-09 17:04:32.044 15979 15979 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 17:04:32.046 15979 15979 I AndroidDockAuto: source=ScreenChanged(signal=NONE, session=467973400132362, environment=ChargingEnvironment(plugged=true, interactive=true, keyguardLocked=true, allowed=true, alwaysOn=false)); state=SHOWING; pause=null; connected=true; display=467973400132362; status=StandBy на зарядке
+10-09 17:05:27.927 15979 15979 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 17:05:27.931 15979 15979 I AndroidDockAuto: source=ScreenChanged(signal=NONE, session=467973400132362, environment=ChargingEnvironment(plugged=true, interactive=true, keyguardLocked=true, allowed=true, alwaysOn=false)); state=SHOWING; pause=null; connected=true; display=467973400132362; status=StandBy на зарядке
+10-09 17:13:39.443 15979 15979 I AndroidDockAuto: event=android.intent.action.BATTERY_CHANGED
+10-09 17:13:39.446 15979 15979 I AndroidDockAuto: source=ScreenChanged(signal=NONE, session=467973400132362, environment=ChargingEnvironment(plugged=true, interactive=true, keyguardLocked=true, allowed=true, alwaysOn=false)); state=SHOWING; pause=null; connected=true; display=467973400132362; status=StandBy на зарядке
+10-09 17:18:30.968 15979 15979 I AndroidDockAuto: source=Tick; state=SHOWING; pause=null; connected=true; display=467973400132362; status=StandBy на зарядке

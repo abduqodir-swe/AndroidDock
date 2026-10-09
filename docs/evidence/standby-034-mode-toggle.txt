@@ -1,0 +1,14 @@
+POCO X7 Pro, AndroidDock 0.3.4, 2026-10-09 local time.
+Source: adb logcat restricted to AndroidDockAuto tag; only relevant events retained.
+The owner disabled "Автоматически на зарядке" in AndroidDock settings while USB remained connected, locked the phone, and reported that StandBy did not appear. Then the owner enabled the same switch again (Always On remained off), locked the phone, and reported that StandBy appeared.
+
+10-09 19:30:46.951 I AndroidDockAuto: t=477131526 service stopSelf reason=modes_inactive session=null
+10-09 19:30:46.959 I AndroidDockAuto: t=477131534 service onDestroy displaySession=null
+10-09 19:30:46.963 I AndroidDockAuto: t=477131538 service stopped receiver jobs and wake lock released
+10-09 19:31:09.997 I AndroidDockAuto: t=477154572 service onCreate
+10-09 19:31:10.001 I AndroidDockAuto: t=477154576 service foreground started
+10-09 19:31:10.031 I AndroidDockAuto: t=477154606 source=ModesChanged(modes=AutomaticModes(onPower=true, alwaysOn=false)) phase=WAITING->WAITING pause=null->null connected=true display=null->null deadline=null effects=[]
+10-09 19:31:12.113 I AndroidDockAuto: t=477156688 source=ScreenChanged(signal=SCREEN_OFF, session=null, environment=ChargingEnvironment(plugged=true, interactive=false, keyguardLocked=true, allowed=true, alwaysOn=false)) phase=WAITING->PENDING pause=null->null connected=true display=null->null deadline=477157384 effects=[]
+10-09 19:31:12.828 I AndroidDockAuto: Launching DockActivity from service; session=477157388309524; plugged=true
+10-09 19:31:13.398 I AndroidDockAuto: t=477157973 activity=focus=true session=477157388309524 active=477157388309524 interactive=true locked=true keepScreenOn=true brightness=0.3 lastInteraction=477157463 orientation=1
+10-09 19:31:13.410 I AndroidDockAuto: t=477157985 source=Shown(session=477157388309524) phase=LAUNCHING->SHOWING pause=null->null connected=true display=477157388309524->477157388309524 deadline=null effects=[]

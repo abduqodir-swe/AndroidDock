@@ -1,0 +1,3 @@
+host_epoch	device_elapsed_ms	wakefulness	top_dock	hold_screen_dock	service_foreground	usb_powered
+1791554648.655	475532.44	Awake	False	False	True	True
+1791554658.794	475542.58	Awake	False	False	True	True
