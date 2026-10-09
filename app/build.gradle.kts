@@ -36,5 +36,7 @@ dependencies {
     implementation(libs.compose.ui)
     implementation(libs.coroutines.android)
     implementation(libs.lifecycle.viewmodel)
+    implementation(libs.activity.compose)
+    implementation(libs.lifecycle.runtime.compose)
     testImplementation(libs.junit)
 }
