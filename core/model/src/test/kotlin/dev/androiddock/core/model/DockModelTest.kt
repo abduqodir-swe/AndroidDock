@@ -58,4 +58,14 @@ class DockModelTest {
         assertNull(batteryPercent(20, 0))
         assertNull(batteryPercent(101, 100))
     }
+
+    @Test fun pixelShiftMovesAtMinuteBoundaryWithinTwoPhysicalPixels() {
+        assertEquals(pixelShiftOffset(0), pixelShiftOffset(59_999))
+        assertNotEquals(pixelShiftOffset(59_999), pixelShiftOffset(60_000))
+        assertEquals(pixelShiftOffset(0), pixelShiftOffset(9 * 60_000))
+        for (minute in -20..20) {
+            val (x, y) = pixelShiftOffset(minute * 60_000L)
+            assertTrue(x in -2..2 && y in -2..2)
+        }
+    }
 }
