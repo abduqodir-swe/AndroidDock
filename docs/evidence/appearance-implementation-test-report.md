@@ -1,0 +1,24 @@
+# AndroidDock appearance editor: implementation test evidence
+
+Date: 2026-10-10. Device: POCO at explicit wireless ADB serial `192.168.0.100:44049`. The AndroidDock debug APK and androidTest APK were installed with `adb install -r`; app data was not cleared.
+
+## Coverage
+
+`DockActivityTest` was updated for the editor's tabs and renamed controls. `AppearanceEditorTest` covers preset save/cancel and retention of comfort settings and the other mode; edited orientation across physical rotation; calendar controls; independent photo crop and reset; and cancellation of photo-picker and lock-wallpaper requests. The picker cancellation invokes the ViewModel's null-result path. The wallpaper test opens its UI entry point but cancels before the adapter is called. It does not verify the Android picker or the platform dialog's negative button.
+
+The tests captured 14 native Compose roots in [appearance-2026-10-10](appearance-2026-10-10): Midnight, Studio, Flip and Gallery in portrait and landscape, plus the three editor tabs in each orientation. Gallery uses a generated solid-blue JPEG, not a personal photo. After the final analog-clock thumbnail change, a narrow test recaptured the two clock-editor screens. Those two images visibly show distinct digital, analog and Flip thumbnails, an unobstructed save/cancel row, and portrait/landscape previews.
+
+## Commands and results
+
+- Final integration build: `env ANDROID_HOME=/opt/homebrew/share/android-commandlinetools JAVA_HOME=$(/usr/libexec/java_home -v 17) ./gradlew :core:model:test :app:testDebugUnitTest :app:assembleDebug :app:assembleDebugAndroidTest :app:lintDebug --offline` — **passed** (`BUILD SUCCESSFUL in 6s`). JUnit XML reports 59 model and 12 app unit tests, zero failures/errors/skips. Lint passed with 16 pre-existing warnings. Both APKs compiled.
+- Final APK SHA-256: `app/build/outputs/apk/debug/app-debug.apk` = `d8e142b6df72840a3a67e37ab8f20aca790c6770eff82195e447d0b7c5eb147b`; `app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk` = `f2719b9ab46d9cd1e2a4fc6004ddbec43cfe1906306eae20f7f7f1de79e4c38f`.
+- First native run: `adb -s 192.168.0.100:44049 shell am instrument -w -e class dev.androiddock.prototype.DockActivityTest,dev.androiddock.prototype.AppearanceEditorTest dev.androiddock.prototype.test/androidx.test.runner.AndroidJUnitRunner` — 9 tests, 2 failures in the new test fixture. It read `repository.state.value` before asynchronous `repository.update` became visible; the expected snapshots were stale. The four existing activity tests and three other new scenarios passed.
+- After synchronizing the test fixture and protecting original photo files, a five-method `AppearanceEditorTest` run passed 2 and failed 3 during `@Before`: the Compose Activity was absent or not foreground. The POCO was awake and unlocked; AndroidRuntime showed no recent crash, while Settings was the foreground window after the run. Once the user left the phone idle and AndroidDock was opened to the foreground, a bounded retry of those three methods returned **`OK (3 tests)`** in 19.6 seconds. Every one of the original nine unique native scenarios therefore passed on at least one run with the corrected fixture.
+- Final thumbnail check: `adb -s 192.168.0.100:44049 shell am instrument -w -e class dev.androiddock.prototype.AppearanceEditorTest#captureClockEditorThumbnailsAfterFinalRenderingChange dev.androiddock.prototype.test/androidx.test.runner.AndroidJUnitRunner` — **`OK (1 test)`** in 5.4 seconds. Its two images replaced the earlier clock-editor captures.
+- `git diff --check -- app/src/androidTest/kotlin/dev/androiddock/prototype/DockActivityTest.kt app/src/androidTest/kotlin/dev/androiddock/prototype/AppearanceEditorTest.kt docs/evidence/appearance-implementation-test-report.md` — passed.
+
+## Device state and limits
+
+The user explicitly authorized a temporary private backup after automatic approval review initially rejected its export. Before native tests, the app's `files` and `shared_prefs` were copied to `/private/tmp` without printing contents. After the last test, AndroidDock was force-stopped and the archive restored. A second read-only archive comparison confirmed all two original private files byte-for-byte equal; neither original archive nor restored archive contained a background JPEG. Both temporary archives were then deleted. The 14 test-created PNGs were copied to the repository and removed from the device's external app-files directory.
+
+System `accelerometer_rotation` and `user_rotation` were both `0` before and after testing. Font scale was read as `1.0` afterward; no font setting was changed. No system wallpaper operation, browser check, app-data clear or uninstall was performed. The final debug APK remains installed on the POCO; system picker UI and an actual lock-screen wallpaper change remain untested.

@@ -99,8 +99,10 @@ class DockActivityTest {
     @Test fun savedPortraitSoloAndFirstWeekdaySurviveRecreationAndDoNotChangeLandscape() {
         openEditor()
         capture("stage2-editor-portrait.png")
-        compose.onNodeWithText("SOLO").performScrollTo().performClick()
-        compose.onNodeWithText("Воскресенье").performScrollTo().performClick()
+        compose.onNodeWithText("Компоновка").performScrollTo().performClick()
+        compose.onNodeWithTag("Компоновка:Одна панель").performScrollTo().performClick()
+        compose.onNodeWithTag("editor-tab-1").performClick()
+        compose.onNodeWithTag("Первый день недели:Воскресенье").performScrollTo().performClick()
         compose.onNodeWithTag("save-editor").performClick()
         compose.waitUntil(5_000) { saved().desktop.portrait.kind == LayoutKind.SOLO && saved().desktop.firstDayOfWeek == 7 }
         compose.activityRule.scenario.recreate()
@@ -127,7 +129,8 @@ class DockActivityTest {
         capture("stage2-analog-landscape.png")
         rotate(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT, Configuration.ORIENTATION_PORTRAIT)
         openEditor()
-        compose.onNodeWithText("Перекидные").performScrollTo().performClick()
+        compose.onNodeWithTag("Стиль часов:Flip").performScrollTo().performClick()
+        compose.onNodeWithText("Комфорт").performScrollTo().performClick()
         compose.onNodeWithTag("Анимация часов").performScrollTo().performClick()
         compose.onNodeWithTag("save-editor").performClick()
         compose.waitUntil(5_000) { saved().desktop.clockStyle == ClockStyle.FLIP && !saved().desktop.animations }

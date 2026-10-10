@@ -1,0 +1,235 @@
+Graph: 1576 nodes; 2149 edges; 192 communities
+[graphify] MultiDiGraph edge-collapse diagnostic
+input: <in-memory>
+input_stage: provided JSON (normal graph.json is post-build)
+effective_directed: <direct-call>
+nodes: 1402
+unverified_code_nodes: 0
+raw_edges: 2227
+valid_candidate_edges: 1836
+missing_endpoint_edges: 0
+dangling_endpoint_edges: 383
+external_reference_edges: 8
+self_loop_edges: 7
+exact_duplicate_edges: 0
+directed_unique_endpoint_pairs: 1785
+directed_same_endpoint_collapsed_edges: 51
+undirected_unique_endpoint_pairs: 1768
+undirected_same_endpoint_collapsed_edges: 68
+same_endpoint_group_count: 46
+relation_variant_groups: 33
+source_file_variant_groups: 0
+source_location_variant_groups: 13
+context_variant_groups: 1
+post_build_graph_type: Graph
+post_build_edges: 2149
+producer_suppression_sites: 12
+producer_suppression_examples:
+  - L1646 seen_ids arity=unknown
+  - L2179 seen_ids arity=unknown
+  - L2181 seen_doc_refs arity=unknown
+  - L2551 seen_ids arity=unknown
+  - L2698 seen_ids arity=unknown
+  - L3424 seen_keys arity=unknown
+  - L3593 seen_keys arity=unknown
+  - L5669 seen_ids arity=unknown
+examples:
+  - app_src_main_kotlin_dev_androiddock_prototype_dockeditor -> app_src_main_kotlin_dev_androiddock_prototype_dockeditor_label edges=5 relations=['contains'] locations=['L28', 'L29', 'L30', 'L31', 'L32'] contexts=['']
+  - app_src_main_kotlin_dev_androiddock_prototype_clockviewmodel -> app_src_main_kotlin_dev_androiddock_prototype_clockviewmodel_requestlockwallpaper edges=3 relations=['contains', 'declares'] locations=['L46', 'L53'] contexts=['', 'Named declaration token in original file; no call relationship implied.']
+  - core_model_src_main_kotlin_dev_androiddock_core_model_chargingstateholder -> core_model_src_main_kotlin_dev_androiddock_core_model_chargingstateholder_chargingenvironment edges=3 relations=['calls', 'contains', 'declares'] locations=['L22', 'L39'] contexts=['', 'Named declaration token in original file; no call relationship implied.', 'call']
+  - app_src_main_kotlin_dev_androiddock_prototype_automaticpermissions -> app_src_main_kotlin_dev_androiddock_prototype_automaticpermissions_automaticpermissions edges=2 relations=['contains', 'declares'] locations=['L17'] contexts=['', 'Named declaration token in original file; no call relationship implied.']
+  - app_src_main_kotlin_dev_androiddock_prototype_automaticpermissions -> app_src_main_kotlin_dev_androiddock_prototype_automaticpermissions_automaticpermissionpage edges=2 relations=['contains', 'declares'] locations=['L28'] contexts=['', 'Named declaration token in original file; no call relationship implied.']
+note: normal graph.json is post-build; raw producer loss must be measured earlier.
+COMMUNITY LABEL INPUT
+0 59 : ChargingWatchService.kt, ChargingWatchService [class L15], notification() [fun L243], onBind() [fun L241], onCreate() [fun L44], onDestroy() [fun L216], onReceive() [fun L29], onStartCommand() [fun L211], readEnvironment() [fun L228], releaseWakeLock() [fun L238], start() [fun L258], stopFor() [fun L239], trace() [fun L240], Companion [object L251], audioMode [val L135], battery [val L229]
+1 54 : ChargingStateHolder.kt, cancelLaunch() [fun L211], closeWindow() [fun L196], disable() [fun L183], eligible() [fun L189], exit() [fun L163], launchFailed() [fun L180], schedule() [fun L190], shown() [fun L155], tick() [fun L128], userLeaveHint() [fun L167], waitForUse() [fun L204], windowStopped() [fun L171], Companion [object L212], allowed [val L22], alwaysOn [val L22]
+2 47 : DockEditor.kt, ClockStyle.label() [fun L30], DockAccent.label() [fun L32], DockBackground.label() [fun L31], DockMode.label() [fun L28], layoutChange() [fun L63], point() [fun L286], profileChange() [fun L62], widgetChange() [fun L64], WidgetKind.label() [fun L29], aspect [val L127], backgroundScroll [val L57], calendarScroll [val L56], center [val L285], clockScroll [val L55], config [val L310]
+3 42 : ChargingStateHolder, ChargingStateHolderTest, .alwaysOnLaunchesOnBatteryAndCableChangesKeepTheSameWindow(), .alwaysOnPowerButtonPauseSurvivesCableChangesAndRearmsAfterUse(), .alwaysOnSupportsRepeatedUseAndLockOnBattery(), .alwaysOnUnplugDoesNotCancelPending(), .backClosesOnlyThisPresentationAndUseRearmsNextLock(), .batteryShowing(), .coveredLockedWindowGetsOneBoundedRestoreBeforeSystemTimeout(), .delayedOldStopExitFocusAndScreenOffDoNotCloseNewWindow(), .disabledModeNeverRearmsFromScreenOrPowerEvents(), .disconnectCancelsPendingAndClosesDisplayImmediately(), .displayScreenOnDoesNotCloseLaunchingWindowWithKeyguard(), .displayTurnScreenOnDoesNotCountAsUseOnPhoneWithoutKeyguard(), .duplicateInitialScreenOffDuringLaunchingDoesNotActAsPowerButton(), .evenShortPowerDisconnectBeginsNewCycleAfterPowerButtonPause()
+4 42 : Draft future import acceptance cases, Draft complete two-profile appearance allowlist, Draft bounded ZIP validation, Draft asset integrity and bounded full decode, Draft durable apply and crash recovery, Draft attribution 512-code-point hard limit, Draft declarative ZIP package, Dock Packs v1 draft contract, Draft runtime and permission exclusion, Draft bounded metadata-free JPEG pipeline, Draft local comfort and mode preservation, Draft private local provenance record, Draft authorship and metadata contract, Draft implementation decisions outstanding, Draft per-export photo opt-in, Draft two-profile preview explicit confirmation
+5 40 : ClockViewModel.kt, beginPhotoPick(), cancelLockWallpaper(), cancelPhotoPick(), clearError(), clearNotice(), PhotoPick, saveEditor(), ClockViewModel [class L19], importPhoto() [fun L104], onCleared() [fun L127], requestLockWallpaper() [fun L53], start() [fun L124], stop() [fun L125], busy [val L24], draft [val L38]
+6 30 : Independent photo crops and explicit lock wallpaper confirmation, Native POCO evidence replaces historical-only validation, Midnight, Studio, Flip and Gallery implementation priority, AndroidDock: идеи и предварительный план, Таймеры, Pomodoro и секундомер, Уведомления, Дополнительные готовые наборы, Фоны, Идеи, которые стоит выделить, Технический стек и архитектура, Принятый стек, Предложения по хостам и состоянию, Предложения по хранению и зависимостям, Предлагаемые модули и контракт виджета, Предложения по таймерам и тестированию, Формат Dock Packs
+7 29 : animatable, ClockFaces.kt, DockScreen.kt, basictext, border, brush, circleshape, clearandsetsemantics, clip, cos, datetimeformatter, fontfamily, fontweight, graphicslayer, iconbutton, instant
+8 29 : Native editor and display use distinct palettes, Auto size is not verified legibility, Gallery local photo scrim, Source-derived tokens and subsequent native evidence, Secondary, Tertiary, Neutral, Named Rules, Typography, Hierarchy, Named Rules, Layout, Elevation & Depth, Shapes, Components, Buttons
+9 28 : activityinfo, after, androidjunit4, AlwaysOnDeviceTest.kt, AppearanceEditorTest.kt, AutomaticDockActivityTest.kt, AutomaticSettingsTest.kt, DockActivityTest.kt, asandroidbitmap, assumetrue, before, configuration, copyonwritearraylist, createandroidcomposerule, createemptycomposerule, delay
+10 26 : activityresultcontracts, alertdialog, alignment, DockActivity.kt, Bundle, ComponentActivity, MainActivity.kt, backhandler, build, cancellationexception, color, detecttapgestures, enableedgetoedge, lifecyclescope, modifier, onclick
+11 23 : DockSystemBars.kt, setDockImmersiveMode(), Bundle, ClockViewModel, ComponentActivity, MainActivity, .cancelEditor(), .onCreate(), .onResume(), .onStart(), .onStop(), .onWindowFocusChanged(), .openScreensaverSettings(), .save(), WindowBrightness.kt, WindowBrightness()
+12 22 : activity, activitynotfoundexception, AutomaticPermissions.kt, AutomaticPermissions, .read(), Activity.openAutomaticPermission() [fun L31], read() [fun L19], Companion [object L18], batteryUnrestricted [val L17], info [val L32], notifications [val L17], overlay [val L17], preferred [val L33], onResume(), componentname, Context
+13 22 : DockRepository, .update(), DockRepositoryTest, .committedSettingsSurviveNewStoreAndConcurrentEdits(), .invalidSavedSettingsShowErrorAndAreNotOverwritten(), cancelingGalleryPickerLeavesDraftAndAppearanceUntouched(), DockSettings, .validated(), SettingsCodec, .decode(), .encode(), PixelShift.kt, pixelShiftOffset(), .appearanceAndCropsRoundTripIndependentlyPerModeAndOrientation(), DockModelTest, .invalidPanelProportionIsRejected()
+14 22 : properties, maximum, minimum, type, maximum, minimum, type, const, maxLength, pattern, type, byteLength, height, mediaType, path, sha256
+15 20 : DockSettings.kt, ClockStyle, ANALOG, DIGITAL, FLIP, DockAccent, AMBER, RED, WHITE, LayoutKind, DUO, SOLO, WidgetKind, BATTERY, CALENDAR, CLOCK
+16 20 : layout, $ref, maximum, minimum, type, enum, type, additionalProperties, properties, required, type, first, firstWeight, kind, second, spacing
+17 18 : AppearanceEditorTest, .calendarChangesAndCropResetSaveWithoutChangingOtherOrientation(), .cancelledPhotoAndWallpaperRequestsLeaveSettingsUntouched(), .captureClockEditorThumbnailsAfterFinalRenderingChange(), .captureNativeAppearanceAndEditorMatrixWithSyntheticPhoto(), .captureRoot(), .draft(), .editedOrientationRemainsExplicitAcrossPhysicalRotation(), .openEditor(), .prepare(), .presetSaveAndCancelKeepIndependentModesAndComfortSettings(), .restore(), .rotate(), .saved(), .testPhoto(), .viewModel()
+18 18 : AutomaticSettingsActivity.kt, Bundle, onCreate(), AutomaticSettingsActivity [class L27], changeMode() [fun L93], alwaysOn [val L46], enabled [val L45], notifications [val L48], status [val L47], busy [var L29], error [var L30], permissions [var L28], DockTheme(), componentactivity, contentdescription, rememberscrollstate
+19 18 : AutomaticStore, .consent(), .disableAll(), .modes(), .restoreSession(), .saveSession(), .setAlwaysOn(), .setEnabled(), AutomaticStoreTest, .alwaysOnConsentIsIndependentPersistsAndDisableAllClearsBoth(), .explicitConsentAndSuppressedCycleSurviveProcessButNotBoot(), .explicitNewOptInClearsOldPauseAndKeepsDisplaySettings(), .oldSuppressedSnapshotRearmsAfterUseOnSameCharge(), ChargingSession, SavedChargingSession, .explicitAlwaysOnOptInRearmsButCannotBypassDisableOrPermission()
+20 17 : AndroidLockWallpaper.kt, LockWallpaper.kt, PhotoStore.kt, .import(), bitmap, bitmapfactory, currentcoroutinecontext, dispatchers, ensureactive, exifinterface, file, matrix, photocrop, Uri, uuid, wallpapermanager
+21 16 : BatteryLabel(), color(), configAccentIsColored(), DockPanel(), DockScreen(), Modifier, YearMonth, MonthButton(), MonthCalendar(), Availability, BatteryState, Data, T, NoPermission, Unavailable, java
+22 15 : AutomaticRuntime, .exit(), .shown(), .userLeaveHint(), .windowStopped(), ChargingEvent, Disable, Exit, ModesChanged, Refresh, ScreenChanged, Shown, Tick, UserLeaveHint, WindowStopped
+23 15 : DockDreamService.kt, DockDreamService, .onAttachedToWindow(), .onDestroy(), .onDetachedFromWindow(), .onDreamingStarted(), .onDreamingStopped(), .releaseWindow(), collectasstatewithlifecycle, ComposeView, DreamService, getvalue, setviewtreelifecycleowner, setviewtreesavedstateregistryowner, viewcompositionstrategy
+24 15 : $ref, anyOf, $ref, properties, landscape, photoAsset, portrait, showBattery, showDate, showSeconds, use24Hour, type, type, type, type
+25 14 : DockActivity, .exit(), .finishWithReason(), .onCreate(), .onDestroy(), .onNewIntent(), .onPause(), .onResume(), .onStart(), .onStop(), .onUserInteraction(), .onUserLeaveHint(), .onWindowFocusChanged(), .trace()
+26 14 : Choice(), ClockStyleChoices(), DockEditor(), EditorChoiceChip(), Expansion(), T, label(), PanelEditor(), SettingSlider(), SettingSwitch(), WidgetControls(), ClosedFloatingPointRange, ClockState.kt, ClockState
+27 14 : DockPhotoPreview.kt, asimagebitmap, background, box, canvas, cliptobounds, dp, fillmaxsize, imagebitmap, intoffset, intsize, localcontext, padding, text
+28 13 : DockActivityTest, .analogAndFlipClocksAndCancelledEditWork(), .assertCleanDock(), .capture(), .clockRunsInPortraitAndViewModelSurvivesLandscapeRotation(), .modesNightBrightnessAndPrivatePhotoBackgroundWork(), .openEditor(), .prepare(), .restore(), .rotate(), .saved(), .savedPortraitSoloAndFirstWeekdaySurviveRecreationAndDoNotChangeLandscape(), .systemBarsVisible()
+29 13 : AndroidLockWallpaper, .isAllowed(), .isSupported(), .setLockPhoto(), confirmLockWallpaper(), requestLockWallpaper(), LockWallpaperAdapter, .isAllowed(), .isSupported(), .setLockPhoto(), .apply(), LockWallpaperRequest, .setLockPhoto()
+30 13 : DockPhotoPreview(), Modifier, currentDockOrientation(), DockBackdrop(), DockOrientation, LANDSCAPE, PORTRAIT, DockProfile, .layout(), .photoFraming(), .windowBrightness(), .withLayout(), .withPhotoFraming()
+31 13 : Approved four appearance worlds, Current local appearance implementation scope, AndroidDock, Users, Product Purpose, Operating Context, Capabilities and Constraints, Evidence on Hand, Platform, Product Principles, Current Scope — 2026-10-10, Stack, AndroidDock current product scope
+32 12 : AutomaticStore.kt, DockRepository.kt, booleanpreferenceskey, catch, coroutinescope, datastore, edit, map, preferences, sharingstarted, statein, stringpreferenceskey
+33 12 : AutoCloseable, ClockStateHolder, .close(), .start(), .stop(), ClockStateHolderTest, .closingCancelsScopeAndPreventsRestart(), .initialStateUsesCurrentWallTime(), .repeatedStartDoesNotCreateExtraTickers(), .runningClockReadsWallTimeEverySecond(), .stoppingPausesUpdatesAndStartingResynchronizes(), .systemTimeChangeIsReflectedWithoutCountingTicks()
+34 12 : enum, type, panel, additionalProperties, properties, required, type, accent, rounded, surface, type, type
+35 11 : AutomaticRuntime.kt, asstateflow, cancel, ClockStateHolder.kt, DockEditorStateHolder.kt, coroutinedispatcher, isactive, Job, launch, mutablestateflow, StateFlow
+36 11 : BatteryProvider, DockApplication.kt, AppContainer, DockApplication, PhotoStore, .removeFiles(), .resolve(), .unusedFiles(), Application, preferencesdatastore, supervisorjob
+37 11 : DreamOwners.kt, DreamOwners, .destroy(), .resume(), .stop(), Lifecycle, LifecycleOwner, lifecycleregistry, SavedStateRegistry, savedstateregistrycontroller, SavedStateRegistryOwner
+38 11 : LockWallpaperOperation, LockWallpaperTest.kt, confirmationKeepsSnapshotAcrossDraftChangesAndCancelDoesNotSet(), explicitOperationPassesExactPhotoAndCropToLockOnlyAdapter(), FakeAdapter, .isAllowed(), .isSupported(), supportPolicyAndMissingFileFailBeforeSetting(), viewModelReportsFailedOperationAndReleasesBusy(), withPhoto(), zeroIdAndAdapterErrorsAreNeverSuccess()
+39 11 : AndroidDock appearance editor: implementation test evidence, Commands and results, - Final integration build: `env ANDROID_HOME=/opt/homebrew/share/android-commandlinetools JAVA_HOME=$(/usr/libexec/java_home -v 17) ./gradlew :core:model:test :app:testDebugUnitTest :app:assembleDebug :app:assembleDebugAndroidTest, - First native run: `adb -s 192.168.0.100:44049 shell am instrument -w -e class dev.androiddock.prototype.DockActivityTest,dev.androiddock.prototype.AppearanceEditorTest dev.androiddock.prototype.test/androidx.test.runner.AndroidJ, - After synchronizing the test fixture and protecting original photo files, a five-method `AppearanceEditorTest` run passed 2 and failed 3 during `@Before`: the Compose Activity was absent or not foreground. The POCO was awake and, - `git diff --check -- app/src/androidTest/kotlin/dev/androiddock/prototype/DockActivityTest.kt app/src/androidTest/kotlin/dev/androiddock/prototype/AppearanceEditorTest.kt docs/evidence/appearance-implementation-test-report.md` —, Device state and limits, The user explicitly authorized a temporary private backup after automatic approval review initially rejected its export. Before native tests, the app's `files` and `shared_prefs` were copied to `/private/tmp` without printing cont, Coverage, The tests captured 14 native Compose roots in [appearance-2026-10-10](appearance-2026-10-10): Midnight, Studio, Flip and Gallery in portrait and landscape, plus the three editor tabs in each orientation. Gallery uses a generated s, appearance-implementation-test-report.md
+40 10 : Black high-contrast canvas, Rounded bottom panel for mode, edit and screensaver settings, Previous and next month controls around calendar title, Dark blue photo backdrop without identifiable photo subject, Russian date and charging percentage text, Oversized white digital clock with seconds, October 2026 month grid with day 9 highlighted, stage2-photo-landscape screenshot, Landscape clock and calendar side-by-side layout, Visible Android status and navigation bars
+41 10 : Black high-contrast canvas, Rounded bottom panel for mode, edit and screensaver settings, Previous and next month controls around calendar title, Dark blue photo backdrop without identifiable photo subject, Russian date and charging percentage text, Oversized white digital clock with seconds, October 2026 month grid with day 9 highlighted, stage2-photo-portrait screenshot, Portrait clock above date and calendar, Visible Android status and navigation bars
+42 10 : Black high-contrast canvas, Rounded bottom panel for mode, edit and screensaver settings, Previous and next month controls around calendar title, Russian date and charging percentage text, Oversized white digital clock with seconds, Enlarged labels and calendar text in this capture, October 2026 month grid with day 9 highlighted, stage2-font130-landscape screenshot, Landscape clock and calendar side-by-side layout, Visible Android status and navigation bars
+43 10 : Black high-contrast canvas, Rounded bottom panel for mode, edit and screensaver settings, Previous and next month controls around calendar title, Russian date and charging percentage text, Oversized white digital clock with seconds, Enlarged labels and calendar text in this capture, October 2026 month grid with day 9 highlighted, stage2-font130-portrait screenshot, Portrait clock above date and calendar, Visible Android status and navigation bars
+44 9 : Historical pre-implementation mockup brief, Lock screen uses photograph without live clock, AndroidDock: варианты оформления и редактор, Направления, Редактор, Платформенная граница обоев, Решение пользователя, Проверка макетов, BRIEF.md
+45 9 : AppearancePresets.kt, PhotoCrop, PhotoFraming, AppearancePresetsTest.kt, AppearancePresetsTest, .cropEdgesAndZoomStayWithinSourceWithMatchingAspect(), .invalidPhotoSettingsAreRejected(), .oldProfileDefaultsKeepLegacyAppearance(), .rejected()
+46 9 : MonthGrid.kt, batteryPercent(), YearMonth, MonthGrid, DockModelTest.kt, .batteryScalesAndUnavailableValuesAreHandled(), dayofweek, localdate, yearmonth
+47 9 : Black high-contrast canvas, Panel 1 color choices: Light, Amber, Red, DUO and SOLO composition options, My screen editor header with Cancel and Save controls, Clock, date, charging and calendar preview, Bedroom and Desktop mode selector, Portrait and Landscape layout selector, compose-root-stage2-editor-portrait screenshot, Panel 1 widget choices: Clock, Calendar, Battery
+48 9 : Black high-contrast canvas, Rounded bottom panel for mode, edit and screensaver settings, Previous and next month controls around calendar title, Dark blue photo backdrop without identifiable photo subject, Russian date and charging percentage text, Oversized white digital clock with seconds, October 2026 month grid with day 9 highlighted, compose-root-stage2-photo-landscape screenshot, Landscape clock and calendar side-by-side layout
+49 9 : Black high-contrast canvas, Rounded bottom panel for mode, edit and screensaver settings, Previous and next month controls around calendar title, Dark blue photo backdrop without identifiable photo subject, Russian date and charging percentage text, Oversized white digital clock with seconds, October 2026 month grid with day 9 highlighted, compose-root-stage2-photo-portrait screenshot, Portrait clock above date and calendar
+50 9 : Black high-contrast canvas, Rounded bottom panel for mode, edit and screensaver settings, Previous and next month controls around calendar title, Russian date and charging percentage text, Oversized white digital clock with seconds, October 2026 month grid with day 9 highlighted, stage2-activity-landscape screenshot, Landscape clock and calendar side-by-side layout, Visible Android status and navigation bars
+51 9 : Black high-contrast canvas, Rounded bottom panel for mode, edit and screensaver settings, Previous and next month controls around calendar title, Russian date and charging percentage text, Oversized white digital clock with seconds, October 2026 month grid with day 9 highlighted, stage2-activity-portrait screenshot, Portrait clock above date and calendar, Visible Android status and navigation bars
+52 9 : White analog hands and tick-mark dial, Black high-contrast canvas, Rounded bottom panel for mode, edit and screensaver settings, Previous and next month controls around calendar title, Russian date and charging percentage text, October 2026 month grid with day 9 highlighted, stage2-analog-landscape screenshot, Landscape clock and calendar side-by-side layout, Visible Android status and navigation bars
+53 9 : White analog hands and tick-mark dial, Black high-contrast canvas, Rounded bottom panel for mode, edit and screensaver settings, Previous and next month controls around calendar title, Russian date and charging percentage text, October 2026 month grid with day 9 highlighted, stage2-analog-portrait screenshot, Portrait clock above date and calendar, Visible Android status and navigation bars
+54 9 : Black high-contrast canvas, Panel 1 color choices: Light, Amber, Red, DUO and SOLO composition options, My screen editor header with Cancel and Save controls, Clock, date, charging and calendar preview, Bedroom and Desktop mode selector, Portrait and Landscape layout selector, stage2-editor-portrait screenshot, Panel 1 widget choices: Clock, Calendar, Battery
+55 9 : Black high-contrast canvas, Rounded bottom panel for mode, edit and screensaver settings, Previous and next month controls around calendar title, Russian date and charging percentage text, Three dark flip-style digit tiles with horizontal split, October 2026 month grid with day 9 highlighted, stage2-flip-landscape screenshot, Landscape clock and calendar side-by-side layout, Visible Android status and navigation bars
+56 9 : Black high-contrast canvas, Rounded bottom panel for mode, edit and screensaver settings, Previous and next month controls around calendar title, Russian date and charging percentage text, Three dark flip-style digit tiles with horizontal split, October 2026 month grid with day 9 highlighted, stage2-flip-portrait screenshot, Portrait clock above date and calendar, Visible Android status and navigation bars
+57 9 : additionalProperties, required, type, $defs, asset, provenance, additionalProperties, required, type
+58 9 : maxLength, minLength, type, maxLength, pattern, type, author, id, properties
+59 9 : $ref, $ref, additionalProperties, properties, required, type, bedroom, desktop, profiles
+60 8 : AutomaticSettingsTest, .alwaysOnPersistsIndependentlyAndChargingFallbackKeepsObserver(), .enabledConsentSurvivesRecreationAndDisableStopsObserver(), .missingOverlayPermissionDoesNotSaveConsent(), .notificationActionDurablyDisablesModeAndReleasesObserver(), .prepare(), .restore(), AutomaticModes
+61 8 : withAppearance(), DockLayout, PanelConfig, .presetsReplaceBothVisualLayoutsAndPreservePersonalChoices(), DockEditorTest.kt, DockEditorTest, .draftChangesAreIndependentAndUndoRestoresPriorSettings(), .profilesAndOrientationLayoutsSurviveSerializationIndependently()
+62 8 : ChargingPhase, BLOCKED, DISABLED, LAUNCHING, PENDING, SHOWING, WAIT_FOR_USE, WAITING
+63 8 : Black high-contrast canvas, Rounded bottom panel for mode, edit and screensaver settings, Previous and next month controls around calendar title, Russian date and charging percentage text, Oversized white digital clock with seconds, October 2026 month grid with day 9 highlighted, compose-root-stage2-activity-landscape screenshot, Landscape clock and calendar side-by-side layout
+64 8 : Black high-contrast canvas, Rounded bottom panel for mode, edit and screensaver settings, Previous and next month controls around calendar title, Russian date and charging percentage text, Oversized white digital clock with seconds, October 2026 month grid with day 9 highlighted, compose-root-stage2-activity-portrait screenshot, Portrait clock above date and calendar
+65 8 : White analog hands and tick-mark dial, Black high-contrast canvas, Rounded bottom panel for mode, edit and screensaver settings, Previous and next month controls around calendar title, Russian date and charging percentage text, October 2026 month grid with day 9 highlighted, compose-root-stage2-analog-landscape screenshot, Landscape clock and calendar side-by-side layout
+66 8 : White analog hands and tick-mark dial, Black high-contrast canvas, Rounded bottom panel for mode, edit and screensaver settings, Previous and next month controls around calendar title, Russian date and charging percentage text, October 2026 month grid with day 9 highlighted, compose-root-stage2-analog-portrait screenshot, Portrait clock above date and calendar
+67 8 : Black high-contrast canvas, DUO and SOLO composition options, My screen editor header with Cancel and Save controls, Clock, date, charging and calendar preview, Bedroom and Desktop mode selector, Portrait and Landscape layout selector, compose-root-stage2-editor-landscape screenshot, Preview on left and controls on right
+68 8 : Black high-contrast canvas, Rounded bottom panel for mode, edit and screensaver settings, Previous and next month controls around calendar title, Russian date and charging percentage text, Three dark flip-style digit tiles with horizontal split, October 2026 month grid with day 9 highlighted, compose-root-stage2-flip-landscape screenshot, Landscape clock and calendar side-by-side layout
+69 8 : Black high-contrast canvas, Rounded bottom panel for mode, edit and screensaver settings, Previous and next month controls around calendar title, Russian date and charging percentage text, Three dark flip-style digit tiles with horizontal split, October 2026 month grid with day 9 highlighted, compose-root-stage2-flip-portrait screenshot, Portrait clock above date and calendar
+70 8 : Black high-contrast canvas, DUO and SOLO composition options, My screen editor header with Cancel and Save controls, Clock, date, charging and calendar preview, Bedroom and Desktop mode selector, Portrait and Landscape layout selector, stage2-editor-landscape screenshot, Preview on left and controls on right
+71 8 : additionalProperties, required, type, properties, metadata, schemaVersion, const, type
+72 8 : Black high-contrast canvas, Rounded bottom panel for mode, edit and screensaver settings, Previous and next month controls around calendar title, Russian date and charging percentage text, Three dark flip-style digit tiles with horizontal split, October 2026 month grid with day 9 highlighted, phone-android16-flip-landscape screenshot, Landscape clock and calendar side-by-side layout
+73 7 : advancetimeby, assertequals, ClockStateHolderTest.kt, experimentalcoroutinesapi, runcurrent, runtest, standardtestdispatcher
+74 7 : AutomaticPermissionPage, APP_INFO, BATTERY, NOTIFICATIONS, OEM_AUTOSTART, OEM_WINDOWS, OVERLAY
+75 7 : AutomaticRestoreReceiver.kt, AutomaticRestoreReceiver [class L11], onReceive() [fun L12], result [val L14], Intent, log, settings
+76 7 : BatteryProvider.kt, awaitclose, batterymanager, broadcastreceiver, callbackflow, distinctuntilchanged, intentfilter
+77 7 : Seven concept boards; raster semantics pending, Mockups are not runtime screenshots, Макеты оформления AndroidDock, Редактор, Границы решения, Оформления, README.md
+78 7 : ChargingEffect, CLOSE, LAUNCH, LAUNCH_TIMEOUT, RESTORE_WINDOW, ChargingEnvironment, update()
+79 7 : ChargingPause, DISPLAY_OFF, LAUNCH_ERROR, MODE_DISABLED, PERMISSION, RECOVERY, USER_EXIT
+80 7 : DockEditorState, DockEditorStateHolder, .cancel(), .change(), .open(), .selectOrientation(), .undo()
+81 7 : Black high-contrast canvas, Russian date and charging percentage text, Oversized white digital clock with seconds, October 2026 month grid with day 9 highlighted, compose-root-stage2-activity-landscape screenshot, Landscape clock and calendar side-by-side layout, Full display without visible app action panel
+82 7 : Black high-contrast canvas, Russian date and charging percentage text, Oversized white digital clock with seconds, October 2026 month grid with day 9 highlighted, compose-root-stage2-activity-portrait screenshot, Portrait clock above date and calendar, Full display without visible app action panel
+83 7 : Black high-contrast canvas, Russian date and charging percentage text, Oversized white digital clock with seconds, October 2026 month grid with day 9 highlighted, stage2-activity-landscape screenshot, Landscape clock and calendar side-by-side layout, Full display without visible app action panel
+84 7 : Black high-contrast canvas, Russian date and charging percentage text, Oversized white digital clock with seconds, October 2026 month grid with day 9 highlighted, stage2-activity-portrait screenshot, Portrait clock above date and calendar, Full display without visible app action panel
+85 7 : Black high-contrast canvas, Russian date and charging percentage text, Oversized white digital clock with seconds, October 2026 month grid with day 9 highlighted, stage2-dream-landscape screenshot, Landscape clock and calendar side-by-side layout, Full display without visible app action panel
+86 7 : Black high-contrast canvas, Russian date and charging percentage text, Oversized white digital clock with seconds, October 2026 month grid with day 9 highlighted, stage2-dream-portrait screenshot, Portrait clock above date and calendar, Full display without visible app action panel
+87 7 : White analog hands and tick-mark dial, Black high-contrast canvas, Russian date and charging percentage text, October 2026 month grid with day 9 highlighted, standby-034-landscape screenshot, Landscape clock and calendar side-by-side layout, Full display without visible app action panel
+88 7 : maxLength, minLength, type, properties, attribution, remixOf, $ref
+89 6 : ActivityScenario, AutomaticDockActivityTest, .backSendsExplicitExitForCurrentToken(), .prepare(), .restore(), .touchRecreationAndTemporaryStopDoNotSendExit()
+90 6 : AnalogClock(), ClockFace(), FlipCard(), FlipClock(), Color, Modifier
+91 6 : AutomaticStoreTest.kt, DockRepositoryTest.kt, files, first, preferencedatastorefactory, test
+92 6 : DockAppearance, FLIP, GALLERY, LEGACY, MIDNIGHT, STUDIO
+93 6 : Large analog clock with three hands and hour and minute ticks, Black high-contrast canvas, Russian date and charging percentage text, October 2026 month grid with day 9 highlighted, physical-reconnect-portrait screenshot, Portrait clock above date and calendar
+94 6 : Large analog clock with three hands and hour and minute ticks, Black high-contrast canvas, Russian date and charging percentage text, October 2026 month grid with day 9 highlighted, prototype-locked screenshot, Portrait clock above date and calendar
+95 5 : AlwaysOnDeviceTest, .batteryAutostartAndCableChangesPreserveShowingWindow(), .plugged(), .shell(), .top()
+96 5 : ChargingScreenSignal, NONE, SCREEN_OFF, SCREEN_ON, USER_PRESENT
+97 5 : DockBackground, BLACK, BLUE, GRAPHITE, PHOTO
+98 5 : DockMode, BEDROOM, DESKTOP, .profile(), .withProfile()
+99 5 : Black high-contrast canvas, Oversized white digital clock with seconds, Outlined screensaver settings button, activity-landscape screenshot, Visible Android status and navigation bars
+100 5 : Black high-contrast canvas, Oversized white digital clock with seconds, Outlined screensaver settings button, activity-portrait screenshot, Visible Android status and navigation bars
+101 5 : AutomaticSettingsTest, Compose UI test results, DockActivity instrumentation, DockActivityTest, Recorded Initial Compose UI test failure
+102 5 : Activity rotation, AutomaticSettingsTest, Recorded Compose UI test results, DockActivity instrumentation, DockActivityTest
+103 5 : Activity rotation, AutomaticSettingsTest, Recorded Compose UI test results, DockActivity instrumentation, DockActivityTest
+104 5 : Black high-contrast canvas, Oversized white digital clock with seconds, Clock-only screen with no visible app controls, Bottom navigation pill, dream-landscape screenshot
+105 5 : Black high-contrast canvas, Oversized white digital clock with seconds, Clock-only screen with no visible app controls, Bottom navigation pill, dream-portrait screenshot
+106 5 : ClockStateHolderTest, DockModelTest, Gradle build verification, JVM test results, Recorded Stage 2 build summary
+107 5 : dock-pack-v1.schema.json, additionalProperties, required, title, type
+108 5 : items, maxItems, type, $ref, assets
+109 5 : profile, additionalProperties, allOf, required, type
+110 4 : Error, Loading, Ready, SettingsState
+111 4 : Activity rotation, Recorded Compose UI test results, DockActivity instrumentation, DockActivityTest
+112 4 : Automatic StandBy lifecycle, AutomaticStoreTest, DockRepositoryTest, Recorded JVM test results
+113 4 : Automatic StandBy lifecycle, AutomaticStoreTest, DockRepositoryTest, Recorded JVM test results
+114 4 : Activity rotation, Recorded Compose UI test results, DockActivity instrumentation, DockActivityTest
+115 4 : Activity rotation, Recorded Compose UI test results, DockActivity instrumentation, DockActivityTest
+116 4 : Activity rotation, Recorded Compose UI test results, DockActivity instrumentation, DockActivityTest
+117 4 : Compose UI test results, DockActivity instrumentation, DockActivityTest, Recorded Initial Stage 2 UI process crash
+118 4 : maximum, minimum, type, firstDayOfWeek
+119 4 : maxLength, minLength, type, license
+120 4 : maxLength, minLength, type, name
+121 4 : textScale, maximum, minimum, type
+122 4 : gradlew, gradlew script, die(), warn()
+123 3 : AnalogStyleThumbnail(), Color, Modifier
+124 3 : Design sidecar components, Design sidecar narrative, AndroidDock structured design sidecar
+125 3 : DockActivity instrumentation, Keyguard behavior, Recorded StandBy 0.2.1 final automatic launch
+126 3 : Automatic StandBy lifecycle, DockActivity instrumentation, Recorded Initial automatic StandBy run failure
+127 3 : Automatic StandBy lifecycle, DockActivity instrumentation, Recorded Physical power-button transition
+128 3 : Automatic StandBy lifecycle, DockActivity instrumentation, Recorded Repeated StandBy lock cycle
+129 3 : Automatic StandBy lifecycle, Recorded Automatic StandBy lifecycle observation, DockActivity instrumentation
+130 3 : Automatic StandBy lifecycle, Recorded Charging reconnection cycle, DockActivity instrumentation
+131 3 : Recorded Automatic observer process restart, Automatic StandBy lifecycle, DockActivity instrumentation
+132 3 : Recorded Automatic StandBy keyguard observation, Keyguard behavior, System call priority
+133 3 : Automatic StandBy lifecycle, Recorded Automatic StandBy lifecycle observation, DockActivity instrumentation
+134 3 : Recorded Compose UI test results, DockActivity instrumentation, DockActivityTest
+135 3 : Recorded Call-screen priority over StandBy, DockActivity instrumentation, System call priority
+136 3 : Automatic StandBy lifecycle, Recorded FastConnect overlay and StandBy, FastConnect recovery
+137 3 : Automatic StandBy lifecycle, Recorded Call-screen priority over StandBy, System call priority
+138 3 : Automatic StandBy lifecycle, Recorded FastConnect overlay and StandBy, FastConnect recovery
+139 3 : Automatic StandBy lifecycle, Recorded Call-screen priority over StandBy, System call priority
+140 3 : Always On mode, Recorded Automatic charging mode toggle, Automatic StandBy lifecycle
+141 3 : Automatic StandBy lifecycle, Recorded Physical power-button transition, Power-button display pause
+142 3 : Automatic StandBy lifecycle, Charging reconnection, Recorded Charging reconnection cycle
+143 3 : Keyguard behavior, Power-button display pause, Recorded Repeated StandBy lock cycle
+144 3 : Activity rotation, Automatic StandBy lifecycle, Recorded Landscape and rotation transition
+145 3 : Automatic StandBy lifecycle, Keyguard behavior, Recorded StandBy idle baseline observation
+146 3 : Automatic StandBy lifecycle, Keyguard behavior, Recorded Landscape and rotation transition
+147 3 : Automatic StandBy lifecycle, Recorded Physical power-button transition, Power-button display pause
+148 3 : Automatic StandBy lifecycle, Recorded FastConnect overlay and StandBy, FastConnect recovery
+149 3 : enum, type, background
+150 3 : enum, type, clockStyle
+151 3 : widget, enum, type
+152 2 : Always On without charging, Independent charging and Always On switches
+153 2 : Android Lint findings, Recorded Gradle build verification
+154 2 : Recorded Android Lint findings, Gradle build verification
+155 2 : Android Lint findings, Recorded Gradle build verification
+156 2 : Android Lint findings, Recorded Gradle build verification
+157 2 : Recorded Android Lint findings, Gradle build verification
+158 2 : Android Lint findings, Recorded Gradle build verification
+159 2 : Automatic StandBy lifecycle, Recorded ChargingWatchService process observation
+160 2 : Recorded Android Lint findings, Gradle build verification
+161 2 : Automatic StandBy lifecycle, Recorded ChargingWatchService process observation
+162 2 : DreamService lifecycle, Recorded DreamService lifecycle observation
+163 2 : DreamService lifecycle, Recorded POCO DreamService configuration
+164 2 : Reversible editor draft, Shared DockScreen architecture
+165 2 : LAUNCHING SCREEN_ON handling, WAIT_FOR_USE transition
+166 1 : app/build.gradle.kts
+167 1 : build.gradle.kts
+168 1 : model/build.gradle.kts
+169 1 : Power button pause
+170 1 : DreamService integration
+171 1 : Native Kotlin and Compose architecture
+172 1 : minSdk 26 candidate
+173 1 : Android 17 SDK candidate
+174 1 : targetSdk 36 for prototype
+175 1 : FastConnect window timeout root cause
+176 1 : POCO DreamService auto-start limitation
+177 1 : StandBy 0.3.4 device validation
+178 1 : Shared DockScreen for Activity and DreamService
+179 1 : Stage 2 visual evidence
+180 1 : Always On 0.3.0
+181 1 : Serialized charging events
+182 1 : LAUNCH_ERROR pause
+183 1 : Always On setup
+184 1 : Charging auto-start setup
+185 1 : DreamService usage
+186 1 : Manual editor usage
+187 1 : ChargingWatchService automatic launch
+188 1 : DreamService firmware limitation
+189 1 : FastConnect covered-window restoration
+190 1 : AndroidDock 0.3.4 StandBy
+191 1 : settings.gradle.kts

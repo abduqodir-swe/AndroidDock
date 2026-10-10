@@ -1,0 +1,24 @@
+{
+  "runs": [
+    {
+      "date": "2026-10-10T06:54:09.474224+00:00",
+      "files": 155,
+      "input_tokens": null,
+      "output_tokens": null,
+      "token_usage_status": "unknown: collaboration usage metadata unavailable",
+      "monetary_cost": null
+    },
+    {
+      "date": "2026-10-10T07:25:54.490290+00:00",
+      "files": 6,
+      "input_tokens": null,
+      "output_tokens": null,
+      "token_usage_status": "unknown; host inline semantic executor exposes no measured usage",
+      "monetary_cost": null,
+      "operation": "Dock Packs documentation semantic refresh"
+    }
+  ],
+  "total_input_tokens": null,
+  "total_output_tokens": null,
+  "token_usage_status": "unknown; zero placeholders are not measurements"
+}

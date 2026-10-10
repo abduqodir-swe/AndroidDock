@@ -1,0 +1,449 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-10T08:07:12.487552+00:00",
+  "title": "Design System: AndroidDock",
+  "extensions": {
+    "colorMeta": {
+      "dock-white": {
+        "displayName": "Dock White",
+        "role": "primary",
+        "tonalRamp": [
+          "oklch(15% 0.0082 91.48)",
+          "oklch(26% 0.0082 91.48)",
+          "oklch(38% 0.0082 91.48)",
+          "oklch(49% 0.0082 91.48)",
+          "oklch(61% 0.0082 91.48)",
+          "oklch(72% 0.0082 91.48)",
+          "oklch(84% 0.0082 91.48)",
+          "oklch(95% 0.0082 91.48)"
+        ]
+      },
+      "dock-amber": {
+        "displayName": "Dock Amber",
+        "role": "secondary",
+        "tonalRamp": [
+          "oklch(15% 0.1097 74.76)",
+          "oklch(26% 0.1097 74.76)",
+          "oklch(38% 0.1097 74.76)",
+          "oklch(49% 0.1097 74.76)",
+          "oklch(61% 0.1097 74.76)",
+          "oklch(72% 0.1097 74.76)",
+          "oklch(84% 0.1097 74.76)",
+          "oklch(95% 0.1097 74.76)"
+        ]
+      },
+      "dock-red": {
+        "displayName": "Dock Red",
+        "role": "tertiary",
+        "tonalRamp": [
+          "oklch(15% 0.1446 25.58)",
+          "oklch(26% 0.1446 25.58)",
+          "oklch(38% 0.1446 25.58)",
+          "oklch(49% 0.1446 25.58)",
+          "oklch(61% 0.1446 25.58)",
+          "oklch(72% 0.1446 25.58)",
+          "oklch(84% 0.1446 25.58)",
+          "oklch(95% 0.1446 25.58)"
+        ]
+      },
+      "studio-sand": {
+        "displayName": "Studio Sand",
+        "role": "secondary",
+        "tonalRamp": [
+          "oklch(15% 0.0582 80.79)",
+          "oklch(26% 0.0582 80.79)",
+          "oklch(38% 0.0582 80.79)",
+          "oklch(49% 0.0582 80.79)",
+          "oklch(61% 0.0582 80.79)",
+          "oklch(72% 0.0582 80.79)",
+          "oklch(84% 0.0582 80.79)",
+          "oklch(95% 0.0582 80.79)"
+        ]
+      },
+      "flip-cream": {
+        "displayName": "Flip Cream",
+        "role": "secondary",
+        "tonalRamp": [
+          "oklch(15% 0.0383 85.34)",
+          "oklch(26% 0.0383 85.34)",
+          "oklch(38% 0.0383 85.34)",
+          "oklch(49% 0.0383 85.34)",
+          "oklch(61% 0.0383 85.34)",
+          "oklch(72% 0.0383 85.34)",
+          "oklch(84% 0.0383 85.34)",
+          "oklch(95% 0.0383 85.34)"
+        ]
+      },
+      "flip-tan": {
+        "displayName": "Flip Tan",
+        "role": "secondary",
+        "tonalRamp": [
+          "oklch(15% 0.0875 73.26)",
+          "oklch(26% 0.0875 73.26)",
+          "oklch(38% 0.0875 73.26)",
+          "oklch(49% 0.0875 73.26)",
+          "oklch(61% 0.0875 73.26)",
+          "oklch(72% 0.0875 73.26)",
+          "oklch(84% 0.0875 73.26)",
+          "oklch(95% 0.0875 73.26)"
+        ]
+      },
+      "black": {
+        "displayName": "Black",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0000 0.00)",
+          "oklch(26% 0.0000 0.00)",
+          "oklch(38% 0.0000 0.00)",
+          "oklch(49% 0.0000 0.00)",
+          "oklch(61% 0.0000 0.00)",
+          "oklch(72% 0.0000 0.00)",
+          "oklch(84% 0.0000 0.00)",
+          "oklch(95% 0.0000 0.00)"
+        ]
+      },
+      "graphite": {
+        "displayName": "Graphite",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0100 248.30)",
+          "oklch(26% 0.0100 248.30)",
+          "oklch(38% 0.0100 248.30)",
+          "oklch(49% 0.0100 248.30)",
+          "oklch(61% 0.0100 248.30)",
+          "oklch(72% 0.0100 248.30)",
+          "oklch(84% 0.0100 248.30)",
+          "oklch(95% 0.0100 248.30)"
+        ]
+      },
+      "blue-night": {
+        "displayName": "Blue Night",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0341 249.70)",
+          "oklch(26% 0.0341 249.70)",
+          "oklch(38% 0.0341 249.70)",
+          "oklch(49% 0.0341 249.70)",
+          "oklch(61% 0.0341 249.70)",
+          "oklch(72% 0.0341 249.70)",
+          "oklch(84% 0.0341 249.70)",
+          "oklch(95% 0.0341 249.70)"
+        ]
+      },
+      "panel": {
+        "displayName": "Panel",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0067 258.37)",
+          "oklch(26% 0.0067 258.37)",
+          "oklch(38% 0.0067 258.37)",
+          "oklch(49% 0.0067 258.37)",
+          "oklch(61% 0.0067 258.37)",
+          "oklch(72% 0.0067 258.37)",
+          "oklch(84% 0.0067 258.37)",
+          "oklch(95% 0.0067 258.37)"
+        ]
+      },
+      "flip-card": {
+        "displayName": "Flip Card",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0037 106.65)",
+          "oklch(26% 0.0037 106.65)",
+          "oklch(38% 0.0037 106.65)",
+          "oklch(49% 0.0037 106.65)",
+          "oklch(61% 0.0037 106.65)",
+          "oklch(72% 0.0037 106.65)",
+          "oklch(84% 0.0037 106.65)",
+          "oklch(95% 0.0037 106.65)"
+        ]
+      },
+      "legacy-flip-card": {
+        "displayName": "Legacy Flip Card",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0065 258.36)",
+          "oklch(26% 0.0065 258.36)",
+          "oklch(38% 0.0065 258.36)",
+          "oklch(49% 0.0065 258.36)",
+          "oklch(61% 0.0065 258.36)",
+          "oklch(72% 0.0065 258.36)",
+          "oklch(84% 0.0065 258.36)",
+          "oklch(95% 0.0065 258.36)"
+        ]
+      },
+      "flip-border": {
+        "displayName": "Flip Border",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0098 106.83)",
+          "oklch(26% 0.0098 106.83)",
+          "oklch(38% 0.0098 106.83)",
+          "oklch(49% 0.0098 106.83)",
+          "oklch(61% 0.0098 106.83)",
+          "oklch(72% 0.0098 106.83)",
+          "oklch(84% 0.0098 106.83)",
+          "oklch(95% 0.0098 106.83)"
+        ]
+      },
+      "editor-primary": {
+        "displayName": "Editor Primary",
+        "role": "primary",
+        "tonalRamp": [
+          "oklch(15% 0.1196 77.69)",
+          "oklch(26% 0.1196 77.69)",
+          "oklch(38% 0.1196 77.69)",
+          "oklch(49% 0.1196 77.69)",
+          "oklch(61% 0.1196 77.69)",
+          "oklch(72% 0.1196 77.69)",
+          "oklch(84% 0.1196 77.69)",
+          "oklch(95% 0.1196 77.69)"
+        ]
+      },
+      "editor-on-primary": {
+        "displayName": "Editor On Primary",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0333 76.66)",
+          "oklch(26% 0.0333 76.66)",
+          "oklch(38% 0.0333 76.66)",
+          "oklch(49% 0.0333 76.66)",
+          "oklch(61% 0.0333 76.66)",
+          "oklch(72% 0.0333 76.66)",
+          "oklch(84% 0.0333 76.66)",
+          "oklch(95% 0.0333 76.66)"
+        ]
+      },
+      "editor-surface": {
+        "displayName": "Editor Surface",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0052 248.12)",
+          "oklch(26% 0.0052 248.12)",
+          "oklch(38% 0.0052 248.12)",
+          "oklch(49% 0.0052 248.12)",
+          "oklch(61% 0.0052 248.12)",
+          "oklch(72% 0.0052 248.12)",
+          "oklch(84% 0.0052 248.12)",
+          "oklch(95% 0.0052 248.12)"
+        ]
+      },
+      "editor-text": {
+        "displayName": "Editor Text",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0029 84.56)",
+          "oklch(26% 0.0029 84.56)",
+          "oklch(38% 0.0029 84.56)",
+          "oklch(49% 0.0029 84.56)",
+          "oklch(61% 0.0029 84.56)",
+          "oklch(72% 0.0029 84.56)",
+          "oklch(84% 0.0029 84.56)",
+          "oklch(95% 0.0029 84.56)"
+        ]
+      },
+      "editor-variant": {
+        "displayName": "Editor Variant",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0084 255.57)",
+          "oklch(26% 0.0084 255.57)",
+          "oklch(38% 0.0084 255.57)",
+          "oklch(49% 0.0084 255.57)",
+          "oklch(61% 0.0084 255.57)",
+          "oklch(72% 0.0084 255.57)",
+          "oklch(84% 0.0084 255.57)",
+          "oklch(95% 0.0084 255.57)"
+        ]
+      },
+      "editor-muted": {
+        "displayName": "Editor Muted",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "editor-selection": {
+        "displayName": "Editor Selection",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0502 75.61)",
+          "oklch(26% 0.0502 75.61)",
+          "oklch(38% 0.0502 75.61)",
+          "oklch(49% 0.0502 75.61)",
+          "oklch(61% 0.0502 75.61)",
+          "oklch(72% 0.0502 75.61)",
+          "oklch(84% 0.0502 75.61)",
+          "oklch(95% 0.0502 75.61)"
+        ]
+      },
+      "editor-on-selection": {
+        "displayName": "Editor On Selection",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0830 80.67)",
+          "oklch(26% 0.0830 80.67)",
+          "oklch(38% 0.0830 80.67)",
+          "oklch(49% 0.0830 80.67)",
+          "oklch(61% 0.0830 80.67)",
+          "oklch(72% 0.0830 80.67)",
+          "oklch(84% 0.0830 80.67)",
+          "oklch(95% 0.0830 80.67)"
+        ]
+      },
+      "editor-outline": {
+        "displayName": "Editor Outline",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15% 0.0082 260.73)",
+          "oklch(26% 0.0082 260.73)",
+          "oklch(38% 0.0082 260.73)",
+          "oklch(49% 0.0082 260.73)",
+          "oklch(61% 0.0082 260.73)",
+          "oklch(72% 0.0082 260.73)",
+          "oklch(84% 0.0082 260.73)",
+          "oklch(95% 0.0082 260.73)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "date": {
+        "purpose": "Supporting clock date."
+      },
+      "period": {
+        "purpose": "12-hour AM/PM label."
+      },
+      "battery": {
+        "purpose": "Supporting battery readout."
+      },
+      "battery-large": {
+        "purpose": "Standalone battery panel."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "flip-change",
+        "value": "350ms Compose tween",
+        "purpose": "Only when profile animations and Android animators are enabled."
+      }
+    ],
+    "breakpoints": [],
+    "nativeEvidence": {
+      "platform": "Android / Jetpack Compose / Material 3",
+      "status": "Source-derived tokens, followed by independent review of 14 native POCO captures confirming theme identities/layouts/editor actions. Final analog-thumbnail confirmation is tracked in docs/evidence/appearance-implementation-test-report.md; arbitrary-photo contrast, font scaling and accessibility remain unverified.",
+      "units": "Normative dp/sp values stay in DESIGN.md; CSS pixels are illustrative translations.",
+      "ramps": "Synthesized same-hue/chroma OKLCH strips for the documentation panel only, not app tokens.",
+      "previewDefaults": "CSS font metrics, Material shape approximations and hover/focus treatments only illustrate native components; do not implement them as new project rules.",
+      "evidenceReport": "docs/evidence/appearance-implementation-test-report.md"
+    }
+  },
+  "components": [
+    {
+      "name": "Save",
+      "kind": "button",
+      "refersTo": "editor-save",
+      "description": "Illustrative HTML translation of native Compose source; not the app implementation or a verified device rendering.",
+      "html": "<button class=\"ds-save\">Сохранить</button>",
+      "css": ".ds-save{background:#F2BD68;color:#251A09;border:0;border-radius:999px;min-height:48px;padding:0 24px;font:500 14px sans-serif}.ds-save:hover{filter:brightness(1.08)}.ds-save:focus-visible{outline:2px solid #8E9196;outline-offset:3px}.ds-save:active{filter:brightness(.92)}.ds-save:disabled{opacity:.38}"
+    },
+    {
+      "name": "Outlined action",
+      "kind": "button",
+      "description": "Illustrative HTML translation of native Compose source; not the app implementation or a verified device rendering.",
+      "html": "<button class=\"ds-outline\">Отмена</button>",
+      "css": ".ds-outline{background:transparent;color:#F2BD68;border:1px solid #8E9196;border-radius:999px;min-height:48px;padding:0 24px;font:500 14px sans-serif}.ds-outline:hover,.ds-outline:active{background:#292C30}.ds-outline:focus-visible{outline:2px solid #F2BD68;outline-offset:3px}.ds-outline:disabled{opacity:.38}"
+    },
+    {
+      "name": "Appearance choice",
+      "kind": "chip",
+      "refersTo": "editor-choice-selected",
+      "description": "Illustrative HTML translation of native Compose source; not the app implementation or a verified device rendering.",
+      "html": "<button class=\"ds-chip\" aria-pressed=\"true\">Midnight</button>",
+      "css": ".ds-chip{min-height:48px;padding:0 16px;border:0;border-radius:8px;background:#4B381C;color:#FFDDA3;font:500 14px sans-serif}.ds-chip:hover,.ds-chip:active{filter:brightness(1.1)}.ds-chip:focus-visible{outline:2px solid #F2BD68;outline-offset:2px}"
+    },
+    {
+      "name": "Editor tabs",
+      "kind": "nav",
+      "description": "Illustrative HTML translation of native Compose source; not the app implementation or a verified device rendering.",
+      "html": "<nav class=\"ds-tabs\" aria-label=\"Раздел редактора\"><button aria-current=\"page\">Часы</button><button>Календарь</button><button>Фон</button></nav>",
+      "css": ".ds-tabs{display:flex;background:#101214}.ds-tabs button{min-height:48px;flex:1;background:transparent;border:0;color:#C8C8C8;font:500 14px sans-serif}.ds-tabs button[aria-current]{color:#F2BD68;border-bottom:3px solid #F2BD68}.ds-tabs button:hover,.ds-tabs button:active{background:#292C30}.ds-tabs button:focus-visible{outline:2px solid #F2BD68;outline-offset:-3px}"
+    },
+    {
+      "name": "Photo dimming slider",
+      "kind": "input",
+      "description": "Illustrative HTML translation of native Compose source; not the app implementation or a verified device rendering.",
+      "html": "<label class=\"ds-slider\">Затемнение <span>32%</span><input aria-label=\"Затемнение\" type=\"range\" min=\"0\" max=\"90\" value=\"32\"></label>",
+      "css": ".ds-slider{display:block;background:#101214;color:#F2F1EF;font:14px sans-serif;padding:12px 20px}.ds-slider span{float:right}.ds-slider input{display:block;width:100%;min-height:48px;accent-color:#F2BD68}.ds-slider input:hover{filter:brightness(1.1)}.ds-slider input:focus-visible{outline:2px solid #8E9196;outline-offset:2px}.ds-slider input:active{accent-color:#FFDDA3}"
+    },
+    {
+      "name": "Warm Flip card",
+      "kind": "card",
+      "refersTo": "flip-card",
+      "description": "Illustrative HTML translation of native Compose source; not the app implementation or a verified device rendering.",
+      "html": "<div class=\"ds-flip\" aria-label=\"Перекидные часы, 09\">09</div>",
+      "css": ".ds-flip{position:relative;background:#242422;color:#F3E6CB;border:1px solid #494943;border-radius:12px;padding:12px 24px;font:bold 72px sans-serif;text-align:center;overflow:hidden}.ds-flip:after{content:\"\";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(0,0,0,.65)}"
+    },
+    {
+      "name": "Flip today",
+      "kind": "custom",
+      "refersTo": "calendar-today-flip",
+      "description": "Illustrative HTML translation of native Compose source; not the app implementation or a verified device rendering.",
+      "html": "<div class=\"ds-today\" aria-label=\"Сегодня, 10 октября\">10</div>",
+      "css": ".ds-today{display:grid;place-items:center;width:36px;height:36px;background:#CBA16A;color:#000;border-radius:8px;font:20px sans-serif}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Midnight / Studio / Flip / Gallery",
+    "overview": "The four user-approved worlds share a quiet dark display and a readable clock/calendar hierarchy. Midnight uses large pale digits and amber calendar emphasis; Studio uses a numbered analog dial and fine dividers; Flip uses warm graphite blocks; Gallery places the clock and calendar over a personally chosen photograph. These descriptions come from the approved mockup brief; implementation values come from the Compose source.\n\nThe editor is a separate native Material 3 workspace with amber actions, compact choices and a persistent preview. Personal customization remains part of the system: the presets establish starting values, while independent panel colors, sizes, arrangements and photo crops can change them.\n\nThis record describes the current local implementation, not a shipped release. It was extracted from `DockScreen.kt`, `ClockFaces.kt`, `DockPhotoPreview.kt`, `DockEditor.kt`, `MainActivity.kt`, `DockSettings.kt` and `AppearancePresets.kt`, with `PRODUCT.md` and the approved `docs/design/mockups/2026-10-10/BRIEF.md` supplying product context. Token extraction was source-derived. Subsequently, 14 native POCO captures in [appearance-2026-10-10](docs/evidence/appearance-2026-10-10/) received an independent visual review confirming the four theme identities, both orientations, month content, editor previews and visible Save/Cancel actions. The analog style-selector thumbnail was refined after that review; final confirmation of that refinement and execution details belong to the [implementation evidence report](docs/evidence/appearance-implementation-test-report.md). This record does not independently certify a release. Font scaling, contrast over arbitrary photographs and accessibility remain unverified.",
+    "keyCharacteristics": [
+      "Four distinct clock worlds on a shared dark canvas.",
+      "Orientation-specific panels and photo framing.",
+      "Tonal depth, warm calendar emphasis and optional panel surfaces.",
+      "Native Material 3 editor with explicit choices and fixed save/cancel actions."
+    ],
+    "rules": [
+      {
+        "name": "The Two Palettes Rule",
+        "body": "Keep display accents and editor action colors separate: their roles and source definitions differ.",
+        "section": "colors"
+      },
+      {
+        "name": "The User Accent Rule",
+        "body": "Preserve explicit panel and weekend colors. Preset-specific today colors apply when the panel foreground is neutral; a selected amber or red foreground supplies its own today highlight.",
+        "section": "colors"
+      },
+      {
+        "name": "The Fit Is Not Legibility Rule",
+        "body": "Auto sizing prevents overflow but does not prove legibility; low source minima must not become recommended text sizes.",
+        "section": "typography"
+      },
+      {
+        "name": "The Local Scrim Rule",
+        "body": "Keep Gallery's local readability scrim when a photo-backed panel has no opaque surface; independent global dimming remains adjustable.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do preserve independent portrait and landscape panel layouts and photo crops.",
+      "Do reuse the display and crop implementation in the editor preview.",
+      "Do use native Material selection, disabled and focus behavior for editor controls.",
+      "Do retain Studio dividers and Flip hinges as materials of their approved worlds.",
+      "Do keep system lock-screen wallpaper as an explicit photo-only action with confirmation."
+    ],
+    "donts": [
+      "Don't turn observed auto-size minima into recommended readable text sizes.",
+      "Don't promote platform display-font fallbacks into the future house type system.",
+      "Don't infer device contrast, font scaling or touch accessibility from source inspection or raster mockups.",
+      "Don't replace user-selected accents or orientation-specific framing with preset defaults during ordinary edits.",
+      "Don't interpret ordinary Save as permission to change system wallpaper."
+    ]
+  }
+}

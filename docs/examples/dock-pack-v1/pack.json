@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "metadata": {
+    "id": "minimal-black",
+    "name": "Minimal Black",
+    "author": "AndroidDock example",
+    "license": "CC0-1.0"
+  },
+  "profiles": {
+    "bedroom": {
+      "portrait": {
+        "kind": "DUO",
+        "first": {
+          "widget": "CLOCK",
+          "accent": "WHITE",
+          "textScale": 1,
+          "surface": false,
+          "rounded": true
+        },
+        "second": {
+          "widget": "CALENDAR",
+          "accent": "WHITE",
+          "textScale": 1,
+          "surface": false,
+          "rounded": true
+        },
+        "firstWeight": 0.5,
+        "spacing": 16
+      },
+      "landscape": {
+        "kind": "DUO",
+        "first": {
+          "widget": "CLOCK",
+          "accent": "WHITE",
+          "textScale": 1,
+          "surface": false,
+          "rounded": true
+        },
+        "second": {
+          "widget": "CALENDAR",
+          "accent": "WHITE",
+          "textScale": 1,
+          "surface": false,
+          "rounded": true
+        },
+        "firstWeight": 0.5,
+        "spacing": 16
+      },
+      "clockStyle": "DIGITAL",
+      "use24Hour": true,
+      "showSeconds": false,
+      "showDate": true,
+      "showBattery": true,
+      "firstDayOfWeek": 1,
+      "background": "BLACK",
+      "photoAsset": null
+    },
+    "desktop": {
+      "portrait": {
+        "kind": "DUO",
+        "first": {
+          "widget": "CLOCK",
+          "accent": "WHITE",
+          "textScale": 1,
+          "surface": false,
+          "rounded": true
+        },
+        "second": {
+          "widget": "CALENDAR",
+          "accent": "WHITE",
+          "textScale": 1,
+          "surface": false,
+          "rounded": true
+        },
+        "firstWeight": 0.5,
+        "spacing": 16
+      },
+      "landscape": {
+        "kind": "DUO",
+        "first": {
+          "widget": "CLOCK",
+          "accent": "WHITE",
+          "textScale": 1,
+          "surface": false,
+          "rounded": true
+        },
+        "second": {
+          "widget": "CALENDAR",
+          "accent": "WHITE",
+          "textScale": 1,
+          "surface": false,
+          "rounded": true
+        },
+        "firstWeight": 0.5,
+        "spacing": 16
+      },
+      "clockStyle": "DIGITAL",
+      "use24Hour": true,
+      "showSeconds": true,
+      "showDate": true,
+      "showBattery": true,
+      "firstDayOfWeek": 1,
+      "background": "BLACK",
+      "photoAsset": null
+    }
+  },
+  "assets": []
+}

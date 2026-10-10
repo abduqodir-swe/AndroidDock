@@ -1,0 +1,733 @@
+{
+  "commands": [
+    {
+      "command": "graphify update .",
+      "exit_code": 0,
+      "nodes": 1496,
+      "edges": 2089
+    },
+    {
+      "command": "python build_graph.py --refresh-code",
+      "exit_code": 1,
+      "reason": "shrink guard:1460 vs CLI1496"
+    },
+    {
+      "command": "restore pre-update graph.json only; python build_graph.py",
+      "exit_code": 0,
+      "force_used": false
+    },
+    {
+      "command": "python supplement_kotlin.py; python build_graph.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python refresh_appearance_docs.py; python build_graph.py; graphify export html",
+      "exit_code": 0
+    }
+  ],
+  "before": {
+    "nodes": 1199,
+    "edges": 1600,
+    "communities": 159
+  },
+  "after": {
+    "nodes": 1576,
+    "edges": 2149,
+    "communities": 192
+  },
+  "node_delta": {
+    "added": 427,
+    "removed": 50
+  },
+  "cli_only_removed_sources": {
+    "app/src/main/kotlin/dev/androiddock/prototype/ClockViewModel.kt": 16,
+    "docs/evidence/appearance-implementation-test-report.md": 4,
+    "DESIGN.md": 26,
+    "docs/design/mockups/2026-10-10/BRIEF.md": 7,
+    "docs/design/mockups/2026-10-10/editors/prompt-set.md": 9,
+    "docs/design/mockups/2026-10-10/README.md": 5,
+    "docs/dock-packs-v1.md": 10,
+    "docs/design/mockups/2026-10-10/themes/prompt-set.md": 8,
+    "PLAN.md": 27,
+    "graphify-out/memory/query_20261010_070953_5a51394c_да__проследи_по_графу__как_chargingsession_связыва.md": 5,
+    "docs/examples/dock-pack-v1/README.md": 2,
+    "PRODUCT.md": 11,
+    "": 5
+  },
+  "semantic_untouched_records_exactly_preserved": {
+    "nodes": true,
+    "edges": true,
+    "hyperedges": true
+  },
+  "selected_document_hashes": {
+    "PLAN.md": "009adaf0511eaa5916ae45a8a273f38484b77dfead6862b5aef26d184481c4e2",
+    "PRODUCT.md": "6f8244defc0b1db05f7c8f9f131af79b48dfaf4a51cc30aa0e025135dc44aeb7",
+    "DESIGN.md": "0e3d58d8e3e796a646c90ac72df37aaed41a57fa62adfa84097a4479b8953050",
+    ".impeccable/design.json": "ca4f626a250d9437480c47dbbe16c9b50797988a4f20f9b1d6af8dc509489da8",
+    "docs/design/mockups/2026-10-10/BRIEF.md": "8211aa6cf945f07445006b17ed40ef541517737b030e0a73a7a6b7783b95a510",
+    "docs/design/mockups/2026-10-10/README.md": "fe68320279323f6993770e4b4469745b534dedf997155af1ed603b954327e88c",
+    "docs/evidence/appearance-implementation-test-report.md": "c4d57608eff45b1d2c8fc93ff6fdf4770e65e5ccf5f3c1f2dad8d5975dd90153"
+  },
+  "all_selected_hashes_current": true,
+  "supplement": {
+    "files": 7,
+    "declarations": 231,
+    "added_nodes": 200,
+    "all_source_hashes_and_exact_lines_current": true
+  },
+  "quarantine": {
+    "before": 24,
+    "after": 19,
+    "retained_self_loops": [
+      {
+        "source": "app_src_main_kotlin_dev_androiddock_prototype_clockviewmodel_requestlockwallpaper",
+        "target": "app_src_main_kotlin_dev_androiddock_prototype_clockviewmodel_requestlockwallpaper",
+        "relation": "calls",
+        "context": "call",
+        "confidence": "EXTRACTED",
+        "source_file": "app/src/main/kotlin/dev/androiddock/prototype/ClockViewModel.kt",
+        "source_location": "L50",
+        "weight": 1.0,
+        "_origin": "ast"
+      },
+      {
+        "source": "app_src_main_kotlin_dev_androiddock_prototype_mainactivity_mainactivity_oncreate",
+        "target": "app_src_main_kotlin_dev_androiddock_prototype_mainactivity_mainactivity_oncreate",
+        "relation": "calls",
+        "context": "call",
+        "confidence": "EXTRACTED",
+        "source_file": "app/src/main/kotlin/dev/androiddock/prototype/MainActivity.kt",
+        "source_location": "L47",
+        "weight": 1.0,
+        "_origin": "ast"
+      },
+      {
+        "source": "app_src_main_kotlin_dev_androiddock_prototype_mainactivity_mainactivity_onstart",
+        "target": "app_src_main_kotlin_dev_androiddock_prototype_mainactivity_mainactivity_onstart",
+        "relation": "calls",
+        "context": "call",
+        "confidence": "EXTRACTED",
+        "source_file": "app/src/main/kotlin/dev/androiddock/prototype/MainActivity.kt",
+        "source_location": "L186",
+        "weight": 1.0,
+        "_origin": "ast"
+      },
+      {
+        "source": "app_src_main_kotlin_dev_androiddock_prototype_mainactivity_mainactivity_onresume",
+        "target": "app_src_main_kotlin_dev_androiddock_prototype_mainactivity_mainactivity_onresume",
+        "relation": "calls",
+        "context": "call",
+        "confidence": "EXTRACTED",
+        "source_file": "app/src/main/kotlin/dev/androiddock/prototype/MainActivity.kt",
+        "source_location": "L188",
+        "weight": 1.0,
+        "_origin": "ast"
+      },
+      {
+        "source": "app_src_main_kotlin_dev_androiddock_prototype_mainactivity_mainactivity_onstop",
+        "target": "app_src_main_kotlin_dev_androiddock_prototype_mainactivity_mainactivity_onstop",
+        "relation": "calls",
+        "context": "call",
+        "confidence": "EXTRACTED",
+        "source_file": "app/src/main/kotlin/dev/androiddock/prototype/MainActivity.kt",
+        "source_location": "L200",
+        "weight": 1.0,
+        "_origin": "ast"
+      },
+      {
+        "source": "app_src_main_kotlin_dev_androiddock_prototype_mainactivity_mainactivity_onwindowfocuschanged",
+        "target": "app_src_main_kotlin_dev_androiddock_prototype_mainactivity_mainactivity_onwindowfocuschanged",
+        "relation": "calls",
+        "context": "call",
+        "confidence": "EXTRACTED",
+        "source_file": "app/src/main/kotlin/dev/androiddock/prototype/MainActivity.kt",
+        "source_location": "L203",
+        "weight": 1.0,
+        "_origin": "ast"
+      },
+      {
+        "source": "core_model_src_main_kotlin_dev_androiddock_core_model_appearancepresets_photocrop",
+        "target": "core_model_src_main_kotlin_dev_androiddock_core_model_appearancepresets_photocrop",
+        "relation": "calls",
+        "context": "call",
+        "confidence": "EXTRACTED",
+        "source_file": "core/model/src/main/kotlin/dev/androiddock/core/model/AppearancePresets.kt",
+        "source_location": "L42",
+        "weight": 1.0,
+        "_origin": "ast"
+      }
+    ],
+    "guard_file_unchanged": true
+  },
+  "diagnostics": {
+    "node_count": 1402,
+    "unverified_node_count": 0,
+    "raw_edge_count": 2227,
+    "non_object_edges": 0,
+    "missing_endpoint_edges": 0,
+    "dangling_endpoint_edges": 383,
+    "external_reference_edges": 8,
+    "self_loop_edges": 7,
+    "valid_candidate_edges": 1836,
+    "exact_duplicate_edges": 0,
+    "directed_unique_endpoint_pairs": 1785,
+    "directed_same_endpoint_collapsed_edges": 51,
+    "undirected_unique_endpoint_pairs": 1768,
+    "undirected_same_endpoint_collapsed_edges": 68,
+    "same_endpoint_group_count": 46,
+    "relation_variant_groups": 33,
+    "source_file_variant_groups": 0,
+    "source_location_variant_groups": 13,
+    "context_variant_groups": 1,
+    "post_build_graph_type": "Graph",
+    "post_build_node_count": 1576,
+    "post_build_edge_count": 2149,
+    "post_build_error": "",
+    "producer_suppression": {
+      "path": "/Users/yorudev/.local/share/uv/tools/graphifyy/lib/python3.14/site-packages/graphify/extract.py",
+      "total_sites": 12,
+      "sites": [
+        {
+          "line": 1646,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids = {n[\"id\"] for n in nodes}"
+        },
+        {
+          "line": 2179,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids = {n[\"id\"] for n in nodes}"
+        },
+        {
+          "line": 2181,
+          "name": "seen_doc_refs",
+          "tuple_arity": 0,
+          "sample": "seen_doc_refs: set[str] = set()"
+        },
+        {
+          "line": 2551,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = {n[\"id\"] for n in nodes}"
+        },
+        {
+          "line": 2698,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids = {n.get(\"id\") for n in nodes}"
+        },
+        {
+          "line": 3424,
+          "name": "seen_keys",
+          "tuple_arity": 0,
+          "sample": "seen_keys: set[tuple] = set()"
+        },
+        {
+          "line": 3593,
+          "name": "seen_keys",
+          "tuple_arity": 0,
+          "sample": "seen_keys: set[tuple] = set()"
+        },
+        {
+          "line": 5669,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = set()"
+        },
+        {
+          "line": 5777,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = set()"
+        },
+        {
+          "line": 5856,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = set()"
+        },
+        {
+          "line": 6371,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = set()"
+        },
+        {
+          "line": 6372,
+          "name": "seen_edges",
+          "tuple_arity": 4,
+          "sample": "seen_edges: set[tuple[str, str, str, str | None]] = set()"
+        }
+      ],
+      "error": ""
+    },
+    "examples": [
+      {
+        "source": "app_src_main_kotlin_dev_androiddock_prototype_dockeditor",
+        "target": "app_src_main_kotlin_dev_androiddock_prototype_dockeditor_label",
+        "edge_count": 5,
+        "relations": [
+          "contains"
+        ],
+        "source_files": [
+          "app/src/main/kotlin/dev/androiddock/prototype/DockEditor.kt"
+        ],
+        "source_locations": [
+          "L28",
+          "L29",
+          "L30",
+          "L31",
+          "L32"
+        ],
+        "contexts": [
+          ""
+        ]
+      },
+      {
+        "source": "app_src_main_kotlin_dev_androiddock_prototype_clockviewmodel",
+        "target": "app_src_main_kotlin_dev_androiddock_prototype_clockviewmodel_requestlockwallpaper",
+        "edge_count": 3,
+        "relations": [
+          "contains",
+          "declares"
+        ],
+        "source_files": [
+          "app/src/main/kotlin/dev/androiddock/prototype/ClockViewModel.kt"
+        ],
+        "source_locations": [
+          "L46",
+          "L53"
+        ],
+        "contexts": [
+          "",
+          "Named declaration token in original file; no call relationship implied."
+        ]
+      },
+      {
+        "source": "core_model_src_main_kotlin_dev_androiddock_core_model_chargingstateholder",
+        "target": "core_model_src_main_kotlin_dev_androiddock_core_model_chargingstateholder_chargingenvironment",
+        "edge_count": 3,
+        "relations": [
+          "calls",
+          "contains",
+          "declares"
+        ],
+        "source_files": [
+          "core/model/src/main/kotlin/dev/androiddock/core/model/ChargingStateHolder.kt"
+        ],
+        "source_locations": [
+          "L22",
+          "L39"
+        ],
+        "contexts": [
+          "",
+          "Named declaration token in original file; no call relationship implied.",
+          "call"
+        ]
+      },
+      {
+        "source": "app_src_main_kotlin_dev_androiddock_prototype_automaticpermissions",
+        "target": "app_src_main_kotlin_dev_androiddock_prototype_automaticpermissions_automaticpermissions",
+        "edge_count": 2,
+        "relations": [
+          "contains",
+          "declares"
+        ],
+        "source_files": [
+          "app/src/main/kotlin/dev/androiddock/prototype/AutomaticPermissions.kt"
+        ],
+        "source_locations": [
+          "L17"
+        ],
+        "contexts": [
+          "",
+          "Named declaration token in original file; no call relationship implied."
+        ]
+      },
+      {
+        "source": "app_src_main_kotlin_dev_androiddock_prototype_automaticpermissions",
+        "target": "app_src_main_kotlin_dev_androiddock_prototype_automaticpermissions_automaticpermissionpage",
+        "edge_count": 2,
+        "relations": [
+          "contains",
+          "declares"
+        ],
+        "source_files": [
+          "app/src/main/kotlin/dev/androiddock/prototype/AutomaticPermissions.kt"
+        ],
+        "source_locations": [
+          "L28"
+        ],
+        "contexts": [
+          "",
+          "Named declaration token in original file; no call relationship implied."
+        ]
+      }
+    ]
+  },
+  "raw_diagnostics": {
+    "node_count": 1402,
+    "unverified_node_count": 0,
+    "raw_edge_count": 2246,
+    "non_object_edges": 0,
+    "missing_endpoint_edges": 0,
+    "dangling_endpoint_edges": 383,
+    "external_reference_edges": 8,
+    "self_loop_edges": 26,
+    "valid_candidate_edges": 1855,
+    "exact_duplicate_edges": 0,
+    "directed_unique_endpoint_pairs": 1804,
+    "directed_same_endpoint_collapsed_edges": 51,
+    "undirected_unique_endpoint_pairs": 1787,
+    "undirected_same_endpoint_collapsed_edges": 68,
+    "same_endpoint_group_count": 46,
+    "relation_variant_groups": 33,
+    "source_file_variant_groups": 0,
+    "source_location_variant_groups": 13,
+    "context_variant_groups": 1,
+    "post_build_graph_type": "Graph",
+    "post_build_node_count": 1576,
+    "post_build_edge_count": 2168,
+    "post_build_error": "",
+    "producer_suppression": {
+      "path": "/Users/yorudev/.local/share/uv/tools/graphifyy/lib/python3.14/site-packages/graphify/extract.py",
+      "total_sites": 12,
+      "sites": [
+        {
+          "line": 1646,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids = {n[\"id\"] for n in nodes}"
+        },
+        {
+          "line": 2179,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids = {n[\"id\"] for n in nodes}"
+        },
+        {
+          "line": 2181,
+          "name": "seen_doc_refs",
+          "tuple_arity": 0,
+          "sample": "seen_doc_refs: set[str] = set()"
+        },
+        {
+          "line": 2551,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = {n[\"id\"] for n in nodes}"
+        },
+        {
+          "line": 2698,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids = {n.get(\"id\") for n in nodes}"
+        },
+        {
+          "line": 3424,
+          "name": "seen_keys",
+          "tuple_arity": 0,
+          "sample": "seen_keys: set[tuple] = set()"
+        },
+        {
+          "line": 3593,
+          "name": "seen_keys",
+          "tuple_arity": 0,
+          "sample": "seen_keys: set[tuple] = set()"
+        },
+        {
+          "line": 5669,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = set()"
+        },
+        {
+          "line": 5777,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = set()"
+        },
+        {
+          "line": 5856,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = set()"
+        },
+        {
+          "line": 6371,
+          "name": "seen_ids",
+          "tuple_arity": 0,
+          "sample": "seen_ids: set[str] = set()"
+        },
+        {
+          "line": 6372,
+          "name": "seen_edges",
+          "tuple_arity": 4,
+          "sample": "seen_edges: set[tuple[str, str, str, str | None]] = set()"
+        }
+      ],
+      "error": ""
+    },
+    "examples": [
+      {
+        "source": "app_src_main_kotlin_dev_androiddock_prototype_dockeditor",
+        "target": "app_src_main_kotlin_dev_androiddock_prototype_dockeditor_label",
+        "edge_count": 5,
+        "relations": [
+          "contains"
+        ],
+        "source_files": [
+          "app/src/main/kotlin/dev/androiddock/prototype/DockEditor.kt"
+        ],
+        "source_locations": [
+          "L28",
+          "L29",
+          "L30",
+          "L31",
+          "L32"
+        ],
+        "contexts": [
+          ""
+        ]
+      },
+      {
+        "source": "app_src_main_kotlin_dev_androiddock_prototype_clockviewmodel",
+        "target": "app_src_main_kotlin_dev_androiddock_prototype_clockviewmodel_requestlockwallpaper",
+        "edge_count": 3,
+        "relations": [
+          "contains",
+          "declares"
+        ],
+        "source_files": [
+          "app/src/main/kotlin/dev/androiddock/prototype/ClockViewModel.kt"
+        ],
+        "source_locations": [
+          "L46",
+          "L53"
+        ],
+        "contexts": [
+          "",
+          "Named declaration token in original file; no call relationship implied."
+        ]
+      },
+      {
+        "source": "core_model_src_main_kotlin_dev_androiddock_core_model_chargingstateholder",
+        "target": "core_model_src_main_kotlin_dev_androiddock_core_model_chargingstateholder_chargingenvironment",
+        "edge_count": 3,
+        "relations": [
+          "calls",
+          "contains",
+          "declares"
+        ],
+        "source_files": [
+          "core/model/src/main/kotlin/dev/androiddock/core/model/ChargingStateHolder.kt"
+        ],
+        "source_locations": [
+          "L22",
+          "L39"
+        ],
+        "contexts": [
+          "",
+          "Named declaration token in original file; no call relationship implied.",
+          "call"
+        ]
+      },
+      {
+        "source": "app_src_main_kotlin_dev_androiddock_prototype_automaticpermissions",
+        "target": "app_src_main_kotlin_dev_androiddock_prototype_automaticpermissions_automaticpermissions",
+        "edge_count": 2,
+        "relations": [
+          "contains",
+          "declares"
+        ],
+        "source_files": [
+          "app/src/main/kotlin/dev/androiddock/prototype/AutomaticPermissions.kt"
+        ],
+        "source_locations": [
+          "L17"
+        ],
+        "contexts": [
+          "",
+          "Named declaration token in original file; no call relationship implied."
+        ]
+      },
+      {
+        "source": "app_src_main_kotlin_dev_androiddock_prototype_automaticpermissions",
+        "target": "app_src_main_kotlin_dev_androiddock_prototype_automaticpermissions_automaticpermissionpage",
+        "edge_count": 2,
+        "relations": [
+          "contains",
+          "declares"
+        ],
+        "source_files": [
+          "app/src/main/kotlin/dev/androiddock/prototype/AutomaticPermissions.kt"
+        ],
+        "source_locations": [
+          "L28"
+        ],
+        "contexts": [
+          "",
+          "Named declaration token in original file; no call relationship implied."
+        ]
+      }
+    ]
+  },
+  "unprocessed_appearance_images": [
+    "docs/design/mockups/2026-10-10/editors/calendar-editor.png",
+    "docs/design/mockups/2026-10-10/editors/background-editor.png",
+    "docs/design/mockups/2026-10-10/editors/clock-editor.png",
+    "docs/design/mockups/2026-10-10/themes/gallery.png",
+    "docs/design/mockups/2026-10-10/themes/midnight.png",
+    "docs/design/mockups/2026-10-10/themes/studio.png",
+    "docs/design/mockups/2026-10-10/themes/flip.png",
+    "docs/evidence/appearance-2026-10-10/theme-flip-portrait.png",
+    "docs/evidence/appearance-2026-10-10/theme-studio-landscape.png",
+    "docs/evidence/appearance-2026-10-10/theme-gallery-landscape.png",
+    "docs/evidence/appearance-2026-10-10/theme-studio-portrait.png",
+    "docs/evidence/appearance-2026-10-10/editor-0-landscape.png",
+    "docs/evidence/appearance-2026-10-10/theme-midnight-portrait.png",
+    "docs/evidence/appearance-2026-10-10/editor-0-portrait.png",
+    "docs/evidence/appearance-2026-10-10/theme-midnight-landscape.png",
+    "docs/evidence/appearance-2026-10-10/editor-1-portrait.png",
+    "docs/evidence/appearance-2026-10-10/editor-2-portrait.png",
+    "docs/evidence/appearance-2026-10-10/editor-1-landscape.png",
+    "docs/evidence/appearance-2026-10-10/theme-flip-landscape.png",
+    "docs/evidence/appearance-2026-10-10/theme-gallery-portrait.png",
+    "docs/evidence/appearance-2026-10-10/editor-2-landscape.png"
+  ],
+  "new_images_semantic_unstamped": true,
+  "source_sha256": {
+    "app/src/main/kotlin/dev/androiddock/prototype/PhotoStore.kt": "670fdfd1a7d828090cdc78ad9ef5f2a5e1daaa1e5fe7240fe0df0d53ff8cec20",
+    "app/src/main/kotlin/dev/androiddock/prototype/AutomaticSettingsActivity.kt": "78063234041b1def1f332d0f7663351739bbdf12ca4fd13abca02e8891f6d9f7",
+    "app/src/main/kotlin/dev/androiddock/prototype/MainActivity.kt": "27a0e2b5f2ded09ae01f328cf1992db96ba77bd3145ae5c0048875c25810343f",
+    "app/src/main/kotlin/dev/androiddock/prototype/DockSystemBars.kt": "63be054a1c54bdfa98d3b8883974c63fb65ac0bde7ffb689539a77421b607082",
+    "app/src/main/kotlin/dev/androiddock/prototype/AutomaticPermissions.kt": "20e3fdfb8b4ab00c40c94a6a4316ae214e8624924ba5fa6fdbb497ce1820540e",
+    "app/src/main/kotlin/dev/androiddock/prototype/AutomaticStore.kt": "6fbb39adee8f083761202c3e4d60386dad535aaa9bd507402a1214502581913d",
+    "app/src/main/kotlin/dev/androiddock/prototype/DockPhotoPreview.kt": "80ad31dc41efbc0579f853e5d0a7a17cd947a8bc7d9f41939458724330bce631",
+    "app/src/main/kotlin/dev/androiddock/prototype/DockDreamService.kt": "d4515a5ebbf400438652642ecf700977ba8bb052efab1bcd15ee7db7ab9bd8c5",
+    "app/src/main/kotlin/dev/androiddock/prototype/DreamOwners.kt": "bc87e2d76c302feeb25fe5fb8b7c968fdbaaa8883c100dfe5b797b3b8a53f3de",
+    "app/src/main/kotlin/dev/androiddock/prototype/DockEditor.kt": "fe6fe7cc74cfc63eb2129d2d94692fe71255280921ca92bc6089c64d9b045120",
+    "app/src/main/kotlin/dev/androiddock/prototype/WindowBrightness.kt": "c7118946155027d0673867f38ec984ec7865b2f3c252194f5aa6d996720299cc",
+    "app/src/main/kotlin/dev/androiddock/prototype/DockActivity.kt": "e1087220041d68afa6affab7e8cbdbebbebfb741c4dabceb0876091c07637589",
+    "app/src/main/kotlin/dev/androiddock/prototype/DockApplication.kt": "c720788fe32fea8c89d835f90f955575b94300b7c3bf888f5af7a1166de4380b",
+    "app/src/main/kotlin/dev/androiddock/prototype/LockWallpaper.kt": "4e4700d22803e6680d327c7f9922e8394c1af2d0a621e49b787e6dffe0a6608d",
+    "app/src/main/kotlin/dev/androiddock/prototype/DockScreen.kt": "54cef8d67a30632eb86a4ae1e49045a9a4ab43b5c7ca0c96ec7a772f9721bc3c",
+    "app/src/main/kotlin/dev/androiddock/prototype/AndroidLockWallpaper.kt": "b5320cfbde946a8398d89ae6d7ed6c35b703d3c42307e48135d41e76b1ee1c67",
+    "app/src/main/kotlin/dev/androiddock/prototype/ClockViewModel.kt": "9564e4f61a0b24c1fcb48d85bc465b89ae0eab804dbb5cd62a87bc20d8b3e781",
+    "app/src/main/kotlin/dev/androiddock/prototype/ClockFaces.kt": "d3992e9a4c0212d35758517c4d83eb5b2e753a0450dbfaeae667ed305365bd5d",
+    "app/src/main/kotlin/dev/androiddock/prototype/BatteryProvider.kt": "0631a007aa47c6afa6c2a71610f5e88574347d0ad9efa63ed6ec5685672b4c34",
+    "app/src/main/kotlin/dev/androiddock/prototype/ChargingWatchService.kt": "48ff8c40c63549bd2022308bfecfaeb57384567fb7b92950e22a34181cc08c4f",
+    "app/src/main/kotlin/dev/androiddock/prototype/AutomaticRestoreReceiver.kt": "e148aa8aa9b0be5ce34e3b677a45954b71a75c85fc4adf497e6d097291a088c1",
+    "app/src/main/kotlin/dev/androiddock/prototype/AutomaticRuntime.kt": "b08aa4185d8b02090c4524c707d4421c79ae0c870e3eaf2c35a539b73dd74648",
+    "app/src/main/kotlin/dev/androiddock/prototype/DockRepository.kt": "796d54ccacf04053db2d6e9e22b1f33eb4dd1871507068e1d94f857e6b477bb0",
+    "app/src/test/kotlin/dev/androiddock/prototype/AutomaticStoreTest.kt": "715cf144b9c058845675cc06a26b62e2325d8de76fe03bce9ab48c807633acb3",
+    "app/src/test/kotlin/dev/androiddock/prototype/LockWallpaperTest.kt": "dd2bea04080f830f8a6ba67f8a315164c01e73aafbe25f471cad795088c1221d",
+    "app/src/test/kotlin/dev/androiddock/prototype/DockRepositoryTest.kt": "98a224642276171399120426c23ace76834fa366903be3628d24a1c9953cacac",
+    "app/src/androidTest/kotlin/dev/androiddock/prototype/AppearanceEditorTest.kt": "894ae306fafd831e484d6a650504f7d82812636412c8e1f9efd3caebff6e321c",
+    "app/src/androidTest/kotlin/dev/androiddock/prototype/AlwaysOnDeviceTest.kt": "6d01644974ac3b72a9278cb84f234dc20dce23947f9bbe85be36f2cdfbd19398",
+    "app/src/androidTest/kotlin/dev/androiddock/prototype/AutomaticSettingsTest.kt": "385488e1ccc1dcc1b29a0151a53b20f0cdba19cdeb35e4cc225e70b1787a5177",
+    "app/src/androidTest/kotlin/dev/androiddock/prototype/DockActivityTest.kt": "0bc9e2cffeaf9fbcc1fb73dfb7fbb716c6480bf0fd72ac079f56edffb353152f",
+    "app/src/androidTest/kotlin/dev/androiddock/prototype/AutomaticDockActivityTest.kt": "dc7abc5513932e389f34a5319c607297159a002826dbb68349c6b575050b3181",
+    "core/model/src/main/kotlin/dev/androiddock/core/model/PixelShift.kt": "b2fa5d027f108bd9b9509f7b03b60f8fc04729a3dac3e4a18aafbdc78c9a4dc8",
+    "core/model/src/main/kotlin/dev/androiddock/core/model/ClockState.kt": "dd1f4f278d4de3df086b903418f9ec2252a2bc9dc65b66ce4c7abc4c04481831",
+    "core/model/src/main/kotlin/dev/androiddock/core/model/DockSettings.kt": "f1be4af35a9b0dd7b9d9d0611ba13255bfa1f94c4b96ffe3fa85e8391ac41ce1",
+    "core/model/src/main/kotlin/dev/androiddock/core/model/ChargingStateHolder.kt": "8dcef3f3c40d3c6bc46e8e6cef2d9d1be374258fd090f0c86f77911b8b2e8a14",
+    "core/model/src/main/kotlin/dev/androiddock/core/model/DockEditorStateHolder.kt": "b84d129f85c35427eb4c20b3ab3af3746fc541c6de5cdf0e1515e34779ea28c6",
+    "core/model/src/main/kotlin/dev/androiddock/core/model/ClockStateHolder.kt": "2261741d7a78d67c3382bb16daeda7a31fc5f247fcb68c43775060190e390b35",
+    "core/model/src/main/kotlin/dev/androiddock/core/model/MonthGrid.kt": "541b6769d7a07a332753815b80fa4652f05034eb1b9aee7b122f6da4cb65ac88",
+    "core/model/src/main/kotlin/dev/androiddock/core/model/AppearancePresets.kt": "bfa93019e5c1aa31d3793db2b88e50a28a9945073f4be8b83cc13ef4cba3cb1f",
+    "core/model/src/test/kotlin/dev/androiddock/core/model/DockEditorTest.kt": "cc45ea940e9d14dd3f537c23b313b6a5f07ef90ae272bfe656fda4751960005d",
+    "core/model/src/test/kotlin/dev/androiddock/core/model/DockModelTest.kt": "922ba01ce6f224efb826475dc31d1b8de5982dea69ebb735d53d94d578424d5e",
+    "core/model/src/test/kotlin/dev/androiddock/core/model/ChargingStateHolderTest.kt": "715e3807b6942514679216efc171b70f08e017aee1d34d9fa74138add1d01227",
+    "core/model/src/test/kotlin/dev/androiddock/core/model/ClockStateHolderTest.kt": "8ebe9c460cb4fa1e5cc72e05528eda47527c3acfa26e98aa2081732424056801",
+    "core/model/src/test/kotlin/dev/androiddock/core/model/AppearancePresetsTest.kt": "82ec88c21bea70cb90f767ea3dd99fc06c418e9b5465554f8177bf7648e5b922"
+  },
+  "limitations": [
+    "Seven Kotlin sources partial AST; bounded declaration inventory is not full lexical or call graph coverage",
+    "Raster semantics not extracted; documents provide navigation only",
+    "No browser, Gradle or native tests performed by graph worker",
+    "Native test evidence is indexed from report, not rerun",
+    "CLI automatic heading and output-memory layer retained only in CLI snapshot; canonical semantic comes from targeted audit fragments",
+    "Input/output tokens and monetary costs unknown"
+  ],
+  "unchanged_semantic_manifest_hashes_restored": [
+    "docs/dock-packs-v1.md",
+    "docs/schemas/dock-pack-v1.schema.json",
+    "docs/examples/dock-pack-v1/pack.json",
+    "docs/examples/dock-pack-v1/README.md"
+  ],
+  "ast_incremental_pending": {
+    "code": [],
+    "document": [],
+    "paper": [],
+    "image": [
+      "/Users/yorudev/Desktop/AndroidDock/docs/evidence/appearance-2026-10-10/editor-0-landscape.png",
+      "/Users/yorudev/Desktop/AndroidDock/docs/evidence/appearance-2026-10-10/editor-0-portrait.png"
+    ],
+    "video": []
+  },
+  "semantic_incremental_pending": {
+    "code": [
+      "/Users/yorudev/Desktop/AndroidDock/.impeccable/design.json",
+      "/Users/yorudev/Desktop/AndroidDock/app/src/androidTest/kotlin/dev/androiddock/prototype/AppearanceEditorTest.kt",
+      "/Users/yorudev/Desktop/AndroidDock/app/src/androidTest/kotlin/dev/androiddock/prototype/DockActivityTest.kt",
+      "/Users/yorudev/Desktop/AndroidDock/app/src/main/kotlin/dev/androiddock/prototype/AndroidLockWallpaper.kt",
+      "/Users/yorudev/Desktop/AndroidDock/app/src/main/kotlin/dev/androiddock/prototype/ClockFaces.kt",
+      "/Users/yorudev/Desktop/AndroidDock/app/src/main/kotlin/dev/androiddock/prototype/ClockViewModel.kt",
+      "/Users/yorudev/Desktop/AndroidDock/app/src/main/kotlin/dev/androiddock/prototype/DockEditor.kt",
+      "/Users/yorudev/Desktop/AndroidDock/app/src/main/kotlin/dev/androiddock/prototype/DockPhotoPreview.kt",
+      "/Users/yorudev/Desktop/AndroidDock/app/src/main/kotlin/dev/androiddock/prototype/DockScreen.kt",
+      "/Users/yorudev/Desktop/AndroidDock/app/src/main/kotlin/dev/androiddock/prototype/LockWallpaper.kt",
+      "/Users/yorudev/Desktop/AndroidDock/app/src/main/kotlin/dev/androiddock/prototype/MainActivity.kt",
+      "/Users/yorudev/Desktop/AndroidDock/app/src/main/kotlin/dev/androiddock/prototype/PhotoStore.kt",
+      "/Users/yorudev/Desktop/AndroidDock/app/src/test/kotlin/dev/androiddock/prototype/LockWallpaperTest.kt",
+      "/Users/yorudev/Desktop/AndroidDock/core/model/src/main/kotlin/dev/androiddock/core/model/AppearancePresets.kt",
+      "/Users/yorudev/Desktop/AndroidDock/core/model/src/main/kotlin/dev/androiddock/core/model/DockSettings.kt",
+      "/Users/yorudev/Desktop/AndroidDock/core/model/src/test/kotlin/dev/androiddock/core/model/AppearancePresetsTest.kt"
+    ],
+    "document": [
+      "/Users/yorudev/Desktop/AndroidDock/docs/design/mockups/2026-10-10/editors/prompt-set.md",
+      "/Users/yorudev/Desktop/AndroidDock/docs/design/mockups/2026-10-10/themes/prompt-set.md",
+      "/Users/yorudev/Desktop/AndroidDock/graphify-out/memory/query_20261010_070953_5a51394c_да__проследи_по_графу__как_chargingsession_связыва.md"
+    ],
+    "paper": [],
+    "image": [
+      "/Users/yorudev/Desktop/AndroidDock/docs/design/mockups/2026-10-10/editors/background-editor.png",
+      "/Users/yorudev/Desktop/AndroidDock/docs/design/mockups/2026-10-10/editors/calendar-editor.png",
+      "/Users/yorudev/Desktop/AndroidDock/docs/design/mockups/2026-10-10/editors/clock-editor.png",
+      "/Users/yorudev/Desktop/AndroidDock/docs/design/mockups/2026-10-10/themes/flip.png",
+      "/Users/yorudev/Desktop/AndroidDock/docs/design/mockups/2026-10-10/themes/gallery.png",
+      "/Users/yorudev/Desktop/AndroidDock/docs/design/mockups/2026-10-10/themes/midnight.png",
+      "/Users/yorudev/Desktop/AndroidDock/docs/design/mockups/2026-10-10/themes/studio.png",
+      "/Users/yorudev/Desktop/AndroidDock/docs/evidence/appearance-2026-10-10/editor-0-landscape.png",
+      "/Users/yorudev/Desktop/AndroidDock/docs/evidence/appearance-2026-10-10/editor-0-portrait.png",
+      "/Users/yorudev/Desktop/AndroidDock/docs/evidence/appearance-2026-10-10/editor-1-landscape.png",
+      "/Users/yorudev/Desktop/AndroidDock/docs/evidence/appearance-2026-10-10/editor-1-portrait.png",
+      "/Users/yorudev/Desktop/AndroidDock/docs/evidence/appearance-2026-10-10/editor-2-landscape.png",
+      "/Users/yorudev/Desktop/AndroidDock/docs/evidence/appearance-2026-10-10/editor-2-portrait.png",
+      "/Users/yorudev/Desktop/AndroidDock/docs/evidence/appearance-2026-10-10/theme-flip-landscape.png",
+      "/Users/yorudev/Desktop/AndroidDock/docs/evidence/appearance-2026-10-10/theme-flip-portrait.png",
+      "/Users/yorudev/Desktop/AndroidDock/docs/evidence/appearance-2026-10-10/theme-gallery-landscape.png",
+      "/Users/yorudev/Desktop/AndroidDock/docs/evidence/appearance-2026-10-10/theme-gallery-portrait.png",
+      "/Users/yorudev/Desktop/AndroidDock/docs/evidence/appearance-2026-10-10/theme-midnight-landscape.png",
+      "/Users/yorudev/Desktop/AndroidDock/docs/evidence/appearance-2026-10-10/theme-midnight-portrait.png",
+      "/Users/yorudev/Desktop/AndroidDock/docs/evidence/appearance-2026-10-10/theme-studio-landscape.png",
+      "/Users/yorudev/Desktop/AndroidDock/docs/evidence/appearance-2026-10-10/theme-studio-portrait.png"
+    ],
+    "video": []
+  },
+  "source_sha256_current": true,
+  "final_validation": {
+    "graph_counts_match": true,
+    "all_app_core_and_selected_doc_sha256_current": true,
+    "all_helpers_syntax_valid": true,
+    "no_ast_code_pending": true,
+    "image_semantic_stamps_absent": true,
+    "untouched_semantics_and_guards_preserved": true
+  },
+  "corpus_detection": {
+    "total_files": 195,
+    "total_words": 766279
+  }
+}

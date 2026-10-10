@@ -1,0 +1,17 @@
+  warning: 7 file(s) had syntax errors and may be partially extracted: app/src/main/kotlin/dev/androiddock/prototype/AutomaticPermissions.kt (first error at line 1, 10 symbol(s) extracted), app/src/main/kotlin/dev/androiddock/prototype/AutomaticRestoreReceiver.kt (first error at line 1, no symbols extracted), app/src/main/kotlin/dev/androiddock/prototype/AutomaticSettingsActivity.kt (first error at line 1, 3 symbol(s) extracted), app/src/main/kotlin/dev/androiddock/prototype/ChargingWatchService.kt (first error at line 1, no symbols extracted), app/src/main/kotlin/dev/androiddock/prototype/ClockViewModel.kt (first error at line 1, 12 symbol(s) extracted) (+2 more)
+[graphify] WARNING: new graph has 1460 nodes but existing graph.json has 1496 (net -36). Refusing to overwrite. Possible causes: missing chunk files from a previous session, or fuzzy dedup collapsed same-named symbols across files during an --update on an already-current graph. Run a full rebuild (/graphify .) to be safe, or pass force=True only if you have verified the reduction is legitimate.
+Supplement: 158 new nodes, 180 declaration edges
+app/src/main/kotlin/dev/androiddock/prototype/AutomaticPermissions.kt 10 declaration tokens
+app/src/main/kotlin/dev/androiddock/prototype/AutomaticRestoreReceiver.kt 3 declaration tokens
+app/src/main/kotlin/dev/androiddock/prototype/AutomaticSettingsActivity.kt 11 declaration tokens
+app/src/main/kotlin/dev/androiddock/prototype/ChargingWatchService.kt 55 declaration tokens
+app/src/main/kotlin/dev/androiddock/prototype/ClockViewModel.kt 39 declaration tokens
+core/model/src/main/kotlin/dev/androiddock/core/model/ChargingStateHolder.kt 62 declaration tokens
+Traceback (most recent call last):
+  File "/Users/yorudev/Desktop/AndroidDock/graphify-out/build_graph.py", line 83, in <module>
+    run()
+    ~~~^^
+  File "/Users/yorudev/Desktop/AndroidDock/graphify-out/build_graph.py", line 53, in run
+    assert to_json(G,communities,str(OUT/'graph.json'),community_labels=labels),'shrink guard rejected export'
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: shrink guard rejected export

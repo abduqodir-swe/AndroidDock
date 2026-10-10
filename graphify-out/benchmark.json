@@ -1,0 +1,27 @@
+{
+  "corpus_tokens": 253710,
+  "corpus_words": 190283,
+  "nodes": 1199,
+  "edges": 1600,
+  "avg_query_tokens": 3542,
+  "reduction_ratio": 71.6,
+  "per_question": [
+    {
+      "question": "what is the main entry point",
+      "query_tokens": 4199,
+      "reduction": 60.4
+    },
+    {
+      "question": "how are errors handled",
+      "query_tokens": 1582,
+      "reduction": 160.4
+    },
+    {
+      "question": "what connects the data layer to the api",
+      "query_tokens": 4847,
+      "reduction": 52.3
+    }
+  ],
+  "measurement_status": "estimated token sizes, not billed usage",
+  "snapshot_status": "Historical pre-appearance baseline:1199 nodes/1600 edges; not measured again after refresh"
+}

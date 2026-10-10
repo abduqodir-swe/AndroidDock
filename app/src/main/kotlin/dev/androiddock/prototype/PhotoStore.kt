@@ -64,7 +64,10 @@ class PhotoStore(private val context: Context) {
         } finally { source.delete() }
     }
 
-    fun resolve(name: String?): File? = name?.takeIf { File(it).name == it && it.endsWith(".jpg") }?.let { File(directory, it) }
+    fun resolve(name: String?): File? = name?.takeIf { File(it).name == it && it.endsWith(".jpg") }?.let { name ->
+        // Reject traversal and symlinks outside the app's private imported-photo directory.
+        runCatching { File(directory, name).takeIf { it.canonicalFile.parentFile == directory.canonicalFile } }.getOrNull()
+    }
 
     // Snapshot before closing the editor so cleanup cannot delete a later draft's new photo.
     fun unusedFiles(keep: Set<String>): List<String> =

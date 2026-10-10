@@ -1,0 +1,306 @@
+[
+  {
+    "edge": {
+      "source": "app_src_main_kotlin_dev_androiddock_prototype_automaticsettingsactivity_onresume",
+      "target": "app_src_main_kotlin_dev_androiddock_prototype_automaticsettingsactivity_onresume",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/kotlin/dev/androiddock/prototype/AutomaticSettingsActivity.kt",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    "source_line": "super.onResume()",
+    "source_sha256": "78063234041b1def1f332d0f7663351739bbdf12ca4fd13abca02e8891f6d9f7",
+    "reason": "Verified resolver same-name target artifact; no recursion claim and no guessed replacement target."
+  },
+  {
+    "edge": {
+      "source": "app_src_main_kotlin_dev_androiddock_prototype_automaticsettingsactivity_oncreate",
+      "target": "app_src_main_kotlin_dev_androiddock_prototype_automaticsettingsactivity_oncreate",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/kotlin/dev/androiddock/prototype/AutomaticSettingsActivity.kt",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    "source_line": "super.onCreate(savedInstanceState)",
+    "source_sha256": "78063234041b1def1f332d0f7663351739bbdf12ca4fd13abca02e8891f6d9f7",
+    "reason": "Verified resolver same-name target artifact; no recursion claim and no guessed replacement target."
+  },
+  {
+    "edge": {
+      "source": "app_src_main_kotlin_dev_androiddock_prototype_dockactivity_dockactivity_oncreate",
+      "target": "app_src_main_kotlin_dev_androiddock_prototype_dockactivity_dockactivity_oncreate",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/kotlin/dev/androiddock/prototype/DockActivity.kt",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    "source_line": "super.onCreate(savedInstanceState)",
+    "source_sha256": "e1087220041d68afa6affab7e8cbdbebbebfb741c4dabceb0876091c07637589",
+    "reason": "Verified resolver same-name target artifact; no recursion claim and no guessed replacement target."
+  },
+  {
+    "edge": {
+      "source": "app_src_main_kotlin_dev_androiddock_prototype_dockactivity_dockactivity_onstart",
+      "target": "app_src_main_kotlin_dev_androiddock_prototype_dockactivity_dockactivity_onstart",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/kotlin/dev/androiddock/prototype/DockActivity.kt",
+      "source_location": "L64",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    "source_line": "override fun onStart() { super.onStart(); clock.start(); trace(\"onStart\") }",
+    "source_sha256": "e1087220041d68afa6affab7e8cbdbebbebfb741c4dabceb0876091c07637589",
+    "reason": "Verified resolver same-name target artifact; no recursion claim and no guessed replacement target."
+  },
+  {
+    "edge": {
+      "source": "app_src_main_kotlin_dev_androiddock_prototype_dockactivity_dockactivity_onresume",
+      "target": "app_src_main_kotlin_dev_androiddock_prototype_dockactivity_dockactivity_onresume",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/kotlin/dev/androiddock/prototype/DockActivity.kt",
+      "source_location": "L65",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    "source_line": "override fun onResume() { super.onResume(); trace(\"onResume\") }",
+    "source_sha256": "e1087220041d68afa6affab7e8cbdbebbebfb741c4dabceb0876091c07637589",
+    "reason": "Verified resolver same-name target artifact; no recursion claim and no guessed replacement target."
+  },
+  {
+    "edge": {
+      "source": "app_src_main_kotlin_dev_androiddock_prototype_dockactivity_dockactivity_onpause",
+      "target": "app_src_main_kotlin_dev_androiddock_prototype_dockactivity_dockactivity_onpause",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/kotlin/dev/androiddock/prototype/DockActivity.kt",
+      "source_location": "L66",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    "source_line": "override fun onPause() { trace(\"onPause\"); super.onPause() }",
+    "source_sha256": "e1087220041d68afa6affab7e8cbdbebbebfb741c4dabceb0876091c07637589",
+    "reason": "Verified resolver same-name target artifact; no recursion claim and no guessed replacement target."
+  },
+  {
+    "edge": {
+      "source": "app_src_main_kotlin_dev_androiddock_prototype_dockactivity_dockactivity_onstop",
+      "target": "app_src_main_kotlin_dev_androiddock_prototype_dockactivity_dockactivity_onstop",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/kotlin/dev/androiddock/prototype/DockActivity.kt",
+      "source_location": "L75",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    "source_line": "super.onStop()",
+    "source_sha256": "e1087220041d68afa6affab7e8cbdbebbebfb741c4dabceb0876091c07637589",
+    "reason": "Verified resolver same-name target artifact; no recursion claim and no guessed replacement target."
+  },
+  {
+    "edge": {
+      "source": "app_src_main_kotlin_dev_androiddock_prototype_dockactivity_dockactivity_ondestroy",
+      "target": "app_src_main_kotlin_dev_androiddock_prototype_dockactivity_dockactivity_ondestroy",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/kotlin/dev/androiddock/prototype/DockActivity.kt",
+      "source_location": "L77",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    "source_line": "override fun onDestroy() { trace(\"onDestroy finishing=$isFinishing\"); super.onDestroy() }",
+    "source_sha256": "e1087220041d68afa6affab7e8cbdbebbebfb741c4dabceb0876091c07637589",
+    "reason": "Verified resolver same-name target artifact; no recursion claim and no guessed replacement target."
+  },
+  {
+    "edge": {
+      "source": "app_src_main_kotlin_dev_androiddock_prototype_dockactivity_dockactivity_onnewintent",
+      "target": "app_src_main_kotlin_dev_androiddock_prototype_dockactivity_dockactivity_onnewintent",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/kotlin/dev/androiddock/prototype/DockActivity.kt",
+      "source_location": "L79",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    "source_line": "super.onNewIntent(intent)",
+    "source_sha256": "e1087220041d68afa6affab7e8cbdbebbebfb741c4dabceb0876091c07637589",
+    "reason": "Verified resolver same-name target artifact; no recursion claim and no guessed replacement target."
+  },
+  {
+    "edge": {
+      "source": "app_src_main_kotlin_dev_androiddock_prototype_dockactivity_dockactivity_exit",
+      "target": "app_src_main_kotlin_dev_androiddock_prototype_dockactivity_dockactivity_exit",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/kotlin/dev/androiddock/prototype/DockActivity.kt",
+      "source_location": "L96",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    "source_line": "appContainer.automaticRuntime.exit(session)",
+    "source_sha256": "e1087220041d68afa6affab7e8cbdbebbebfb741c4dabceb0876091c07637589",
+    "reason": "Verified resolver same-name target artifact; no recursion claim and no guessed replacement target."
+  },
+  {
+    "edge": {
+      "source": "app_src_main_kotlin_dev_androiddock_prototype_dockactivity_dockactivity_onuserleavehint",
+      "target": "app_src_main_kotlin_dev_androiddock_prototype_dockactivity_dockactivity_onuserleavehint",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/kotlin/dev/androiddock/prototype/DockActivity.kt",
+      "source_location": "L100",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    "source_line": "super.onUserLeaveHint()",
+    "source_sha256": "e1087220041d68afa6affab7e8cbdbebbebfb741c4dabceb0876091c07637589",
+    "reason": "Verified resolver same-name target artifact; no recursion claim and no guessed replacement target."
+  },
+  {
+    "edge": {
+      "source": "app_src_main_kotlin_dev_androiddock_prototype_dockactivity_dockactivity_onuserinteraction",
+      "target": "app_src_main_kotlin_dev_androiddock_prototype_dockactivity_dockactivity_onuserinteraction",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/kotlin/dev/androiddock/prototype/DockActivity.kt",
+      "source_location": "L105",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    "source_line": "super.onUserInteraction()",
+    "source_sha256": "e1087220041d68afa6affab7e8cbdbebbebfb741c4dabceb0876091c07637589",
+    "reason": "Verified resolver same-name target artifact; no recursion claim and no guessed replacement target."
+  },
+  {
+    "edge": {
+      "source": "app_src_main_kotlin_dev_androiddock_prototype_dockactivity_dockactivity_onwindowfocuschanged",
+      "target": "app_src_main_kotlin_dev_androiddock_prototype_dockactivity_dockactivity_onwindowfocuschanged",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/kotlin/dev/androiddock/prototype/DockActivity.kt",
+      "source_location": "L110",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    "source_line": "super.onWindowFocusChanged(hasFocus)",
+    "source_sha256": "e1087220041d68afa6affab7e8cbdbebbebfb741c4dabceb0876091c07637589",
+    "reason": "Verified resolver same-name target artifact; no recursion claim and no guessed replacement target."
+  },
+  {
+    "edge": {
+      "source": "app_src_main_kotlin_dev_androiddock_prototype_dockdreamservice_dockdreamservice_onattachedtowindow",
+      "target": "app_src_main_kotlin_dev_androiddock_prototype_dockdreamservice_dockdreamservice_onattachedtowindow",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/kotlin/dev/androiddock/prototype/DockDreamService.kt",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    "source_line": "super.onAttachedToWindow()",
+    "source_sha256": "d4515a5ebbf400438652642ecf700977ba8bb052efab1bcd15ee7db7ab9bd8c5",
+    "reason": "Verified resolver same-name target artifact; no recursion claim and no guessed replacement target."
+  },
+  {
+    "edge": {
+      "source": "app_src_main_kotlin_dev_androiddock_prototype_dockdreamservice_dockdreamservice_ondreamingstarted",
+      "target": "app_src_main_kotlin_dev_androiddock_prototype_dockdreamservice_dockdreamservice_ondreamingstarted",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/kotlin/dev/androiddock/prototype/DockDreamService.kt",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    "source_line": "super.onDreamingStarted()",
+    "source_sha256": "d4515a5ebbf400438652642ecf700977ba8bb052efab1bcd15ee7db7ab9bd8c5",
+    "reason": "Verified resolver same-name target artifact; no recursion claim and no guessed replacement target."
+  },
+  {
+    "edge": {
+      "source": "app_src_main_kotlin_dev_androiddock_prototype_dockdreamservice_dockdreamservice_ondreamingstopped",
+      "target": "app_src_main_kotlin_dev_androiddock_prototype_dockdreamservice_dockdreamservice_ondreamingstopped",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/kotlin/dev/androiddock/prototype/DockDreamService.kt",
+      "source_location": "L62",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    "source_line": "super.onDreamingStopped()",
+    "source_sha256": "d4515a5ebbf400438652642ecf700977ba8bb052efab1bcd15ee7db7ab9bd8c5",
+    "reason": "Verified resolver same-name target artifact; no recursion claim and no guessed replacement target."
+  },
+  {
+    "edge": {
+      "source": "app_src_main_kotlin_dev_androiddock_prototype_dockdreamservice_dockdreamservice_ondetachedfromwindow",
+      "target": "app_src_main_kotlin_dev_androiddock_prototype_dockdreamservice_dockdreamservice_ondetachedfromwindow",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/kotlin/dev/androiddock/prototype/DockDreamService.kt",
+      "source_location": "L68",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    "source_line": "super.onDetachedFromWindow()",
+    "source_sha256": "d4515a5ebbf400438652642ecf700977ba8bb052efab1bcd15ee7db7ab9bd8c5",
+    "reason": "Verified resolver same-name target artifact; no recursion claim and no guessed replacement target."
+  },
+  {
+    "edge": {
+      "source": "app_src_main_kotlin_dev_androiddock_prototype_dockdreamservice_dockdreamservice_ondestroy",
+      "target": "app_src_main_kotlin_dev_androiddock_prototype_dockdreamservice_dockdreamservice_ondestroy",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/kotlin/dev/androiddock/prototype/DockDreamService.kt",
+      "source_location": "L73",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    "source_line": "super.onDestroy()",
+    "source_sha256": "d4515a5ebbf400438652642ecf700977ba8bb052efab1bcd15ee7db7ab9bd8c5",
+    "reason": "Verified resolver same-name target artifact; no recursion claim and no guessed replacement target."
+  },
+  {
+    "edge": {
+      "source": "core_model_src_main_kotlin_dev_androiddock_core_model_monthgrid_monthgrid",
+      "target": "core_model_src_main_kotlin_dev_androiddock_core_model_monthgrid_monthgrid",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "core/model/src/main/kotlin/dev/androiddock/core/model/MonthGrid.kt",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    "source_line": "return MonthGrid(",
+    "source_sha256": "541b6769d7a07a332753815b80fa4652f05034eb1b9aee7b122f6da4cb65ac88",
+    "reason": "Verified resolver same-name target artifact; no recursion claim and no guessed replacement target."
+  }
+]

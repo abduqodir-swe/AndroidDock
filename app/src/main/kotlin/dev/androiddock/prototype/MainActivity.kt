@@ -1,5 +1,6 @@
 package dev.androiddock.prototype
 
+import android.app.AlertDialog
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.graphics.Color
@@ -53,11 +54,28 @@ class MainActivity : ComponentActivity() {
             val draft by clock.editor.state.collectAsStateWithLifecycle()
             val busy by clock.busy.collectAsStateWithLifecycle()
             val error by clock.error.collectAsStateWithLifecycle()
+            val lockRequest by clock.lockRequest.collectAsStateWithLifecycle()
+            val notice by clock.notice.collectAsStateWithLifecycle()
+            LaunchedEffect(notice) {
+                notice?.let { Toast.makeText(this@MainActivity, it, Toast.LENGTH_LONG).show(); clock.clearNotice() }
+            }
+            DisposableEffect(lockRequest) {
+                val dialog = lockRequest?.let {
+                    AlertDialog.Builder(this@MainActivity)
+                        .setTitle("Обои экрана блокировки")
+                        .setMessage("Установить выбранное фото с портретным кадрированием на экран блокировки? Часы и календарь останутся в AndroidDock. Обои главного экрана не изменятся.")
+                        .setPositiveButton("Установить") { _, _ -> clock.confirmLockWallpaper(AndroidLockWallpaper(applicationContext)) }
+                        .setNegativeButton("Отмена") { _, _ -> clock.cancelLockWallpaper() }
+                        .setOnCancelListener { clock.cancelLockWallpaper() }
+                        .show()
+                }
+                onDispose { dialog?.setOnCancelListener(null); dialog?.dismiss() }
+            }
             var controlsVisible by rememberSaveable { mutableStateOf(false) }
             var monthOffset by rememberSaveable { mutableIntStateOf(0) }
             val orientation = currentDockOrientation()
             val picker = rememberLauncherForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri ->
-                uri?.let { clock.importPhoto(appContainer, it) }
+                if (uri != null) clock.importPhoto(appContainer, uri) else clock.cancelPhotoPick()
             }
             DockTheme {
                 val settings = (configuration as? SettingsState.Ready)?.settings
@@ -70,10 +88,15 @@ class MainActivity : ComponentActivity() {
                 BackHandler(enabled = draft == null && controlsVisible) { controlsVisible = false }
                 if (draft != null) {
                     DockEditor(draft!!, time, battery, busy, error,
-                        onChange = clock.editor::change, onOrientation = clock.editor::selectOrientation,
-                        onUndo = clock.editor::undo, onCancel = ::cancelEditor,
+                        onChange = { if (!clock.busy.value) clock.editor.change(it) }, onOrientation = { if (!clock.busy.value) clock.editor.selectOrientation(it) },
+                        onUndo = { if (!clock.busy.value) clock.editor.undo() }, onCancel = ::cancelEditor,
                         onSave = { clock.saveEditor(appContainer) },
-                        onPhoto = { picker.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly)) })
+                        onPhoto = { if (clock.beginPhotoPick()) picker.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly)) },
+                        onGalleryPhoto = { if (clock.beginPhotoPick(gallery = true)) picker.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly)) },
+                        onLockWallpaper = {
+                            val metrics = resources.displayMetrics
+                            clock.requestLockWallpaper(appContainer, metrics.widthPixels, metrics.heightPixels)
+                        })
                 } else if (settings != null) {
                     fun openEditor() {
                         controlsVisible = false
@@ -143,6 +166,7 @@ class MainActivity : ComponentActivity() {
         if (clock.busy.value) return
         val saved = (appContainer.repository.state.value as? SettingsState.Ready)?.settings ?: return
         val unused = appContainer.photos.unusedFiles(setOfNotNull(saved.bedroom.photoPath, saved.desktop.photoPath))
+        clock.cancelPhotoPick()
         clock.editor.cancel()
         clock.clearError()
         appContainer.scope.launch { appContainer.photos.removeFiles(unused) }

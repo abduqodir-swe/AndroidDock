@@ -1,0 +1,1724 @@
+{
+  "selected_files": [
+    "PLAN.md",
+    "PRODUCT.md",
+    "DESIGN.md",
+    ".impeccable/design.json",
+    "docs/design/mockups/2026-10-10/BRIEF.md",
+    "docs/design/mockups/2026-10-10/README.md",
+    "docs/evidence/appearance-implementation-test-report.md"
+  ],
+  "source_sha256": {
+    "PLAN.md": "009adaf0511eaa5916ae45a8a273f38484b77dfead6862b5aef26d184481c4e2",
+    "PRODUCT.md": "6f8244defc0b1db05f7c8f9f131af79b48dfaf4a51cc30aa0e025135dc44aeb7",
+    "DESIGN.md": "0e3d58d8e3e796a646c90ac72df37aaed41a57fa62adfa84097a4479b8953050",
+    ".impeccable/design.json": "ca4f626a250d9437480c47dbbe16c9b50797988a4f20f9b1d6af8dc509489da8",
+    "docs/design/mockups/2026-10-10/BRIEF.md": "8211aa6cf945f07445006b17ed40ef541517737b030e0a73a7a6b7783b95a510",
+    "docs/design/mockups/2026-10-10/README.md": "fe68320279323f6993770e4b4469745b534dedf997155af1ed603b954327e88c",
+    "docs/evidence/appearance-implementation-test-report.md": "c4d57608eff45b1d2c8fc93ff6fdf4770e65e5ccf5f3c1f2dad8d5975dd90153"
+  },
+  "fresh_fragment": {
+    "nodes": [
+      {
+        "id": "appearance_doc_plan_md_record",
+        "label": "AndroidDock current roadmap",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L1"
+      },
+      {
+        "id": "appearance_doc_plan_md_l1",
+        "label": "AndroidDock: идеи и предварительный план",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L1"
+      },
+      {
+        "id": "appearance_doc_plan_md_l6",
+        "label": "Текущая работа — оформление и редактор",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L6"
+      },
+      {
+        "id": "appearance_doc_plan_md_l20",
+        "label": "Предлагаемая концепция",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L20"
+      },
+      {
+        "id": "appearance_doc_plan_md_l26",
+        "label": "Компоновки и управление",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L26"
+      },
+      {
+        "id": "appearance_doc_plan_md_l36",
+        "label": "Два режима",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L36"
+      },
+      {
+        "id": "appearance_doc_plan_md_l42",
+        "label": "Часы и варианты оформления",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L42"
+      },
+      {
+        "id": "appearance_doc_plan_md_l63",
+        "label": "Виджеты",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L63"
+      },
+      {
+        "id": "appearance_doc_plan_md_l87",
+        "label": "Расширение виджетов: предложения пользователя",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L87"
+      },
+      {
+        "id": "appearance_doc_plan_md_l91",
+        "label": "Мониторинг системы",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L91"
+      },
+      {
+        "id": "appearance_doc_plan_md_l99",
+        "label": "Музыкальный плеер",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L99"
+      },
+      {
+        "id": "appearance_doc_plan_md_l106",
+        "label": "Таймеры, Pomodoro и секундомер",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L106"
+      },
+      {
+        "id": "appearance_doc_plan_md_l114",
+        "label": "Уведомления",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L114"
+      },
+      {
+        "id": "appearance_doc_plan_md_l121",
+        "label": "Дополнительные готовые наборы",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L121"
+      },
+      {
+        "id": "appearance_doc_plan_md_l128",
+        "label": "Фоны",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L128"
+      },
+      {
+        "id": "appearance_doc_plan_md_l136",
+        "label": "Идеи, которые стоит выделить",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L136"
+      },
+      {
+        "id": "appearance_doc_plan_md_l145",
+        "label": "Технический стек и архитектура",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L145"
+      },
+      {
+        "id": "appearance_doc_plan_md_l147",
+        "label": "Принятый стек",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L147"
+      },
+      {
+        "id": "appearance_doc_plan_md_l157",
+        "label": "Предложения по хостам и состоянию",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L157"
+      },
+      {
+        "id": "appearance_doc_plan_md_l165",
+        "label": "Предложения по хранению и зависимостям",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L165"
+      },
+      {
+        "id": "appearance_doc_plan_md_l175",
+        "label": "Предлагаемые модули и контракт виджета",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L175"
+      },
+      {
+        "id": "appearance_doc_plan_md_l183",
+        "label": "Предложения по таймерам и тестированию",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L183"
+      },
+      {
+        "id": "appearance_doc_plan_md_l191",
+        "label": "Формат Dock Packs",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L191"
+      },
+      {
+        "id": "appearance_doc_plan_md_l204",
+        "label": "Предлагаемые этапы",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L204"
+      },
+      {
+        "id": "appearance_doc_plan_md_l214",
+        "label": "Предлагаемые границы и риски",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L214"
+      },
+      {
+        "id": "appearance_doc_plan_md_l221",
+        "label": "Предлагаемые принципы поставки",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L221"
+      },
+      {
+        "id": "appearance_doc_plan_md_l234",
+        "label": "Источники и технические основания",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L234"
+      },
+      {
+        "id": "appearance_doc_plan_md_concept_9",
+        "label": "Midnight, Studio, Flip and Gallery implementation priority",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L9"
+      },
+      {
+        "id": "appearance_doc_plan_md_concept_11",
+        "label": "Independent photo crops and explicit lock wallpaper confirmation",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L11"
+      },
+      {
+        "id": "appearance_doc_plan_md_concept_15",
+        "label": "Native POCO evidence replaces historical-only validation",
+        "file_type": "concept",
+        "source_file": "PLAN.md",
+        "source_location": "L15"
+      },
+      {
+        "id": "appearance_doc_product_md_record",
+        "label": "AndroidDock current product scope",
+        "file_type": "concept",
+        "source_file": "PRODUCT.md",
+        "source_location": "L1"
+      },
+      {
+        "id": "appearance_doc_product_md_l1",
+        "label": "AndroidDock",
+        "file_type": "concept",
+        "source_file": "PRODUCT.md",
+        "source_location": "L1"
+      },
+      {
+        "id": "appearance_doc_product_md_l5",
+        "label": "Platform",
+        "file_type": "concept",
+        "source_file": "PRODUCT.md",
+        "source_location": "L5"
+      },
+      {
+        "id": "appearance_doc_product_md_l9",
+        "label": "Stack",
+        "file_type": "concept",
+        "source_file": "PRODUCT.md",
+        "source_location": "L9"
+      },
+      {
+        "id": "appearance_doc_product_md_l17",
+        "label": "Users",
+        "file_type": "concept",
+        "source_file": "PRODUCT.md",
+        "source_location": "L17"
+      },
+      {
+        "id": "appearance_doc_product_md_l21",
+        "label": "Product Purpose",
+        "file_type": "concept",
+        "source_file": "PRODUCT.md",
+        "source_location": "L21"
+      },
+      {
+        "id": "appearance_doc_product_md_l25",
+        "label": "Operating Context",
+        "file_type": "concept",
+        "source_file": "PRODUCT.md",
+        "source_location": "L25"
+      },
+      {
+        "id": "appearance_doc_product_md_l31",
+        "label": "Capabilities and Constraints",
+        "file_type": "concept",
+        "source_file": "PRODUCT.md",
+        "source_location": "L31"
+      },
+      {
+        "id": "appearance_doc_product_md_l46",
+        "label": "Evidence on Hand",
+        "file_type": "concept",
+        "source_file": "PRODUCT.md",
+        "source_location": "L46"
+      },
+      {
+        "id": "appearance_doc_product_md_l60",
+        "label": "Product Principles",
+        "file_type": "concept",
+        "source_file": "PRODUCT.md",
+        "source_location": "L60"
+      },
+      {
+        "id": "appearance_doc_product_md_l67",
+        "label": "Current Scope — 2026-10-10",
+        "file_type": "concept",
+        "source_file": "PRODUCT.md",
+        "source_location": "L67"
+      },
+      {
+        "id": "appearance_doc_product_md_concept_44",
+        "label": "Approved four appearance worlds",
+        "file_type": "concept",
+        "source_file": "PRODUCT.md",
+        "source_location": "L44"
+      },
+      {
+        "id": "appearance_doc_product_md_concept_67",
+        "label": "Current local appearance implementation scope",
+        "file_type": "concept",
+        "source_file": "PRODUCT.md",
+        "source_location": "L67"
+      },
+      {
+        "id": "appearance_doc_design_md_record",
+        "label": "AndroidDock source-derived design record",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L1"
+      },
+      {
+        "id": "appearance_doc_design_md_l74",
+        "label": "Design System: AndroidDock",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L74"
+      },
+      {
+        "id": "appearance_doc_design_md_l76",
+        "label": "Overview",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L76"
+      },
+      {
+        "id": "appearance_doc_design_md_l92",
+        "label": "Colors",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L92"
+      },
+      {
+        "id": "appearance_doc_design_md_l96",
+        "label": "Primary",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L96"
+      },
+      {
+        "id": "appearance_doc_design_md_l100",
+        "label": "Secondary",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L100"
+      },
+      {
+        "id": "appearance_doc_design_md_l105",
+        "label": "Tertiary",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L105"
+      },
+      {
+        "id": "appearance_doc_design_md_l108",
+        "label": "Neutral",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L108"
+      },
+      {
+        "id": "appearance_doc_design_md_l115",
+        "label": "Named Rules",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L115"
+      },
+      {
+        "id": "appearance_doc_design_md_l120",
+        "label": "Typography",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L120"
+      },
+      {
+        "id": "appearance_doc_design_md_l127",
+        "label": "Hierarchy",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L127"
+      },
+      {
+        "id": "appearance_doc_design_md_l134",
+        "label": "Named Rules",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L134"
+      },
+      {
+        "id": "appearance_doc_design_md_l137",
+        "label": "Layout",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L137"
+      },
+      {
+        "id": "appearance_doc_design_md_l145",
+        "label": "Elevation & Depth",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L145"
+      },
+      {
+        "id": "appearance_doc_design_md_l151",
+        "label": "Named Rules",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L151"
+      },
+      {
+        "id": "appearance_doc_design_md_l154",
+        "label": "Shapes",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L154"
+      },
+      {
+        "id": "appearance_doc_design_md_l158",
+        "label": "Components",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L158"
+      },
+      {
+        "id": "appearance_doc_design_md_l160",
+        "label": "Buttons",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L160"
+      },
+      {
+        "id": "appearance_doc_design_md_l163",
+        "label": "Chips",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L163"
+      },
+      {
+        "id": "appearance_doc_design_md_l166",
+        "label": "Cards / Containers",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L166"
+      },
+      {
+        "id": "appearance_doc_design_md_l169",
+        "label": "Inputs / Fields",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L169"
+      },
+      {
+        "id": "appearance_doc_design_md_l172",
+        "label": "Navigation",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L172"
+      },
+      {
+        "id": "appearance_doc_design_md_l175",
+        "label": "Clock / Calendar / Photo",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L175"
+      },
+      {
+        "id": "appearance_doc_design_md_l178",
+        "label": "Do's and Don'ts",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L178"
+      },
+      {
+        "id": "appearance_doc_design_md_l180",
+        "label": "Do:",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L180"
+      },
+      {
+        "id": "appearance_doc_design_md_l187",
+        "label": "Don't:",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L187"
+      },
+      {
+        "id": "appearance_doc_design_md_concept_116",
+        "label": "Native editor and display use distinct palettes",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L116"
+      },
+      {
+        "id": "appearance_doc_design_md_concept_135",
+        "label": "Auto size is not verified legibility",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L135"
+      },
+      {
+        "id": "appearance_doc_design_md_concept_152",
+        "label": "Gallery local photo scrim",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L152"
+      },
+      {
+        "id": "appearance_doc_design_md_concept_84",
+        "label": "Source-derived tokens and subsequent native evidence",
+        "file_type": "concept",
+        "source_file": "DESIGN.md",
+        "source_location": "L84"
+      },
+      {
+        "id": "appearance_doc_impeccable_design_json_record",
+        "label": "AndroidDock structured design sidecar",
+        "file_type": "concept",
+        "source_file": ".impeccable/design.json",
+        "source_location": "L1"
+      },
+      {
+        "id": "appearance_doc_impeccable_design_json_l348",
+        "label": "Design sidecar components",
+        "file_type": "concept",
+        "source_file": ".impeccable/design.json",
+        "source_location": "L348"
+      },
+      {
+        "id": "appearance_doc_impeccable_design_json_l403",
+        "label": "Design sidecar narrative",
+        "file_type": "concept",
+        "source_file": ".impeccable/design.json",
+        "source_location": "L403"
+      },
+      {
+        "id": "appearance_doc_docs_design_mockups_2026_10_10_brief_md_record",
+        "label": "BRIEF.md",
+        "file_type": "concept",
+        "source_file": "docs/design/mockups/2026-10-10/BRIEF.md",
+        "source_location": "L1"
+      },
+      {
+        "id": "appearance_doc_docs_design_mockups_2026_10_10_brief_md_l1",
+        "label": "AndroidDock: варианты оформления и редактор",
+        "file_type": "concept",
+        "source_file": "docs/design/mockups/2026-10-10/BRIEF.md",
+        "source_location": "L1"
+      },
+      {
+        "id": "appearance_doc_docs_design_mockups_2026_10_10_brief_md_l5",
+        "label": "Решение пользователя",
+        "file_type": "concept",
+        "source_file": "docs/design/mockups/2026-10-10/BRIEF.md",
+        "source_location": "L5"
+      },
+      {
+        "id": "appearance_doc_docs_design_mockups_2026_10_10_brief_md_l15",
+        "label": "Направления",
+        "file_type": "concept",
+        "source_file": "docs/design/mockups/2026-10-10/BRIEF.md",
+        "source_location": "L15"
+      },
+      {
+        "id": "appearance_doc_docs_design_mockups_2026_10_10_brief_md_l27",
+        "label": "Редактор",
+        "file_type": "concept",
+        "source_file": "docs/design/mockups/2026-10-10/BRIEF.md",
+        "source_location": "L27"
+      },
+      {
+        "id": "appearance_doc_docs_design_mockups_2026_10_10_brief_md_l44",
+        "label": "Платформенная граница обоев",
+        "file_type": "concept",
+        "source_file": "docs/design/mockups/2026-10-10/BRIEF.md",
+        "source_location": "L44"
+      },
+      {
+        "id": "appearance_doc_docs_design_mockups_2026_10_10_brief_md_l57",
+        "label": "Проверка макетов",
+        "file_type": "concept",
+        "source_file": "docs/design/mockups/2026-10-10/BRIEF.md",
+        "source_location": "L57"
+      },
+      {
+        "id": "appearance_doc_docs_design_mockups_2026_10_10_brief_md_concept_3",
+        "label": "Historical pre-implementation mockup brief",
+        "file_type": "concept",
+        "source_file": "docs/design/mockups/2026-10-10/BRIEF.md",
+        "source_location": "L3"
+      },
+      {
+        "id": "appearance_doc_docs_design_mockups_2026_10_10_brief_md_concept_41",
+        "label": "Lock screen uses photograph without live clock",
+        "file_type": "concept",
+        "source_file": "docs/design/mockups/2026-10-10/BRIEF.md",
+        "source_location": "L41"
+      },
+      {
+        "id": "appearance_doc_docs_design_mockups_2026_10_10_readme_md_record",
+        "label": "README.md",
+        "file_type": "concept",
+        "source_file": "docs/design/mockups/2026-10-10/README.md",
+        "source_location": "L1"
+      },
+      {
+        "id": "appearance_doc_docs_design_mockups_2026_10_10_readme_md_l1",
+        "label": "Макеты оформления AndroidDock",
+        "file_type": "concept",
+        "source_file": "docs/design/mockups/2026-10-10/README.md",
+        "source_location": "L1"
+      },
+      {
+        "id": "appearance_doc_docs_design_mockups_2026_10_10_readme_md_l7",
+        "label": "Оформления",
+        "file_type": "concept",
+        "source_file": "docs/design/mockups/2026-10-10/README.md",
+        "source_location": "L7"
+      },
+      {
+        "id": "appearance_doc_docs_design_mockups_2026_10_10_readme_md_l14",
+        "label": "Редактор",
+        "file_type": "concept",
+        "source_file": "docs/design/mockups/2026-10-10/README.md",
+        "source_location": "L14"
+      },
+      {
+        "id": "appearance_doc_docs_design_mockups_2026_10_10_readme_md_l26",
+        "label": "Границы решения",
+        "file_type": "concept",
+        "source_file": "docs/design/mockups/2026-10-10/README.md",
+        "source_location": "L26"
+      },
+      {
+        "id": "appearance_doc_docs_design_mockups_2026_10_10_readme_md_concept_3",
+        "label": "Seven concept boards; raster semantics pending",
+        "file_type": "concept",
+        "source_file": "docs/design/mockups/2026-10-10/README.md",
+        "source_location": "L3"
+      },
+      {
+        "id": "appearance_doc_docs_design_mockups_2026_10_10_readme_md_concept_4",
+        "label": "Mockups are not runtime screenshots",
+        "file_type": "concept",
+        "source_file": "docs/design/mockups/2026-10-10/README.md",
+        "source_location": "L4"
+      },
+      {
+        "id": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_record",
+        "label": "appearance-implementation-test-report.md",
+        "file_type": "concept",
+        "source_file": "docs/evidence/appearance-implementation-test-report.md",
+        "source_location": "L1"
+      },
+      {
+        "id": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_l1",
+        "label": "AndroidDock appearance editor: implementation test evidence",
+        "file_type": "concept",
+        "source_file": "docs/evidence/appearance-implementation-test-report.md",
+        "source_location": "L1"
+      },
+      {
+        "id": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_l5",
+        "label": "Coverage",
+        "file_type": "concept",
+        "source_file": "docs/evidence/appearance-implementation-test-report.md",
+        "source_location": "L5"
+      },
+      {
+        "id": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_l11",
+        "label": "Commands and results",
+        "file_type": "concept",
+        "source_file": "docs/evidence/appearance-implementation-test-report.md",
+        "source_location": "L11"
+      },
+      {
+        "id": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_l20",
+        "label": "Device state and limits",
+        "file_type": "concept",
+        "source_file": "docs/evidence/appearance-implementation-test-report.md",
+        "source_location": "L20"
+      },
+      {
+        "id": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_l9",
+        "label": "The tests captured 14 native Compose roots in [appearance-2026-10-10](appearance-2026-10-10): Midnight, Studio, Flip and Gallery in portrait and landscape, plus the three editor tabs in each orientation. Gallery uses a generated s",
+        "file_type": "concept",
+        "source_file": "docs/evidence/appearance-implementation-test-report.md",
+        "source_location": "L9",
+        "evidence_status": "Recorded test evidence; graph refresh did not execute these tests"
+      },
+      {
+        "id": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_l13",
+        "label": "- Final integration build: `env ANDROID_HOME=/opt/homebrew/share/android-commandlinetools JAVA_HOME=$(/usr/libexec/java_home -v 17) ./gradlew :core:model:test :app:testDebugUnitTest :app:assembleDebug :app:assembleDebugAndroidTest",
+        "file_type": "concept",
+        "source_file": "docs/evidence/appearance-implementation-test-report.md",
+        "source_location": "L13",
+        "evidence_status": "Recorded test evidence; graph refresh did not execute these tests"
+      },
+      {
+        "id": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_l15",
+        "label": "- First native run: `adb -s 192.168.0.100:44049 shell am instrument -w -e class dev.androiddock.prototype.DockActivityTest,dev.androiddock.prototype.AppearanceEditorTest dev.androiddock.prototype.test/androidx.test.runner.AndroidJ",
+        "file_type": "concept",
+        "source_file": "docs/evidence/appearance-implementation-test-report.md",
+        "source_location": "L15",
+        "evidence_status": "Recorded test evidence; graph refresh did not execute these tests"
+      },
+      {
+        "id": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_l16",
+        "label": "- After synchronizing the test fixture and protecting original photo files, a five-method `AppearanceEditorTest` run passed 2 and failed 3 during `@Before`: the Compose Activity was absent or not foreground. The POCO was awake and",
+        "file_type": "concept",
+        "source_file": "docs/evidence/appearance-implementation-test-report.md",
+        "source_location": "L16",
+        "evidence_status": "Recorded test evidence; graph refresh did not execute these tests"
+      },
+      {
+        "id": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_l18",
+        "label": "- `git diff --check -- app/src/androidTest/kotlin/dev/androiddock/prototype/DockActivityTest.kt app/src/androidTest/kotlin/dev/androiddock/prototype/AppearanceEditorTest.kt docs/evidence/appearance-implementation-test-report.md` —",
+        "file_type": "concept",
+        "source_file": "docs/evidence/appearance-implementation-test-report.md",
+        "source_location": "L18",
+        "evidence_status": "Recorded test evidence; graph refresh did not execute these tests"
+      },
+      {
+        "id": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_l22",
+        "label": "The user explicitly authorized a temporary private backup after automatic approval review initially rejected its export. Before native tests, the app's `files` and `shared_prefs` were copied to `/private/tmp` without printing cont",
+        "file_type": "concept",
+        "source_file": "docs/evidence/appearance-implementation-test-report.md",
+        "source_location": "L22",
+        "evidence_status": "Recorded test evidence; graph refresh did not execute these tests"
+      }
+    ],
+    "edges": [
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_l1",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L1"
+      },
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_l6",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L6"
+      },
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_l20",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L20"
+      },
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_l26",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L26"
+      },
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_l36",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L36"
+      },
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_l42",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L42"
+      },
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_l63",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L63"
+      },
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_l87",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L87"
+      },
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_l91",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L91"
+      },
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_l99",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L99"
+      },
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_l106",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L106"
+      },
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_l114",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L114"
+      },
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_l121",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L121"
+      },
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_l128",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L128"
+      },
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_l136",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L136"
+      },
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_l145",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L145"
+      },
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_l147",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L147"
+      },
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_l157",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L157"
+      },
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_l165",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L165"
+      },
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_l175",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L175"
+      },
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_l183",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L183"
+      },
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_l191",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L191"
+      },
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_l204",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L204"
+      },
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_l214",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L214"
+      },
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_l221",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L221"
+      },
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_l234",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L234"
+      },
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_concept_9",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L9"
+      },
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_concept_11",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L11"
+      },
+      {
+        "source": "appearance_doc_plan_md_record",
+        "target": "appearance_doc_plan_md_concept_15",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PLAN.md",
+        "source_location": "L15"
+      },
+      {
+        "source": "appearance_doc_product_md_record",
+        "target": "appearance_doc_product_md_l1",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PRODUCT.md",
+        "source_location": "L1"
+      },
+      {
+        "source": "appearance_doc_product_md_record",
+        "target": "appearance_doc_product_md_l5",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PRODUCT.md",
+        "source_location": "L5"
+      },
+      {
+        "source": "appearance_doc_product_md_record",
+        "target": "appearance_doc_product_md_l9",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PRODUCT.md",
+        "source_location": "L9"
+      },
+      {
+        "source": "appearance_doc_product_md_record",
+        "target": "appearance_doc_product_md_l17",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PRODUCT.md",
+        "source_location": "L17"
+      },
+      {
+        "source": "appearance_doc_product_md_record",
+        "target": "appearance_doc_product_md_l21",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PRODUCT.md",
+        "source_location": "L21"
+      },
+      {
+        "source": "appearance_doc_product_md_record",
+        "target": "appearance_doc_product_md_l25",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PRODUCT.md",
+        "source_location": "L25"
+      },
+      {
+        "source": "appearance_doc_product_md_record",
+        "target": "appearance_doc_product_md_l31",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PRODUCT.md",
+        "source_location": "L31"
+      },
+      {
+        "source": "appearance_doc_product_md_record",
+        "target": "appearance_doc_product_md_l46",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PRODUCT.md",
+        "source_location": "L46"
+      },
+      {
+        "source": "appearance_doc_product_md_record",
+        "target": "appearance_doc_product_md_l60",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PRODUCT.md",
+        "source_location": "L60"
+      },
+      {
+        "source": "appearance_doc_product_md_record",
+        "target": "appearance_doc_product_md_l67",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PRODUCT.md",
+        "source_location": "L67"
+      },
+      {
+        "source": "appearance_doc_product_md_record",
+        "target": "appearance_doc_product_md_concept_44",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PRODUCT.md",
+        "source_location": "L44"
+      },
+      {
+        "source": "appearance_doc_product_md_record",
+        "target": "appearance_doc_product_md_concept_67",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "PRODUCT.md",
+        "source_location": "L67"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_l74",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L74"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_l76",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L76"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_l92",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L92"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_l96",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L96"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_l100",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L100"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_l105",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L105"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_l108",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L108"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_l115",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L115"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_l120",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L120"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_l127",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L127"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_l134",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L134"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_l137",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L137"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_l145",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L145"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_l151",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L151"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_l154",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L154"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_l158",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L158"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_l160",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L160"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_l163",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L163"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_l166",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L166"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_l169",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L169"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_l172",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L172"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_l175",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L175"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_l178",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L178"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_l180",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L180"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_l187",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L187"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_concept_116",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L116"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_concept_135",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L135"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_concept_152",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L152"
+      },
+      {
+        "source": "appearance_doc_design_md_record",
+        "target": "appearance_doc_design_md_concept_84",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "DESIGN.md",
+        "source_location": "L84"
+      },
+      {
+        "source": "appearance_doc_impeccable_design_json_record",
+        "target": "appearance_doc_impeccable_design_json_l348",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": ".impeccable/design.json",
+        "source_location": "L348"
+      },
+      {
+        "source": "appearance_doc_impeccable_design_json_record",
+        "target": "appearance_doc_impeccable_design_json_l403",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": ".impeccable/design.json",
+        "source_location": "L403"
+      },
+      {
+        "source": "appearance_doc_docs_design_mockups_2026_10_10_brief_md_record",
+        "target": "appearance_doc_docs_design_mockups_2026_10_10_brief_md_l1",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "docs/design/mockups/2026-10-10/BRIEF.md",
+        "source_location": "L1"
+      },
+      {
+        "source": "appearance_doc_docs_design_mockups_2026_10_10_brief_md_record",
+        "target": "appearance_doc_docs_design_mockups_2026_10_10_brief_md_l5",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "docs/design/mockups/2026-10-10/BRIEF.md",
+        "source_location": "L5"
+      },
+      {
+        "source": "appearance_doc_docs_design_mockups_2026_10_10_brief_md_record",
+        "target": "appearance_doc_docs_design_mockups_2026_10_10_brief_md_l15",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "docs/design/mockups/2026-10-10/BRIEF.md",
+        "source_location": "L15"
+      },
+      {
+        "source": "appearance_doc_docs_design_mockups_2026_10_10_brief_md_record",
+        "target": "appearance_doc_docs_design_mockups_2026_10_10_brief_md_l27",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "docs/design/mockups/2026-10-10/BRIEF.md",
+        "source_location": "L27"
+      },
+      {
+        "source": "appearance_doc_docs_design_mockups_2026_10_10_brief_md_record",
+        "target": "appearance_doc_docs_design_mockups_2026_10_10_brief_md_l44",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "docs/design/mockups/2026-10-10/BRIEF.md",
+        "source_location": "L44"
+      },
+      {
+        "source": "appearance_doc_docs_design_mockups_2026_10_10_brief_md_record",
+        "target": "appearance_doc_docs_design_mockups_2026_10_10_brief_md_l57",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "docs/design/mockups/2026-10-10/BRIEF.md",
+        "source_location": "L57"
+      },
+      {
+        "source": "appearance_doc_docs_design_mockups_2026_10_10_brief_md_record",
+        "target": "appearance_doc_docs_design_mockups_2026_10_10_brief_md_concept_3",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "docs/design/mockups/2026-10-10/BRIEF.md",
+        "source_location": "L3"
+      },
+      {
+        "source": "appearance_doc_docs_design_mockups_2026_10_10_brief_md_record",
+        "target": "appearance_doc_docs_design_mockups_2026_10_10_brief_md_concept_41",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "docs/design/mockups/2026-10-10/BRIEF.md",
+        "source_location": "L41"
+      },
+      {
+        "source": "appearance_doc_docs_design_mockups_2026_10_10_readme_md_record",
+        "target": "appearance_doc_docs_design_mockups_2026_10_10_readme_md_l1",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "docs/design/mockups/2026-10-10/README.md",
+        "source_location": "L1"
+      },
+      {
+        "source": "appearance_doc_docs_design_mockups_2026_10_10_readme_md_record",
+        "target": "appearance_doc_docs_design_mockups_2026_10_10_readme_md_l7",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "docs/design/mockups/2026-10-10/README.md",
+        "source_location": "L7"
+      },
+      {
+        "source": "appearance_doc_docs_design_mockups_2026_10_10_readme_md_record",
+        "target": "appearance_doc_docs_design_mockups_2026_10_10_readme_md_l14",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "docs/design/mockups/2026-10-10/README.md",
+        "source_location": "L14"
+      },
+      {
+        "source": "appearance_doc_docs_design_mockups_2026_10_10_readme_md_record",
+        "target": "appearance_doc_docs_design_mockups_2026_10_10_readme_md_l26",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "docs/design/mockups/2026-10-10/README.md",
+        "source_location": "L26"
+      },
+      {
+        "source": "appearance_doc_docs_design_mockups_2026_10_10_readme_md_record",
+        "target": "appearance_doc_docs_design_mockups_2026_10_10_readme_md_concept_3",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "docs/design/mockups/2026-10-10/README.md",
+        "source_location": "L3"
+      },
+      {
+        "source": "appearance_doc_docs_design_mockups_2026_10_10_readme_md_record",
+        "target": "appearance_doc_docs_design_mockups_2026_10_10_readme_md_concept_4",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "docs/design/mockups/2026-10-10/README.md",
+        "source_location": "L4"
+      },
+      {
+        "source": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_record",
+        "target": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_l1",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "docs/evidence/appearance-implementation-test-report.md",
+        "source_location": "L1"
+      },
+      {
+        "source": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_record",
+        "target": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_l5",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "docs/evidence/appearance-implementation-test-report.md",
+        "source_location": "L5"
+      },
+      {
+        "source": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_record",
+        "target": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_l11",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "docs/evidence/appearance-implementation-test-report.md",
+        "source_location": "L11"
+      },
+      {
+        "source": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_record",
+        "target": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_l20",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "docs/evidence/appearance-implementation-test-report.md",
+        "source_location": "L20"
+      },
+      {
+        "source": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_record",
+        "target": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_l9",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "docs/evidence/appearance-implementation-test-report.md",
+        "source_location": "L9"
+      },
+      {
+        "source": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_record",
+        "target": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_l13",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "docs/evidence/appearance-implementation-test-report.md",
+        "source_location": "L13"
+      },
+      {
+        "source": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_record",
+        "target": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_l15",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "docs/evidence/appearance-implementation-test-report.md",
+        "source_location": "L15"
+      },
+      {
+        "source": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_record",
+        "target": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_l16",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "docs/evidence/appearance-implementation-test-report.md",
+        "source_location": "L16"
+      },
+      {
+        "source": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_record",
+        "target": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_l18",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "docs/evidence/appearance-implementation-test-report.md",
+        "source_location": "L18"
+      },
+      {
+        "source": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_record",
+        "target": "appearance_doc_docs_evidence_appearance_implementation_test_report_md_l22",
+        "relation": "documents",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "weight": 1.0,
+        "source_file": "docs/evidence/appearance-implementation-test-report.md",
+        "source_location": "L22"
+      }
+    ],
+    "hyperedges": [],
+    "input_tokens": null,
+    "output_tokens": null
+  },
+  "untouched_counts": {
+    "nodes": 495,
+    "edges": 446,
+    "hyperedges": 0
+  },
+  "cache_entries_written": 7,
+  "method": "Host-authored targeted document concepts and exact headings; no raster analysis",
+  "token_usage": "unknown"
+}

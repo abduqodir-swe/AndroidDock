@@ -4,6 +4,7 @@ import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 
+@Serializable enum class DockAppearance { LEGACY, MIDNIGHT, STUDIO, FLIP, GALLERY }
 @Serializable enum class DockMode { BEDROOM, DESKTOP }
 @Serializable enum class DockOrientation { PORTRAIT, LANDSCAPE }
 @Serializable enum class LayoutKind { DUO, SOLO }
@@ -11,6 +12,12 @@ import kotlinx.serialization.json.Json
 @Serializable enum class ClockStyle { DIGITAL, ANALOG, FLIP }
 @Serializable enum class DockBackground { BLACK, GRAPHITE, BLUE, PHOTO }
 @Serializable enum class DockAccent { WHITE, AMBER, RED }
+
+@Serializable data class PhotoFraming(
+    val x: Float = .5f,
+    val y: Float = .5f,
+    val zoom: Float = 1f,
+)
 
 @Serializable data class PanelConfig(
     val widget: WidgetKind = WidgetKind.CLOCK,
@@ -45,10 +52,19 @@ import kotlinx.serialization.json.Json
     val nightEnabled: Boolean = false,
     val animations: Boolean = true,
     val pixelShift: Boolean = true,
+    val appearance: DockAppearance = DockAppearance.LEGACY,
+    val calendarHighlightToday: Boolean = true,
+    val calendarWeekendAccent: DockAccent? = null,
+    val photoDim: Float = .72f,
+    val portraitPhoto: PhotoFraming = PhotoFraming(),
+    val landscapePhoto: PhotoFraming = PhotoFraming(),
 ) {
     fun layout(orientation: DockOrientation) = if (orientation == DockOrientation.PORTRAIT) portrait else landscape
     fun withLayout(orientation: DockOrientation, layout: DockLayout) =
         if (orientation == DockOrientation.PORTRAIT) copy(portrait = layout) else copy(landscape = layout)
+    fun photoFraming(orientation: DockOrientation) = if (orientation == DockOrientation.PORTRAIT) portraitPhoto else landscapePhoto
+    fun withPhotoFraming(orientation: DockOrientation, framing: PhotoFraming) =
+        if (orientation == DockOrientation.PORTRAIT) copy(portraitPhoto = framing) else copy(landscapePhoto = framing)
     fun windowBrightness(): Float = if (nightEnabled) nightBrightness else brightness
 }
 
@@ -70,6 +86,12 @@ import kotlinx.serialization.json.Json
         require(schemaVersion == 1) { "Unsupported settings version: $schemaVersion" }
         listOf(bedroom, desktop).forEach { p ->
             require(p.firstDayOfWeek in 1..7)
+            require(p.photoDim.isFinite() && p.photoDim in 0f.. .9f)
+            listOf(p.portraitPhoto, p.landscapePhoto).forEach { framing ->
+                require(framing.x.isFinite() && framing.x in 0f..1f)
+                require(framing.y.isFinite() && framing.y in 0f..1f)
+                require(framing.zoom.isFinite() && framing.zoom in 1f..3f)
+            }
             require(p.brightness == -1f || p.brightness in .01f..1f)
             require(p.nightBrightness in .01f..1f)
             listOf(p.portrait, p.landscape).forEach { l ->

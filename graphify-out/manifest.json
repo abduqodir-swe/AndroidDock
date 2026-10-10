@@ -1,0 +1,1172 @@
+{
+  "app/build.gradle.kts": {
+    "mtime": 1791551730.5178027,
+    "seen": 1791615249.471713,
+    "ast_hash": "5f73a9901168dbace58d6caeca5febe5",
+    "semantic_hash": "5f73a9901168dbace58d6caeca5febe5"
+  },
+  "app/src/androidTest/kotlin/dev/androiddock/prototype/AlwaysOnDeviceTest.kt": {
+    "mtime": 1791546651.9191387,
+    "seen": 1791615249.4717162,
+    "ast_hash": "4b14d13c5f25412e7f3767f7ae3eca7b",
+    "semantic_hash": "4b14d13c5f25412e7f3767f7ae3eca7b"
+  },
+  "app/src/androidTest/kotlin/dev/androiddock/prototype/AutomaticDockActivityTest.kt": {
+    "mtime": 1791550842.1272693,
+    "seen": 1791615249.4717171,
+    "ast_hash": "596293235091a87ba30b881b52ab6d87",
+    "semantic_hash": "596293235091a87ba30b881b52ab6d87"
+  },
+  "app/src/androidTest/kotlin/dev/androiddock/prototype/AutomaticSettingsTest.kt": {
+    "mtime": 1791546160.746474,
+    "seen": 1791615249.4717171,
+    "ast_hash": "074792f62f30d68adcfbf0936605355a",
+    "semantic_hash": "074792f62f30d68adcfbf0936605355a"
+  },
+  "app/src/androidTest/kotlin/dev/androiddock/prototype/DockActivityTest.kt": {
+    "mtime": 1791618426.799058,
+    "seen": 1791619572.9642172,
+    "ast_hash": "febe297e7f6f2e9e8dd99acef9d3210a",
+    "semantic_hash": ""
+  },
+  "app/src/main/kotlin/dev/androiddock/prototype/AutomaticPermissions.kt": {
+    "mtime": 1791542000.4260197,
+    "seen": 1791615249.4717178,
+    "ast_hash": "bbb729f67bdd3db1c145cfcc5454166c",
+    "semantic_hash": "bbb729f67bdd3db1c145cfcc5454166c"
+  },
+  "app/src/main/kotlin/dev/androiddock/prototype/AutomaticRestoreReceiver.kt": {
+    "mtime": 1791541938.3119586,
+    "seen": 1791615249.471719,
+    "ast_hash": "afe82b61f9b6a98ba2911a77f90a6b6c",
+    "semantic_hash": "afe82b61f9b6a98ba2911a77f90a6b6c"
+  },
+  "app/src/main/kotlin/dev/androiddock/prototype/AutomaticRuntime.kt": {
+    "mtime": 1791550818.6078217,
+    "seen": 1791615249.471719,
+    "ast_hash": "c3c76a6443305818304655ec9430b7ec",
+    "semantic_hash": "c3c76a6443305818304655ec9430b7ec"
+  },
+  "app/src/main/kotlin/dev/androiddock/prototype/AutomaticSettingsActivity.kt": {
+    "mtime": 1791546060.884555,
+    "seen": 1791615249.471719,
+    "ast_hash": "cdc0ff633c4dad45c3cf0cefde334743",
+    "semantic_hash": "cdc0ff633c4dad45c3cf0cefde334743"
+  },
+  "app/src/main/kotlin/dev/androiddock/prototype/AutomaticStore.kt": {
+    "mtime": 1791546023.0292428,
+    "seen": 1791615249.47172,
+    "ast_hash": "9291d548a114ec47f41abfe4010e6002",
+    "semantic_hash": "9291d548a114ec47f41abfe4010e6002"
+  },
+  "app/src/main/kotlin/dev/androiddock/prototype/BatteryProvider.kt": {
+    "mtime": 1791536574.728902,
+    "seen": 1791615249.47172,
+    "ast_hash": "87d58d6657cceaf58147d68f17689eb5",
+    "semantic_hash": "87d58d6657cceaf58147d68f17689eb5"
+  },
+  "app/src/main/kotlin/dev/androiddock/prototype/ChargingWatchService.kt": {
+    "mtime": 1791551730.4841018,
+    "seen": 1791615249.471721,
+    "ast_hash": "c856d686f9d9be8ddd5957e50fb2c037",
+    "semantic_hash": "c856d686f9d9be8ddd5957e50fb2c037"
+  },
+  "app/src/main/kotlin/dev/androiddock/prototype/ClockFaces.kt": {
+    "mtime": 1791618578.7551975,
+    "seen": 1791619572.964223,
+    "ast_hash": "c2f01e4a0c895d7328ef1c5973d4b5fe",
+    "semantic_hash": ""
+  },
+  "app/src/main/kotlin/dev/androiddock/prototype/ClockViewModel.kt": {
+    "mtime": 1791618364.5556562,
+    "seen": 1791619572.964223,
+    "ast_hash": "66829652503be27df4defa908ddc6508",
+    "semantic_hash": ""
+  },
+  "app/src/main/kotlin/dev/androiddock/prototype/DockActivity.kt": {
+    "mtime": 1791550824.0232728,
+    "seen": 1791615249.471722,
+    "ast_hash": "f429274255f5d84848d1e09347b72cf2",
+    "semantic_hash": "f429274255f5d84848d1e09347b72cf2"
+  },
+  "app/src/main/kotlin/dev/androiddock/prototype/DockApplication.kt": {
+    "mtime": 1791541829.0768964,
+    "seen": 1791615249.471722,
+    "ast_hash": "42f465c87a77845051e7d2cdb9627134",
+    "semantic_hash": "42f465c87a77845051e7d2cdb9627134"
+  },
+  "app/src/main/kotlin/dev/androiddock/prototype/DockDreamService.kt": {
+    "mtime": 1791539845.242595,
+    "seen": 1791615249.471722,
+    "ast_hash": "caa04c078cf447cb76f7761560fada74",
+    "semantic_hash": "caa04c078cf447cb76f7761560fada74"
+  },
+  "app/src/main/kotlin/dev/androiddock/prototype/DockEditor.kt": {
+    "mtime": 1791619526.2942264,
+    "seen": 1791619572.964225,
+    "ast_hash": "795c2b5af0f0a9d43170f77d1670bef7",
+    "semantic_hash": ""
+  },
+  "app/src/main/kotlin/dev/androiddock/prototype/DockRepository.kt": {
+    "mtime": 1791536574.6970122,
+    "seen": 1791615249.471723,
+    "ast_hash": "2c1ad9c8560cd5197d23ae1bac4e5ea1",
+    "semantic_hash": "2c1ad9c8560cd5197d23ae1bac4e5ea1"
+  },
+  "app/src/main/kotlin/dev/androiddock/prototype/DockScreen.kt": {
+    "mtime": 1791618346.4047525,
+    "seen": 1791619572.964227,
+    "ast_hash": "ed1f118aeeb1b161a80bca89e9e27bc9",
+    "semantic_hash": ""
+  },
+  "app/src/main/kotlin/dev/androiddock/prototype/DockSystemBars.kt": {
+    "mtime": 1791539845.1925874,
+    "seen": 1791615249.471724,
+    "ast_hash": "0175b82d6cde52a79f50f920b03a81f6",
+    "semantic_hash": "0175b82d6cde52a79f50f920b03a81f6"
+  },
+  "app/src/main/kotlin/dev/androiddock/prototype/DreamOwners.kt": {
+    "mtime": 1791537185.7418754,
+    "seen": 1791615249.471724,
+    "ast_hash": "d2c8c1f73cdb99e8e216da84bd81289a",
+    "semantic_hash": "d2c8c1f73cdb99e8e216da84bd81289a"
+  },
+  "app/src/main/kotlin/dev/androiddock/prototype/MainActivity.kt": {
+    "mtime": 1791618317.2090592,
+    "seen": 1791619572.964229,
+    "ast_hash": "d1d5037e2ff89bf9ee90eb376b77fbc2",
+    "semantic_hash": ""
+  },
+  "app/src/main/kotlin/dev/androiddock/prototype/PhotoStore.kt": {
+    "mtime": 1791618456.1628754,
+    "seen": 1791619572.964229,
+    "ast_hash": "b41cfd8e51190f3737da981a53565c66",
+    "semantic_hash": ""
+  },
+  "app/src/main/kotlin/dev/androiddock/prototype/WindowBrightness.kt": {
+    "mtime": 1791537111.442776,
+    "seen": 1791615249.4717262,
+    "ast_hash": "5ebf6de8026216291f2985e4221d9ba3",
+    "semantic_hash": "5ebf6de8026216291f2985e4221d9ba3"
+  },
+  "app/src/test/kotlin/dev/androiddock/prototype/AutomaticStoreTest.kt": {
+    "mtime": 1791546160.7234657,
+    "seen": 1791615249.4717262,
+    "ast_hash": "8e6a3e32da25faacc4f4d838b3833ad9",
+    "semantic_hash": "8e6a3e32da25faacc4f4d838b3833ad9"
+  },
+  "app/src/test/kotlin/dev/androiddock/prototype/DockRepositoryTest.kt": {
+    "mtime": 1791536856.6848629,
+    "seen": 1791615249.4717271,
+    "ast_hash": "4aeb3a1266c8240364aafd372cd49fab",
+    "semantic_hash": "4aeb3a1266c8240364aafd372cd49fab"
+  },
+  "build.gradle.kts": {
+    "mtime": 1791536574.616204,
+    "seen": 1791615249.4717271,
+    "ast_hash": "bdf8603dff79ef8c2a713ce4265c2ca8",
+    "semantic_hash": "bdf8603dff79ef8c2a713ce4265c2ca8"
+  },
+  "core/model/build.gradle.kts": {
+    "mtime": 1791536574.6332552,
+    "seen": 1791615249.4717271,
+    "ast_hash": "f5d1f5de1a38c31fb3d97cf3642715e0",
+    "semantic_hash": "f5d1f5de1a38c31fb3d97cf3642715e0"
+  },
+  "core/model/src/main/kotlin/dev/androiddock/core/model/ChargingStateHolder.kt": {
+    "mtime": 1791551491.654273,
+    "seen": 1791615249.471728,
+    "ast_hash": "14e3f5d9b9a437356bc049a8849223b2",
+    "semantic_hash": "14e3f5d9b9a437356bc049a8849223b2"
+  },
+  "core/model/src/main/kotlin/dev/androiddock/core/model/ClockState.kt": {
+    "mtime": 1791528870.4327087,
+    "seen": 1791615249.471728,
+    "ast_hash": "329749a8007ce7f86b3ff4e8f008a333",
+    "semantic_hash": "329749a8007ce7f86b3ff4e8f008a333"
+  },
+  "core/model/src/main/kotlin/dev/androiddock/core/model/ClockStateHolder.kt": {
+    "mtime": 1791528870.4511077,
+    "seen": 1791615249.471728,
+    "ast_hash": "0bb78a788a1813d00aaa60ebadd1d0c8",
+    "semantic_hash": "0bb78a788a1813d00aaa60ebadd1d0c8"
+  },
+  "core/model/src/main/kotlin/dev/androiddock/core/model/DockEditorStateHolder.kt": {
+    "mtime": 1791536856.682306,
+    "seen": 1791615249.4717288,
+    "ast_hash": "f8920903473be1082d113484a4e68a74",
+    "semantic_hash": "f8920903473be1082d113484a4e68a74"
+  },
+  "core/model/src/main/kotlin/dev/androiddock/core/model/DockSettings.kt": {
+    "mtime": 1791618227.010805,
+    "seen": 1791619572.964235,
+    "ast_hash": "e4a7f508fd656097d0e6444e26fa748d",
+    "semantic_hash": ""
+  },
+  "core/model/src/main/kotlin/dev/androiddock/core/model/MonthGrid.kt": {
+    "mtime": 1791536574.6815796,
+    "seen": 1791615249.4717288,
+    "ast_hash": "6fb1f9fe8743261705f515eda7ca5140",
+    "semantic_hash": "6fb1f9fe8743261705f515eda7ca5140"
+  },
+  "core/model/src/main/kotlin/dev/androiddock/core/model/PixelShift.kt": {
+    "mtime": 1791537030.7875278,
+    "seen": 1791615249.47173,
+    "ast_hash": "84edca1918c5e1b14d3f4abb8e428784",
+    "semantic_hash": "84edca1918c5e1b14d3f4abb8e428784"
+  },
+  "core/model/src/test/kotlin/dev/androiddock/core/model/ChargingStateHolderTest.kt": {
+    "mtime": 1791551498.727109,
+    "seen": 1791615249.47173,
+    "ast_hash": "248ccbd7156b2dae6d01bcdec51fd934",
+    "semantic_hash": "248ccbd7156b2dae6d01bcdec51fd934"
+  },
+  "core/model/src/test/kotlin/dev/androiddock/core/model/ClockStateHolderTest.kt": {
+    "mtime": 1791529278.7484372,
+    "seen": 1791615249.47173,
+    "ast_hash": "bb1d33d7d6d351e252f320063e19c935",
+    "semantic_hash": "bb1d33d7d6d351e252f320063e19c935"
+  },
+  "core/model/src/test/kotlin/dev/androiddock/core/model/DockEditorTest.kt": {
+    "mtime": 1791536856.6871555,
+    "seen": 1791615249.471731,
+    "ast_hash": "8eca2bdcff3831de0d8949d3e5338cd3",
+    "semantic_hash": "8eca2bdcff3831de0d8949d3e5338cd3"
+  },
+  "core/model/src/test/kotlin/dev/androiddock/core/model/DockModelTest.kt": {
+    "mtime": 1791537267.1426985,
+    "seen": 1791615249.471731,
+    "ast_hash": "d664083a8f3c5818142bfee60a4e9746",
+    "semantic_hash": "d664083a8f3c5818142bfee60a4e9746"
+  },
+  "docs/evidence/always-on/settings-before-ui.json": {
+    "mtime": 1791546249.051728,
+    "seen": 1791615249.471732,
+    "ast_hash": "93e26b9ca33158c9f1c406646a1db7ef",
+    "semantic_hash": "93e26b9ca33158c9f1c406646a1db7ef"
+  },
+  "docs/evidence/automatic-021/settings-after-first-ui.json": {
+    "mtime": 1791545359.2353845,
+    "seen": 1791615249.471732,
+    "ast_hash": "8f21423fb83da41b827e7fe9dca69368",
+    "semantic_hash": "8f21423fb83da41b827e7fe9dca69368"
+  },
+  "docs/evidence/automatic-021/settings-after-ui.json": {
+    "mtime": 1791545710.8247042,
+    "seen": 1791615249.471732,
+    "ast_hash": "5c091d79407b242d31a6fff9e5adba3e",
+    "semantic_hash": "5c091d79407b242d31a6fff9e5adba3e"
+  },
+  "docs/evidence/automatic-021/settings-before-ui.json": {
+    "mtime": 1791545054.2449956,
+    "seen": 1791615249.471733,
+    "ast_hash": "d4b49c73496850ea3f76b05cdbb6d1b8",
+    "semantic_hash": "d4b49c73496850ea3f76b05cdbb6d1b8"
+  },
+  "docs/evidence/automatic/back-suppressed.json": {
+    "mtime": 1791542132.6615477,
+    "seen": 1791615249.471733,
+    "ast_hash": "cbd3b2ea7ffea3c9ce989285291f1d6d",
+    "semantic_hash": "cbd3b2ea7ffea3c9ce989285291f1d6d"
+  },
+  "docs/evidence/automatic/battery-reset-final.json": {
+    "mtime": 1791542145.4256256,
+    "seen": 1791615249.471733,
+    "ast_hash": "d748bff818505705e13b4904134edf6e",
+    "semantic_hash": "d748bff818505705e13b4904134edf6e"
+  },
+  "docs/evidence/automatic/final-showing-portrait.json": {
+    "mtime": 1791542115.328904,
+    "seen": 1791615249.471734,
+    "ast_hash": "12ab982d54fb231657268a3836229ea1",
+    "semantic_hash": "12ab982d54fb231657268a3836229ea1"
+  },
+  "docs/evidence/automatic/power-button-suppressed.json": {
+    "mtime": 1791542121.4809918,
+    "seen": 1791615249.471734,
+    "ast_hash": "4c2c53e756c8ee65988ad20e0b3731e2",
+    "semantic_hash": "4c2c53e756c8ee65988ad20e0b3731e2"
+  },
+  "docs/evidence/automatic/simulated-reconnect-after-back.json": {
+    "mtime": 1791542138.5272748,
+    "seen": 1791615249.471735,
+    "ast_hash": "1595a4e0e488511b795ac473fbc45973",
+    "semantic_hash": "1595a4e0e488511b795ac473fbc45973"
+  },
+  "docs/evidence/automatic/simulated-reconnect-after-power-button.json": {
+    "mtime": 1791542127.3620262,
+    "seen": 1791615249.471735,
+    "ast_hash": "cf3c8f38fdd4fe249257876139a2c920",
+    "semantic_hash": "cf3c8f38fdd4fe249257876139a2c920"
+  },
+  "docs/evidence/automatic/simulated-unplug-closes.json": {
+    "mtime": 1791542141.6097634,
+    "seen": 1791615249.471735,
+    "ast_hash": "00bbd6540931ae244388653f376523fd",
+    "semantic_hash": "00bbd6540931ae244388653f376523fd"
+  },
+  "docs/evidence/dream-lock-test.json": {
+    "mtime": 1791530732.0736897,
+    "seen": 1791615249.471736,
+    "ast_hash": "3362ec269d2d9fc8c1b1347969854413",
+    "semantic_hash": "3362ec269d2d9fc8c1b1347969854413"
+  },
+  "docs/evidence/idle-charge-invalid-locked.json": {
+    "mtime": 1791530209.391212,
+    "seen": 1791615249.471736,
+    "ast_hash": "9b6db50a120977fb1e85659ac932312c",
+    "semantic_hash": "9b6db50a120977fb1e85659ac932312c"
+  },
+  "docs/evidence/idle-charge-test.json": {
+    "mtime": 1791530595.1564028,
+    "seen": 1791615249.4717371,
+    "ast_hash": "6e353929e9ba763632c459aa98d1d816",
+    "semantic_hash": "6e353929e9ba763632c459aa98d1d816"
+  },
+  "docs/evidence/immersive-device-checks.json": {
+    "mtime": 1791540246.4609118,
+    "seen": 1791615249.4717371,
+    "ast_hash": "499570ac4ef6656e3e1edf0706a1b45d",
+    "semantic_hash": "499570ac4ef6656e3e1edf0706a1b45d"
+  },
+  "docs/evidence/stage2-device-checks-final.json": {
+    "mtime": 1791538201.7640052,
+    "seen": 1791615249.4717371,
+    "ast_hash": "433c7d414fad4973eea5bea4e326888f",
+    "semantic_hash": "433c7d414fad4973eea5bea4e326888f"
+  },
+  "docs/evidence/stage2-device-checks.json": {
+    "mtime": 1791538117.8925438,
+    "seen": 1791615249.471738,
+    "ast_hash": "993244e44237370909991294777c972c",
+    "semantic_hash": "993244e44237370909991294777c972c"
+  },
+  "docs/evidence/stage2-dream-capture-check.json": {
+    "mtime": 1791538925.59392,
+    "seen": 1791615249.471738,
+    "ast_hash": "deb4863b783c04ce7362839af1f0c561",
+    "semantic_hash": "deb4863b783c04ce7362839af1f0c561"
+  },
+  "docs/evidence/stage2-photo-picker-check.json": {
+    "mtime": 1791539069.100817,
+    "seen": 1791615249.471738,
+    "ast_hash": "02809d0c8138291dde03ed376545764e",
+    "semantic_hash": "02809d0c8138291dde03ed376545764e"
+  },
+  "docs/evidence/stage2-process-restart.json": {
+    "mtime": 1791538875.070725,
+    "seen": 1791615249.4717388,
+    "ast_hash": "f54835807072de497cd7a80fc60b81ac",
+    "semantic_hash": "f54835807072de497cd7a80fc60b81ac"
+  },
+  "gradlew": {
+    "mtime": 1791528752.5351784,
+    "seen": 1791615249.4717388,
+    "ast_hash": "780b1d3e23a3b82154795f73df943a14",
+    "semantic_hash": "780b1d3e23a3b82154795f73df943a14"
+  },
+  "settings.gradle.kts": {
+    "mtime": 1791528715.168916,
+    "seen": 1791615249.47174,
+    "ast_hash": "bf9c7281f51994be6c6172955220fc1f",
+    "semantic_hash": "bf9c7281f51994be6c6172955220fc1f"
+  },
+  "PLAN.md": {
+    "mtime": 1791619787.6792612,
+    "seen": 1791619821.86957,
+    "ast_hash": "0307ff1f2c47697a2c650d3b2b51994a",
+    "semantic_hash": "0013f340d81d256e93c24c1d99579966"
+  },
+  "PRODUCT.md": {
+    "mtime": 1791619115.452351,
+    "seen": 1791619745.394285,
+    "ast_hash": "d3d44e2b89b43f63df9ece495651f160",
+    "semantic_hash": "d3d44e2b89b43f63df9ece495651f160"
+  },
+  "README.md": {
+    "mtime": 1791551756.375027,
+    "seen": 1791615249.471741,
+    "ast_hash": "17d5a6ab68f0ebf80a2d1def9953ca9e",
+    "semantic_hash": "17d5a6ab68f0ebf80a2d1def9953ca9e"
+  },
+  "docs/always-on-mode.md": {
+    "mtime": 1791546022.8796434,
+    "seen": 1791615249.471741,
+    "ast_hash": "a0ea91f6aa83016777a1a83a63f3170c",
+    "semantic_hash": "a0ea91f6aa83016777a1a83a63f3170c"
+  },
+  "docs/decisions/ADR-001.md": {
+    "mtime": 1791528331.3602252,
+    "seen": 1791615249.471741,
+    "ast_hash": "368d073b408873fd24f27aa52e9e1f5b",
+    "semantic_hash": "368d073b408873fd24f27aa52e9e1f5b"
+  },
+  "docs/decisions/ADR-002.md": {
+    "mtime": 1791530239.6214647,
+    "seen": 1791615249.471742,
+    "ast_hash": "b19474bfe85f2bf9f06eca9c1b9da54f",
+    "semantic_hash": "b19474bfe85f2bf9f06eca9c1b9da54f"
+  },
+  "docs/evidence/activity-ui-test.txt": {
+    "mtime": 1791530137.3316262,
+    "seen": 1791615249.471742,
+    "ast_hash": "9951ba286dc55a900b92b6108b3817ca",
+    "semantic_hash": "9951ba286dc55a900b92b6108b3817ca"
+  },
+  "docs/evidence/always-on/build-test-lint.txt": {
+    "mtime": 1791546751.857302,
+    "seen": 1791615249.4717429,
+    "ast_hash": "80f5fb48a4314bfe279e3c0a5faff57b",
+    "semantic_hash": "80f5fb48a4314bfe279e3c0a5faff57b"
+  },
+  "docs/evidence/always-on/jvm-results.txt": {
+    "mtime": 1791546350.5840023,
+    "seen": 1791615249.4717429,
+    "ast_hash": "20de1bad26c0200211eaf2fb413d001c",
+    "semantic_hash": "20de1bad26c0200211eaf2fb413d001c"
+  },
+  "docs/evidence/always-on/lint.txt": {
+    "mtime": 1791546751.862605,
+    "seen": 1791615249.4717429,
+    "ast_hash": "9a8b4927073beef3d0ed8828171d3a10",
+    "semantic_hash": "9a8b4927073beef3d0ed8828171d3a10"
+  },
+  "docs/evidence/always-on/ui-build-lint.txt": {
+    "mtime": 1791546751.8602068,
+    "seen": 1791615249.471744,
+    "ast_hash": "99a04c6eb87a97610199b7fb26482c93",
+    "semantic_hash": "99a04c6eb87a97610199b7fb26482c93"
+  },
+  "docs/evidence/automatic-021/build-test-lint.txt": {
+    "mtime": 1791545531.7808738,
+    "seen": 1791615249.471744,
+    "ast_hash": "387ab940db4eb76c079c025b97c3f51d",
+    "semantic_hash": "387ab940db4eb76c079c025b97c3f51d"
+  },
+  "docs/evidence/automatic-021/final-autostart.txt": {
+    "mtime": 1791545710.126159,
+    "seen": 1791615249.471744,
+    "ast_hash": "2a645bcbdd0094fe71a534c026667079",
+    "semantic_hash": "2a645bcbdd0094fe71a534c026667079"
+  },
+  "docs/evidence/automatic-021/first-run-failed.txt": {
+    "mtime": 1791544511.462117,
+    "seen": 1791615249.471745,
+    "ast_hash": "2efc07620d85095d6e50e258ce2e7654",
+    "semantic_hash": "2efc07620d85095d6e50e258ce2e7654"
+  },
+  "docs/evidence/automatic-021/jvm-results.txt": {
+    "mtime": 1791545625.6317017,
+    "seen": 1791615249.471745,
+    "ast_hash": "2b9952ba5617c4d0387859cd63a1f2ff",
+    "semantic_hash": "2b9952ba5617c4d0387859cd63a1f2ff"
+  },
+  "docs/evidence/automatic-021/lint.txt": {
+    "mtime": 1791545531.784739,
+    "seen": 1791615249.471746,
+    "ast_hash": "9a8b4927073beef3d0ed8828171d3a10",
+    "semantic_hash": "9a8b4927073beef3d0ed8828171d3a10"
+  },
+  "docs/evidence/automatic-021/native-ui-first-run.txt": {
+    "mtime": 1791545334.5546927,
+    "seen": 1791615249.471746,
+    "ast_hash": "1e325a0a512223537e947f955a70b6df",
+    "semantic_hash": "1e325a0a512223537e947f955a70b6df"
+  },
+  "docs/evidence/automatic-021/native-ui-tests.txt": {
+    "mtime": 1791545624.8982038,
+    "seen": 1791615249.471746,
+    "ast_hash": "725c4c0c6e099336cc7a92bb780ac554",
+    "semantic_hash": "725c4c0c6e099336cc7a92bb780ac554"
+  },
+  "docs/evidence/automatic-021/physical-power-and-return.txt": {
+    "mtime": 1791544698.9821715,
+    "seen": 1791615249.4717472,
+    "ast_hash": "6feae49070fdad7609accbef8ced0634",
+    "semantic_hash": "6feae49070fdad7609accbef8ced0634"
+  },
+  "docs/evidence/automatic-021/three-cycles.txt": {
+    "mtime": 1791544590.2004492,
+    "seen": 1791615249.4717472,
+    "ast_hash": "7999f6e66631da57faca8eb21aa999c2",
+    "semantic_hash": "7999f6e66631da57faca8eb21aa999c2"
+  },
+  "docs/evidence/automatic/build-test-lint.txt": {
+    "mtime": 1791542770.7547042,
+    "seen": 1791615249.471748,
+    "ast_hash": "a093bcaec855b17e4269f2a4761f2c43",
+    "semantic_hash": "a093bcaec855b17e4269f2a4761f2c43"
+  },
+  "docs/evidence/automatic/final-lifecycle.txt": {
+    "mtime": 1791542928.122019,
+    "seen": 1791615249.471748,
+    "ast_hash": "cd1cbe3d7dbf2373c3c3009cf2fcd590",
+    "semantic_hash": "cd1cbe3d7dbf2373c3c3009cf2fcd590"
+  },
+  "docs/evidence/automatic/final-service.txt": {
+    "mtime": 1791542928.1968257,
+    "seen": 1791615249.471748,
+    "ast_hash": "284252a56b3f06227a32550bdb085971",
+    "semantic_hash": "284252a56b3f06227a32550bdb085971"
+  },
+  "docs/evidence/automatic/lint.txt": {
+    "mtime": 1791542770.7571008,
+    "seen": 1791615249.471749,
+    "ast_hash": "9a8b4927073beef3d0ed8828171d3a10",
+    "semantic_hash": "9a8b4927073beef3d0ed8828171d3a10"
+  },
+  "docs/evidence/automatic/native-ui-tests.txt": {
+    "mtime": 1791542443.2211888,
+    "seen": 1791615249.4717498,
+    "ast_hash": "dc8878cf1f6cfb5a30cff05b42724a1c",
+    "semantic_hash": "dc8878cf1f6cfb5a30cff05b42724a1c"
+  },
+  "docs/evidence/automatic/physical-reconnect-and-rotation.txt": {
+    "mtime": 1791542241.0883026,
+    "seen": 1791615249.4717498,
+    "ast_hash": "5c05fe683e9212402e5b57b468b3b876",
+    "semantic_hash": "5c05fe683e9212402e5b57b468b3b876"
+  },
+  "docs/evidence/automatic/process-restart.txt": {
+    "mtime": 1791542254.1349778,
+    "seen": 1791615249.4717498,
+    "ast_hash": "e0187816343d0fe5b4533c98d8c2dc2a",
+    "semantic_hash": "e0187816343d0fe5b4533c98d8c2dc2a"
+  },
+  "docs/evidence/automatic/prototype-keyguard.txt": {
+    "mtime": 1791541726.3414109,
+    "seen": 1791615249.471751,
+    "ast_hash": "419fb65f87d79e2ef4b78066f88a7540",
+    "semantic_hash": "419fb65f87d79e2ef4b78066f88a7540"
+  },
+  "docs/evidence/automatic/prototype-lifecycle.txt": {
+    "mtime": 1791541726.2807155,
+    "seen": 1791615249.471751,
+    "ast_hash": "ca85ccb1fd069352ab8f8bcd7448a039",
+    "semantic_hash": "ca85ccb1fd069352ab8f8bcd7448a039"
+  },
+  "docs/evidence/automatic/prototype-service.txt": {
+    "mtime": 1791541726.3942754,
+    "seen": 1791615249.471752,
+    "ast_hash": "b2caaf92f49c07b42a86c8744e368711",
+    "semantic_hash": "b2caaf92f49c07b42a86c8744e368711"
+  },
+  "docs/evidence/dream-lifecycle.txt": {
+    "mtime": 1791530749.4675236,
+    "seen": 1791615249.471752,
+    "ast_hash": "fde2144f9c6e6899ed141350c64cc8d7",
+    "semantic_hash": "fde2144f9c6e6899ed141350c64cc8d7"
+  },
+  "docs/evidence/immersive-ui-test.txt": {
+    "mtime": 1791540095.0783494,
+    "seen": 1791615249.471752,
+    "ast_hash": "cf89bdf56dfcc5374e78bb5a01e702db",
+    "semantic_hash": "cf89bdf56dfcc5374e78bb5a01e702db"
+  },
+  "docs/evidence/power-dream-config.txt": {
+    "mtime": 1791530688.3033717,
+    "seen": 1791615249.471753,
+    "ast_hash": "b32dcc5acbacf2cb73354f4ab30afa2c",
+    "semantic_hash": "b32dcc5acbacf2cb73354f4ab30afa2c"
+  },
+  "docs/evidence/stage2-build-summary.txt": {
+    "mtime": 1791539312.3317606,
+    "seen": 1791615249.471753,
+    "ast_hash": "49f14cc90066b9d5e596e62f506ca4f8",
+    "semantic_hash": "49f14cc90066b9d5e596e62f506ca4f8"
+  },
+  "docs/evidence/stage2-duo-ui-test.txt": {
+    "mtime": 1791536951.6444757,
+    "seen": 1791615249.471753,
+    "ast_hash": "9891369f2c2ed09204697c17138c02ea",
+    "semantic_hash": "9891369f2c2ed09204697c17138c02ea"
+  },
+  "docs/evidence/stage2-ui-test-before-layout-fix.txt": {
+    "mtime": 1791537709.061657,
+    "seen": 1791615249.471754,
+    "ast_hash": "81def41dc7e803a056f8efc181a7265c",
+    "semantic_hash": "81def41dc7e803a056f8efc181a7265c"
+  },
+  "docs/evidence/stage2-ui-test-initial-failed.txt": {
+    "mtime": 1791537529.375316,
+    "seen": 1791615249.471754,
+    "ast_hash": "489ca407105622eba7a51d1277ef1f57",
+    "semantic_hash": "489ca407105622eba7a51d1277ef1f57"
+  },
+  "docs/evidence/stage2-ui-test.txt": {
+    "mtime": 1791539215.584254,
+    "seen": 1791615249.471755,
+    "ast_hash": "d9db186cc75c81f3e410df20f5da4824",
+    "semantic_hash": "d9db186cc75c81f3e410df20f5da4824"
+  },
+  "docs/evidence/standby-032-dialer-contention.txt": {
+    "mtime": 1791551479.9650195,
+    "seen": 1791615249.471755,
+    "ast_hash": "7adbc08cbdbba081a4198db35aa0a670",
+    "semantic_hash": "7adbc08cbdbba081a4198db35aa0a670"
+  },
+  "docs/evidence/standby-032-fastconnect-live.txt": {
+    "mtime": 1791551293.229704,
+    "seen": 1791615249.471755,
+    "ast_hash": "0ecfaeb87583a145851a2da89a2ef0c9",
+    "semantic_hash": "0ecfaeb87583a145851a2da89a2ef0c9"
+  },
+  "docs/evidence/standby-034-call-priority.txt": {
+    "mtime": 1791553729.942609,
+    "seen": 1791615249.471756,
+    "ast_hash": "d0e59a8b1784a6eb31e7c41a04ded72d",
+    "semantic_hash": "d0e59a8b1784a6eb31e7c41a04ded72d"
+  },
+  "docs/evidence/standby-034-fastconnect.txt": {
+    "mtime": 1791555576.2180421,
+    "seen": 1791615249.471756,
+    "ast_hash": "860ce48bfcbff605e6a885f7a9baa300",
+    "semantic_hash": "860ce48bfcbff605e6a885f7a9baa300"
+  },
+  "docs/evidence/standby-034-incall-priority.txt": {
+    "mtime": 1791554709.320796,
+    "seen": 1791615249.4717572,
+    "ast_hash": "785e5efa7bb0fc0510a00e8a736a4fd6",
+    "semantic_hash": "785e5efa7bb0fc0510a00e8a736a4fd6"
+  },
+  "docs/evidence/standby-034-mode-toggle.txt": {
+    "mtime": 1791556312.7050772,
+    "seen": 1791615249.4717572,
+    "ast_hash": "378fb2911123acc47ee840ed964773c1",
+    "semantic_hash": "378fb2911123acc47ee840ed964773c1"
+  },
+  "docs/evidence/standby-034-physical-power.txt": {
+    "mtime": 1791555686.3192337,
+    "seen": 1791615249.4717572,
+    "ast_hash": "c1d927ed7e60473d96fbdf51eca87df8",
+    "semantic_hash": "c1d927ed7e60473d96fbdf51eca87df8"
+  },
+  "docs/evidence/standby-034-power-cycle.txt": {
+    "mtime": 1791555804.1910653,
+    "seen": 1791615249.4717581,
+    "ast_hash": "d003a1fb3f87f1f5c4f6cf5479827b3b",
+    "semantic_hash": "d003a1fb3f87f1f5c4f6cf5479827b3b"
+  },
+  "docs/evidence/standby-034-relock.txt": {
+    "mtime": 1791555747.8534746,
+    "seen": 1791615249.4717581,
+    "ast_hash": "9309cd18a17643a68448373702c1dc78",
+    "semantic_hash": "9309cd18a17643a68448373702c1dc78"
+  },
+  "docs/evidence/standby-034-rotation.txt": {
+    "mtime": 1791555512.7028522,
+    "seen": 1791615249.471759,
+    "ast_hash": "cb7eee7b26b0a2119382b4e83984afc5",
+    "semantic_hash": "cb7eee7b26b0a2119382b4e83984afc5"
+  },
+  "docs/evidence/standby-idle-baseline-events-2026-10-09.txt": {
+    "mtime": 1791548325.8572435,
+    "seen": 1791615249.471759,
+    "ast_hash": "f166ce5fe86fdd9871f32d971b61b136",
+    "semantic_hash": "f166ce5fe86fdd9871f32d971b61b136"
+  },
+  "docs/evidence/standby-idle-landscape-start-2026-10-09.txt": {
+    "mtime": 1791548930.1332579,
+    "seen": 1791615249.471759,
+    "ast_hash": "16f1cd156ae99623ff2e6444a52b181f",
+    "semantic_hash": "16f1cd156ae99623ff2e6444a52b181f"
+  },
+  "docs/evidence/standby-physical-controls-031.txt": {
+    "mtime": 1791549638.029115,
+    "seen": 1791615249.4717598,
+    "ast_hash": "94fe441a4a1940476f2496abcdac5190",
+    "semantic_hash": "94fe441a4a1940476f2496abcdac5190"
+  },
+  "docs/evidence/standby-timeout-root-cause-031.txt": {
+    "mtime": 1791550770.0986366,
+    "seen": 1791615249.4717598,
+    "ast_hash": "b41081fd6075a6a91ddcde956cd20718",
+    "semantic_hash": "b41081fd6075a6a91ddcde956cd20718"
+  },
+  "docs/platform-findings.md": {
+    "mtime": 1791556312.7260938,
+    "seen": 1791615249.4717598,
+    "ast_hash": "66177880e24bbf0d86979c074bcb5995",
+    "semantic_hash": "66177880e24bbf0d86979c074bcb5995"
+  },
+  "docs/stage2-design-evidence.md": {
+    "mtime": 1791539344.652877,
+    "seen": 1791615249.471761,
+    "ast_hash": "5599c69275b57fa192ecb80774b0c572",
+    "semantic_hash": "5599c69275b57fa192ecb80774b0c572"
+  },
+  "docs/stage2-implementation.md": {
+    "mtime": 1791546350.5844574,
+    "seen": 1791615249.471761,
+    "ast_hash": "31fa7cc986eec2c2629e6d3b4edc7954",
+    "semantic_hash": "31fa7cc986eec2c2629e6d3b4edc7954"
+  },
+  "docs/standby-cycle-021.md": {
+    "mtime": 1791545334.677388,
+    "seen": 1791615249.471762,
+    "ast_hash": "725928480759f119868952c6d1683c6a",
+    "semantic_hash": "725928480759f119868952c6d1683c6a"
+  },
+  "docs/usage.md": {
+    "mtime": 1791551756.3947864,
+    "seen": 1791615249.471762,
+    "ast_hash": "96dcae19715cef832731a09313a4786a",
+    "semantic_hash": "96dcae19715cef832731a09313a4786a"
+  },
+  ".impeccable/review/phone-android16-flip-landscape.png": {
+    "mtime": 1791538936.6691203,
+    "seen": 1791615249.471762,
+    "ast_hash": "9d9d0c2f0bacd6f5d4387a4a965d5725",
+    "semantic_hash": "9d9d0c2f0bacd6f5d4387a4a965d5725"
+  },
+  "docs/evidence/activity-landscape.png": {
+    "mtime": 1791530162.7623715,
+    "seen": 1791615249.471763,
+    "ast_hash": "a1e55c8857aa7717e7d550bd753b3496",
+    "semantic_hash": "a1e55c8857aa7717e7d550bd753b3496"
+  },
+  "docs/evidence/activity-portrait.png": {
+    "mtime": 1791530162.710837,
+    "seen": 1791615249.471763,
+    "ast_hash": "1e84ea1d637f50571db142b5efb66d35",
+    "semantic_hash": "1e84ea1d637f50571db142b5efb66d35"
+  },
+  "docs/evidence/automatic/physical-reconnect-portrait.png": {
+    "mtime": 1791542218.561919,
+    "seen": 1791615249.471763,
+    "ast_hash": "9750dcb3a8bfb9828dd8cada41f064a2",
+    "semantic_hash": "9750dcb3a8bfb9828dd8cada41f064a2"
+  },
+  "docs/evidence/automatic/prototype-locked.png": {
+    "mtime": 1791541726.9284127,
+    "seen": 1791615249.4717638,
+    "ast_hash": "89bcd46da1f0f20365823cc0a5504c5d",
+    "semantic_hash": "89bcd46da1f0f20365823cc0a5504c5d"
+  },
+  "docs/evidence/dream-landscape.png": {
+    "mtime": 1791530025.4335525,
+    "seen": 1791615249.4717638,
+    "ast_hash": "75519649de08c51c466bb5fd65b3c6e9",
+    "semantic_hash": "75519649de08c51c466bb5fd65b3c6e9"
+  },
+  "docs/evidence/dream-portrait.png": {
+    "mtime": 1791529925.5736668,
+    "seen": 1791615249.471765,
+    "ast_hash": "d9133496ca398b150e6dfb8ca3c1e66d",
+    "semantic_hash": "d9133496ca398b150e6dfb8ca3c1e66d"
+  },
+  "docs/evidence/immersive-captures/compose-root-stage2-activity-landscape.png": {
+    "mtime": 1791540124.940887,
+    "seen": 1791615249.471765,
+    "ast_hash": "a67a96d5ec74aa914497fdafa9791261",
+    "semantic_hash": "a67a96d5ec74aa914497fdafa9791261"
+  },
+  "docs/evidence/immersive-captures/compose-root-stage2-activity-portrait.png": {
+    "mtime": 1791540124.9310575,
+    "seen": 1791615249.471765,
+    "ast_hash": "2ab3ebb6e410db0b4c910e2dbb01875a",
+    "semantic_hash": "2ab3ebb6e410db0b4c910e2dbb01875a"
+  },
+  "docs/evidence/immersive-captures/stage2-activity-landscape.png": {
+    "mtime": 1791540124.960328,
+    "seen": 1791615249.471766,
+    "ast_hash": "a67a96d5ec74aa914497fdafa9791261",
+    "semantic_hash": "a67a96d5ec74aa914497fdafa9791261"
+  },
+  "docs/evidence/immersive-captures/stage2-activity-portrait.png": {
+    "mtime": 1791540124.9511864,
+    "seen": 1791615249.471766,
+    "ast_hash": "2ab3ebb6e410db0b4c910e2dbb01875a",
+    "semantic_hash": "2ab3ebb6e410db0b4c910e2dbb01875a"
+  },
+  "docs/evidence/stage2-captures/compose-root-stage2-activity-landscape.png": {
+    "mtime": 1791539226.0421765,
+    "seen": 1791615249.471767,
+    "ast_hash": "9d24243e5e5b18ad5cb6919e75b012ac",
+    "semantic_hash": "9d24243e5e5b18ad5cb6919e75b012ac"
+  },
+  "docs/evidence/stage2-captures/compose-root-stage2-activity-portrait.png": {
+    "mtime": 1791539226.0126114,
+    "seen": 1791615249.471767,
+    "ast_hash": "8fbb9ff0080b19bd7699d174ef7c7590",
+    "semantic_hash": "8fbb9ff0080b19bd7699d174ef7c7590"
+  },
+  "docs/evidence/stage2-captures/compose-root-stage2-analog-landscape.png": {
+    "mtime": 1791538778.1171298,
+    "seen": 1791615249.471767,
+    "ast_hash": "9da49c781268efb5415fe99b3ab8897e",
+    "semantic_hash": "9da49c781268efb5415fe99b3ab8897e"
+  },
+  "docs/evidence/stage2-captures/compose-root-stage2-analog-portrait.png": {
+    "mtime": 1791538778.1199172,
+    "seen": 1791615249.4717681,
+    "ast_hash": "375260184a6673492dac73c9c8a56aa9",
+    "semantic_hash": "375260184a6673492dac73c9c8a56aa9"
+  },
+  "docs/evidence/stage2-captures/compose-root-stage2-editor-landscape.png": {
+    "mtime": 1791538778.122771,
+    "seen": 1791615249.4717681,
+    "ast_hash": "8ee839e3c4d6731a650f010506d0aab3",
+    "semantic_hash": "8ee839e3c4d6731a650f010506d0aab3"
+  },
+  "docs/evidence/stage2-captures/compose-root-stage2-editor-portrait.png": {
+    "mtime": 1791538778.1241102,
+    "seen": 1791615249.4717681,
+    "ast_hash": "1c3e09072c33d243c458af6803c5685c",
+    "semantic_hash": "1c3e09072c33d243c458af6803c5685c"
+  },
+  "docs/evidence/stage2-captures/compose-root-stage2-flip-landscape.png": {
+    "mtime": 1791538778.1315885,
+    "seen": 1791615249.471769,
+    "ast_hash": "9d9d0c2f0bacd6f5d4387a4a965d5725",
+    "semantic_hash": "9d9d0c2f0bacd6f5d4387a4a965d5725"
+  },
+  "docs/evidence/stage2-captures/compose-root-stage2-flip-portrait.png": {
+    "mtime": 1791538778.1331954,
+    "seen": 1791615249.471769,
+    "ast_hash": "d2a5f0113ce96404fbee6f64860b1d21",
+    "semantic_hash": "d2a5f0113ce96404fbee6f64860b1d21"
+  },
+  "docs/evidence/stage2-captures/compose-root-stage2-photo-landscape.png": {
+    "mtime": 1791538778.1354315,
+    "seen": 1791615249.471769,
+    "ast_hash": "6e4f3e441ce363e2fdb4f8d4823777e0",
+    "semantic_hash": "6e4f3e441ce363e2fdb4f8d4823777e0"
+  },
+  "docs/evidence/stage2-captures/compose-root-stage2-photo-portrait.png": {
+    "mtime": 1791538778.1360726,
+    "seen": 1791615249.47177,
+    "ast_hash": "311e889041d8e07a3dccdabf64df26cf",
+    "semantic_hash": "311e889041d8e07a3dccdabf64df26cf"
+  },
+  "docs/evidence/stage2-captures/stage2-activity-landscape.png": {
+    "mtime": 1791538778.1369536,
+    "seen": 1791615249.47177,
+    "ast_hash": "938fa5bce3afd6baaef9e025f17ca890",
+    "semantic_hash": "938fa5bce3afd6baaef9e025f17ca890"
+  },
+  "docs/evidence/stage2-captures/stage2-activity-portrait.png": {
+    "mtime": 1791538778.1375976,
+    "seen": 1791615249.4717708,
+    "ast_hash": "89bb5224aadd6c7c1f5173d6b13597c3",
+    "semantic_hash": "89bb5224aadd6c7c1f5173d6b13597c3"
+  },
+  "docs/evidence/stage2-captures/stage2-analog-landscape.png": {
+    "mtime": 1791538778.1382134,
+    "seen": 1791615249.4717708,
+    "ast_hash": "b9b7eb904a09e21b2e1a238707be8ab3",
+    "semantic_hash": "b9b7eb904a09e21b2e1a238707be8ab3"
+  },
+  "docs/evidence/stage2-captures/stage2-analog-portrait.png": {
+    "mtime": 1791538778.138624,
+    "seen": 1791615249.4717708,
+    "ast_hash": "57485594b373dbef28ee18b726dba0e7",
+    "semantic_hash": "57485594b373dbef28ee18b726dba0e7"
+  },
+  "docs/evidence/stage2-captures/stage2-editor-landscape.png": {
+    "mtime": 1791538778.138849,
+    "seen": 1791615249.471772,
+    "ast_hash": "9316835585fd1482896e3eeb2bc5bd7b",
+    "semantic_hash": "9316835585fd1482896e3eeb2bc5bd7b"
+  },
+  "docs/evidence/stage2-captures/stage2-editor-portrait.png": {
+    "mtime": 1791538778.139165,
+    "seen": 1791615249.471772,
+    "ast_hash": "feec88ec2f1d26eb8f29c8b3657fba4a",
+    "semantic_hash": "feec88ec2f1d26eb8f29c8b3657fba4a"
+  },
+  "docs/evidence/stage2-captures/stage2-flip-landscape.png": {
+    "mtime": 1791538778.139406,
+    "seen": 1791615249.471773,
+    "ast_hash": "7bcb0cebe5f0f8f4b563d21d7c250502",
+    "semantic_hash": "7bcb0cebe5f0f8f4b563d21d7c250502"
+  },
+  "docs/evidence/stage2-captures/stage2-flip-portrait.png": {
+    "mtime": 1791538778.140038,
+    "seen": 1791615249.471773,
+    "ast_hash": "8b5c049aab11987d6f909bbbef612a58",
+    "semantic_hash": "8b5c049aab11987d6f909bbbef612a58"
+  },
+  "docs/evidence/stage2-captures/stage2-photo-landscape.png": {
+    "mtime": 1791538778.147837,
+    "seen": 1791615249.471773,
+    "ast_hash": "2d8e14a6e1f235aae3dccd6719b793dc",
+    "semantic_hash": "2d8e14a6e1f235aae3dccd6719b793dc"
+  },
+  "docs/evidence/stage2-captures/stage2-photo-portrait.png": {
+    "mtime": 1791538778.1486464,
+    "seen": 1791615249.4717739,
+    "ast_hash": "0caaed8181b22e7b59e5ec9f3c392f14",
+    "semantic_hash": "0caaed8181b22e7b59e5ec9f3c392f14"
+  },
+  "docs/evidence/stage2-dream-landscape.png": {
+    "mtime": 1791538924.2534175,
+    "seen": 1791615249.4717739,
+    "ast_hash": "e9fed2ea8d35b9008258156c4b50e44f",
+    "semantic_hash": "e9fed2ea8d35b9008258156c4b50e44f"
+  },
+  "docs/evidence/stage2-dream-portrait.png": {
+    "mtime": 1791538922.0107772,
+    "seen": 1791615249.4717739,
+    "ast_hash": "5a991232e8e566da276c04f51b265a0c",
+    "semantic_hash": "5a991232e8e566da276c04f51b265a0c"
+  },
+  "docs/evidence/stage2-font130-landscape.png": {
+    "mtime": 1791538125.1942377,
+    "seen": 1791615249.471775,
+    "ast_hash": "ad1c22985886ea3b85c36ef19824e94d",
+    "semantic_hash": "ad1c22985886ea3b85c36ef19824e94d"
+  },
+  "docs/evidence/stage2-font130-portrait.png": {
+    "mtime": 1791538123.14537,
+    "seen": 1791615249.471775,
+    "ast_hash": "5d9500d1a85a231faf2c79830ba020e2",
+    "semantic_hash": "5d9500d1a85a231faf2c79830ba020e2"
+  },
+  "docs/evidence/standby-034-landscape.png": {
+    "mtime": 1791555462.6924741,
+    "seen": 1791615249.471776,
+    "ast_hash": "42dec840b57b4eb41ac5da5bb9e3e408",
+    "semantic_hash": "42dec840b57b4eb41ac5da5bb9e3e408"
+  },
+  "docs/dock-packs-v1.md": {
+    "mtime": 1791616883.905758,
+    "seen": 1791619572.964258,
+    "ast_hash": "b1bf98273d69d01a8d8cdab39066ddaf",
+    "semantic_hash": "b1bf98273d69d01a8d8cdab39066ddaf"
+  },
+  "docs/schemas/dock-pack-v1.schema.json": {
+    "mtime": 1791616708.6079016,
+    "seen": 1791619572.96425,
+    "ast_hash": "c1b18176bdbe548f23de1e0bb7ffe781",
+    "semantic_hash": "c1b18176bdbe548f23de1e0bb7ffe781"
+  },
+  "docs/examples/dock-pack-v1/pack.json": {
+    "mtime": 1791616538.2015238,
+    "seen": 1791619572.9642491,
+    "ast_hash": "5cc51e3e74704f4a43d4f502afaea3ca",
+    "semantic_hash": "5cc51e3e74704f4a43d4f502afaea3ca"
+  },
+  "docs/examples/dock-pack-v1/README.md": {
+    "mtime": 1791616661.3860283,
+    "seen": 1791619572.964282,
+    "ast_hash": "558f5ed20dd8f7fc01bbc7ca1b3b8af9",
+    "semantic_hash": "558f5ed20dd8f7fc01bbc7ca1b3b8af9"
+  },
+  ".impeccable/design.json": {
+    "mtime": 1791619632.4878852,
+    "seen": 1791619822.760917,
+    "ast_hash": "1265596120ca9bbc8761c8651a8726ae",
+    "semantic_hash": ""
+  },
+  "app/src/androidTest/kotlin/dev/androiddock/prototype/AppearanceEditorTest.kt": {
+    "mtime": 1791619517.698892,
+    "seen": 1791619572.964215,
+    "ast_hash": "eeaf99c2b64b5dd9ec3cda4538ace450",
+    "semantic_hash": ""
+  },
+  "app/src/main/kotlin/dev/androiddock/prototype/AndroidLockWallpaper.kt": {
+    "mtime": 1791618364.5552974,
+    "seen": 1791619572.9642181,
+    "ast_hash": "e9685332475fa62a225a52a21d4c2ecb",
+    "semantic_hash": ""
+  },
+  "app/src/main/kotlin/dev/androiddock/prototype/DockPhotoPreview.kt": {
+    "mtime": 1791618585.145343,
+    "seen": 1791619572.964226,
+    "ast_hash": "85ed74dd856f13ea6a22b80656c16795",
+    "semantic_hash": ""
+  },
+  "app/src/main/kotlin/dev/androiddock/prototype/LockWallpaper.kt": {
+    "mtime": 1791618364.5551257,
+    "seen": 1791619572.9642282,
+    "ast_hash": "f0ebf799674a0854fe990373aed2267d",
+    "semantic_hash": ""
+  },
+  "app/src/test/kotlin/dev/androiddock/prototype/LockWallpaperTest.kt": {
+    "mtime": 1791618456.1630955,
+    "seen": 1791619572.964231,
+    "ast_hash": "2f88834b14cfade1c88bcd0ad2abc4cc",
+    "semantic_hash": ""
+  },
+  "core/model/src/main/kotlin/dev/androiddock/core/model/AppearancePresets.kt": {
+    "mtime": 1791618649.3401344,
+    "seen": 1791619572.964233,
+    "ast_hash": "283fe7e692d69e957434abed06732b8b",
+    "semantic_hash": ""
+  },
+  "core/model/src/test/kotlin/dev/androiddock/core/model/AppearancePresetsTest.kt": {
+    "mtime": 1791618649.340857,
+    "seen": 1791619572.964237,
+    "ast_hash": "a5149349ec6533663b4cfc28869f3ee0",
+    "semantic_hash": ""
+  },
+  "DESIGN.md": {
+    "mtime": 1791619632.4872944,
+    "seen": 1791619745.394287,
+    "ast_hash": "9dae49517db752377b6d5e6043928b4c",
+    "semantic_hash": "2e74d7357803157c98e0ad3b398d1770"
+  },
+  "docs/design/mockups/2026-10-10/BRIEF.md": {
+    "mtime": 1791617800.2889636,
+    "seen": 1791619745.394291,
+    "ast_hash": "0c3bee9218d43c7617044fa4b365eccd",
+    "semantic_hash": "0c3bee9218d43c7617044fa4b365eccd"
+  },
+  "docs/design/mockups/2026-10-10/README.md": {
+    "mtime": 1791618012.0648365,
+    "seen": 1791619745.3942919,
+    "ast_hash": "612cc5dc689ecd917018c03fc8e52a96",
+    "semantic_hash": "612cc5dc689ecd917018c03fc8e52a96"
+  },
+  "docs/design/mockups/2026-10-10/editors/prompt-set.md": {
+    "mtime": 1791618049.4989316,
+    "seen": 1791619572.964256,
+    "ast_hash": "b31025438ebe31d3c2d7452d452f9e1e",
+    "semantic_hash": ""
+  },
+  "docs/design/mockups/2026-10-10/themes/prompt-set.md": {
+    "mtime": 1791617956.6426892,
+    "seen": 1791619572.964258,
+    "ast_hash": "36b4a711d7f9c9175f909545c988b932",
+    "semantic_hash": ""
+  },
+  "docs/evidence/appearance-implementation-test-report.md": {
+    "mtime": 1791619719.2072577,
+    "seen": 1791619745.394294,
+    "ast_hash": "496b51e92ce515120deacc783ff66681",
+    "semantic_hash": "8143189bc7f8d923001fb22be6d60c71"
+  },
+  "graphify-out/memory/query_20261010_070953_5a51394c_\u0434\u0430__\u043f\u0440\u043e\u0441\u043b\u0435\u0434\u0438_\u043f\u043e_\u0433\u0440\u0430\u0444\u0443__\u043a\u0430\u043a_chargingsession_\u0441\u0432\u044f\u0437\u044b\u0432\u0430.md": {
+    "mtime": 1791616193.6491528,
+    "seen": 1791619572.964285,
+    "ast_hash": "505e9584c225974f253f7f5dca709327",
+    "semantic_hash": ""
+  },
+  "docs/design/mockups/2026-10-10/editors/background-editor.png": {
+    "mtime": 1791617917.130662,
+    "seen": 1791619572.9642859,
+    "ast_hash": "3c2b8062a091854a2e20d4daaf5e0307",
+    "semantic_hash": ""
+  },
+  "docs/design/mockups/2026-10-10/editors/calendar-editor.png": {
+    "mtime": 1791618037.913431,
+    "seen": 1791619572.964287,
+    "ast_hash": "495c20c3af11aaf43b2f07ea474a77ef",
+    "semantic_hash": ""
+  },
+  "docs/design/mockups/2026-10-10/editors/clock-editor.png": {
+    "mtime": 1791617917.1237152,
+    "seen": 1791619572.964287,
+    "ast_hash": "ad20587a40e5242b25cf2cc3bc9efdef",
+    "semantic_hash": ""
+  },
+  "docs/design/mockups/2026-10-10/themes/flip.png": {
+    "mtime": 1791617937.6197076,
+    "seen": 1791619572.964288,
+    "ast_hash": "d537624031e474e6727e1aea5b64eee8",
+    "semantic_hash": ""
+  },
+  "docs/design/mockups/2026-10-10/themes/gallery.png": {
+    "mtime": 1791617937.7056684,
+    "seen": 1791619572.964288,
+    "ast_hash": "14b6726a8a367b71a8d34a8adfc3e5ef",
+    "semantic_hash": ""
+  },
+  "docs/design/mockups/2026-10-10/themes/midnight.png": {
+    "mtime": 1791617855.2151577,
+    "seen": 1791619572.964288,
+    "ast_hash": "4d753f17018a5dac033e74bafbf29017",
+    "semantic_hash": ""
+  },
+  "docs/design/mockups/2026-10-10/themes/studio.png": {
+    "mtime": 1791617855.335,
+    "seen": 1791619572.964289,
+    "ast_hash": "55a54f1ab30e771110956a7325cc3f08",
+    "semantic_hash": ""
+  },
+  "docs/evidence/appearance-2026-10-10/editor-0-landscape.png": {
+    "mtime": 1791619293.0861828,
+    "seen": 1791619572.9642901,
+    "ast_hash": "3deac37fa526ed800fca6c585ef493d6",
+    "semantic_hash": ""
+  },
+  "docs/evidence/appearance-2026-10-10/editor-0-portrait.png": {
+    "mtime": 1791619293.037994,
+    "seen": 1791619572.964291,
+    "ast_hash": "991d18afb9bafb7c48411270658b7ce2",
+    "semantic_hash": ""
+  },
+  "docs/evidence/appearance-2026-10-10/editor-1-landscape.png": {
+    "mtime": 1791619293.185929,
+    "seen": 1791619572.964291,
+    "ast_hash": "6588aa3d7bba6dc0ec290943ce0f4dce",
+    "semantic_hash": ""
+  },
+  "docs/evidence/appearance-2026-10-10/editor-1-portrait.png": {
+    "mtime": 1791619293.1381593,
+    "seen": 1791619572.964292,
+    "ast_hash": "3f2a6d85f00f51d28ffbd167c6fb1e08",
+    "semantic_hash": ""
+  },
+  "docs/evidence/appearance-2026-10-10/editor-2-landscape.png": {
+    "mtime": 1791619293.2863748,
+    "seen": 1791619572.964292,
+    "ast_hash": "9953bf784459eed3dba35a78bbba3833",
+    "semantic_hash": ""
+  },
+  "docs/evidence/appearance-2026-10-10/editor-2-portrait.png": {
+    "mtime": 1791619293.236828,
+    "seen": 1791619572.964292,
+    "ast_hash": "2afe604f1e8cbcca4fa33d1eadbed292",
+    "semantic_hash": ""
+  },
+  "docs/evidence/appearance-2026-10-10/theme-flip-landscape.png": {
+    "mtime": 1791619292.898817,
+    "seen": 1791619572.964293,
+    "ast_hash": "b6b510fe8e0a6c2509f5a93dba0f94bf",
+    "semantic_hash": ""
+  },
+  "docs/evidence/appearance-2026-10-10/theme-flip-portrait.png": {
+    "mtime": 1791619292.855538,
+    "seen": 1791619572.964293,
+    "ast_hash": "5641f3dc9d6f35285ff8216205d96570",
+    "semantic_hash": ""
+  },
+  "docs/evidence/appearance-2026-10-10/theme-gallery-landscape.png": {
+    "mtime": 1791619292.992386,
+    "seen": 1791619572.964293,
+    "ast_hash": "35fd6be9c55ec0054d920e47c8057370",
+    "semantic_hash": ""
+  },
+  "docs/evidence/appearance-2026-10-10/theme-gallery-portrait.png": {
+    "mtime": 1791619292.9432678,
+    "seen": 1791619572.964294,
+    "ast_hash": "a845a55091b3f01f778fb8245b545022",
+    "semantic_hash": ""
+  },
+  "docs/evidence/appearance-2026-10-10/theme-midnight-landscape.png": {
+    "mtime": 1791619292.7001305,
+    "seen": 1791619572.964294,
+    "ast_hash": "56a3bf7248be2089dbdc6ba207f92d69",
+    "semantic_hash": ""
+  },
+  "docs/evidence/appearance-2026-10-10/theme-midnight-portrait.png": {
+    "mtime": 1791619292.6475825,
+    "seen": 1791619572.964295,
+    "ast_hash": "32348b6f089370e19b620c7d6e67c475",
+    "semantic_hash": ""
+  },
+  "docs/evidence/appearance-2026-10-10/theme-studio-landscape.png": {
+    "mtime": 1791619292.806111,
+    "seen": 1791619572.964295,
+    "ast_hash": "9b46c9a77d2d75688479887347c6236c",
+    "semantic_hash": ""
+  },
+  "docs/evidence/appearance-2026-10-10/theme-studio-portrait.png": {
+    "mtime": 1791619292.7522006,
+    "seen": 1791619572.9642959,
+    "ast_hash": "9ffbc8331c369fee24a9ff51d3e5fc95",
+    "semantic_hash": ""
+  }
+}

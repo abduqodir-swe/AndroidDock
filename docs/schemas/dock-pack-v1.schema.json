@@ -1,0 +1,323 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dock Packs v1 — draft for review",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": 1,
+      "type": "integer"
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 64,
+          "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$(?![\\s\\S])"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "author": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "license": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "attribution": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "remixOf": {
+          "$ref": "#/$defs/provenance"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "author",
+        "license"
+      ]
+    },
+    "profiles": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "bedroom": {
+          "$ref": "#/$defs/profile"
+        },
+        "desktop": {
+          "$ref": "#/$defs/profile"
+        }
+      },
+      "required": [
+        "bedroom",
+        "desktop"
+      ]
+    },
+    "assets": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "$ref": "#/$defs/asset"
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "metadata",
+    "profiles",
+    "assets"
+  ],
+  "$defs": {
+    "profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "portrait": {
+          "$ref": "#/$defs/layout"
+        },
+        "landscape": {
+          "$ref": "#/$defs/layout"
+        },
+        "clockStyle": {
+          "type": "string",
+          "enum": [
+            "DIGITAL",
+            "ANALOG",
+            "FLIP"
+          ]
+        },
+        "use24Hour": {
+          "type": "boolean"
+        },
+        "showSeconds": {
+          "type": "boolean"
+        },
+        "showDate": {
+          "type": "boolean"
+        },
+        "showBattery": {
+          "type": "boolean"
+        },
+        "firstDayOfWeek": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 7
+        },
+        "background": {
+          "type": "string",
+          "enum": [
+            "BLACK",
+            "GRAPHITE",
+            "BLUE",
+            "PHOTO"
+          ]
+        },
+        "photoAsset": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 80,
+              "pattern": "^assets/[a-z0-9][a-z0-9_-]{0,63}\\.jpg$(?![\\s\\S])"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "portrait",
+        "landscape",
+        "clockStyle",
+        "use24Hour",
+        "showSeconds",
+        "showDate",
+        "showBattery",
+        "firstDayOfWeek",
+        "background",
+        "photoAsset"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "background": {
+                "const": "PHOTO"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "photoAsset": {
+                "type": "string",
+                "maxLength": 80,
+                "pattern": "^assets/[a-z0-9][a-z0-9_-]{0,63}\\.jpg$(?![\\s\\S])"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "photoAsset": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "panel": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "widget": {
+          "type": "string",
+          "enum": [
+            "CLOCK",
+            "CALENDAR",
+            "BATTERY"
+          ]
+        },
+        "accent": {
+          "type": "string",
+          "enum": [
+            "WHITE",
+            "AMBER",
+            "RED"
+          ]
+        },
+        "textScale": {
+          "type": "number",
+          "minimum": 0.7,
+          "maximum": 1.3
+        },
+        "surface": {
+          "type": "boolean"
+        },
+        "rounded": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "widget",
+        "accent",
+        "textScale",
+        "surface",
+        "rounded"
+      ]
+    },
+    "layout": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "DUO",
+            "SOLO"
+          ]
+        },
+        "first": {
+          "$ref": "#/$defs/panel"
+        },
+        "second": {
+          "$ref": "#/$defs/panel"
+        },
+        "firstWeight": {
+          "type": "number",
+          "minimum": 0.3,
+          "maximum": 0.7
+        },
+        "spacing": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 32
+        }
+      },
+      "required": [
+        "kind",
+        "first",
+        "second",
+        "firstWeight",
+        "spacing"
+      ]
+    },
+    "asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string",
+          "maxLength": 80,
+          "pattern": "^assets/[a-z0-9][a-z0-9_-]{0,63}\\.jpg$(?![\\s\\S])"
+        },
+        "mediaType": {
+          "const": "image/jpeg"
+        },
+        "byteLength": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 6291456
+        },
+        "width": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4096
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4096
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$(?![\\s\\S])"
+        }
+      },
+      "required": [
+        "path",
+        "mediaType",
+        "byteLength",
+        "width",
+        "height",
+        "sha256"
+      ]
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 64,
+          "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$(?![\\s\\S])"
+        },
+        "author": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "license": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        }
+      },
+      "required": [
+        "id",
+        "author",
+        "license"
+      ]
+    }
+  }
+}

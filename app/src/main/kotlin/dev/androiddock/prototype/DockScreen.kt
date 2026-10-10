@@ -8,22 +8,14 @@ import androidx.compose.foundation.text.BasicText
 import androidx.compose.foundation.text.TextAutoSize
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.produceState
-import androidx.compose.foundation.Image
 import androidx.compose.material3.IconButton
 import androidx.compose.foundation.Canvas
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.StrokeCap
-import androidx.compose.ui.graphics.asImageBitmap
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.IntOffset
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
-import android.graphics.BitmapFactory
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.testTag
@@ -72,18 +64,20 @@ fun DockScreen(
     val time = Instant.ofEpochMilli(state.epochMillis).atZone(ZoneId.systemDefault())
     val shift = if (profile.pixelShift && !preview) pixelShiftOffset(state.epochMillis) else 0 to 0
     Box(modifier.fillMaxSize()) {
-    DockBackdrop(profile)
+    DockBackdrop(profile, orientation)
     Box(Modifier.fillMaxSize().then(if (preview) Modifier else Modifier.safeDrawingPadding()).padding(if (preview || orientation == DockOrientation.LANDSCAPE) 8.dp else 24.dp).offset { IntOffset(shift.first, shift.second) }) {
         if (layout.kind == LayoutKind.SOLO) {
             DockPanel(layout.first, profile, time, battery, Modifier.fillMaxSize(), monthOffset, onMonthChange)
         } else if (orientation == DockOrientation.PORTRAIT) {
             Column(Modifier.fillMaxSize(), verticalArrangement = Arrangement.spacedBy(layout.spacing.dp)) {
                 DockPanel(layout.first, profile, time, battery, Modifier.weight(layout.firstWeight).fillMaxWidth(), monthOffset, onMonthChange)
+                if (profile.appearance == DockAppearance.STUDIO) Box(Modifier.fillMaxWidth().height(1.dp).background(Color.White.copy(alpha = .18f)))
                 DockPanel(layout.second, profile, time, battery, Modifier.weight(1f - layout.firstWeight).fillMaxWidth(), monthOffset, onMonthChange)
             }
         } else {
             Row(Modifier.fillMaxSize(), horizontalArrangement = Arrangement.spacedBy(layout.spacing.dp)) {
                 DockPanel(layout.first, profile, time, battery, Modifier.weight(layout.firstWeight).fillMaxHeight(), monthOffset, onMonthChange)
+                if (profile.appearance == DockAppearance.STUDIO) Box(Modifier.fillMaxHeight().width(1.dp).background(Color.White.copy(alpha = .18f)))
                 DockPanel(layout.second, profile, time, battery, Modifier.weight(1f - layout.firstWeight).fillMaxHeight(), monthOffset, onMonthChange)
             }
         }
@@ -92,27 +86,14 @@ fun DockScreen(
 }
 
 @Composable
-private fun DockBackdrop(profile: DockProfile) {
+private fun DockBackdrop(profile: DockProfile, orientation: DockOrientation) {
     val color = when (profile.background) {
         DockBackground.BLACK, DockBackground.PHOTO -> Color.Black
         DockBackground.GRAPHITE -> Color(0xFF15191D)
         DockBackground.BLUE -> Color(0xFF0C1A28)
     }
     Box(Modifier.fillMaxSize().background(color))
-    if (profile.background == DockBackground.PHOTO) {
-        val context = LocalContext.current
-        val bitmap by produceState<android.graphics.Bitmap?>(null, profile.photoPath) {
-            value = withContext(Dispatchers.IO) {
-                context.appContainer.photos.resolve(profile.photoPath)?.let { file ->
-                    try { BitmapFactory.decodeFile(file.path) } catch (_: Exception) { null }
-                }
-            }
-        }
-        bitmap?.let { Image(it.asImageBitmap(), contentDescription = null, Modifier.fillMaxSize().testTag("photo-background"), contentScale = ContentScale.Crop) }
-        // Fixed scrim keeps light numerals readable on arbitrary photographs.
-        Box(Modifier.fillMaxSize().background(Color.Black.copy(alpha = .72f)))
-        if (bitmap == null) Text("Фото недоступно", color = Color.White, modifier = Modifier.padding(24.dp))
-    }
+    if (profile.background == DockBackground.PHOTO) DockPhotoPreview(profile, orientation, Modifier.fillMaxSize())
 }
 
 @Composable
@@ -120,11 +101,11 @@ private fun DockPanel(
     config: PanelConfig, profile: DockProfile, time: java.time.ZonedDateTime,
     battery: Availability<BatteryState>, modifier: Modifier, monthOffset: Int, onMonthChange: ((Int) -> Unit)?,
 ) {
-    val color = config.accent.color()
+    val color = if (config.accent == DockAccent.WHITE && profile.appearance == DockAppearance.FLIP) Color(0xFFF3E6CB) else config.accent.color()
     Box(modifier.background(
         if (config.surface) Color(0xFF17191C) else Color.Transparent,
         RoundedCornerShape(if (config.rounded) 16.dp else 0.dp),
-    ).padding(8.dp), contentAlignment = Alignment.Center) {
+    ).then(if (profile.appearance == DockAppearance.GALLERY && profile.background == DockBackground.PHOTO && !config.surface) Modifier.background(Brush.verticalGradient(listOf(Color.Black.copy(alpha = .25f), Color.Black.copy(alpha = .6f), Color.Black.copy(alpha = .25f))), RoundedCornerShape(if (config.rounded) 16.dp else 0.dp)) else Modifier).padding(8.dp), contentAlignment = Alignment.Center) {
         when (config.widget) {
             WidgetKind.CLOCK -> Column(Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 ClockFace(time, profile, color, config.textScale, Modifier.weight(1f).fillMaxWidth())
@@ -132,7 +113,7 @@ private fun DockPanel(
                 if (profile.showDate) Text(time.format(DateTimeFormatter.ofPattern("EEEE, d MMMM", Locale.getDefault())), color = color.copy(alpha = .8f), fontSize = 16.sp, textAlign = TextAlign.Center)
                 if (profile.showBattery) BatteryLabel(battery, color)
             }
-            WidgetKind.CALENDAR -> MonthCalendar(YearMonth.from(time).plusMonths(monthOffset.toLong()), time.toLocalDate(), DayOfWeek.of(profile.firstDayOfWeek), color, config.textScale, monthOffset, onMonthChange)
+            WidgetKind.CALENDAR -> MonthCalendar(YearMonth.from(time).plusMonths(monthOffset.toLong()), time.toLocalDate(), DayOfWeek.of(profile.firstDayOfWeek), color, config.textScale, monthOffset, onMonthChange, profile)
             WidgetKind.BATTERY -> BatteryLabel(battery, color, large = true)
         }
     }
@@ -148,29 +129,38 @@ internal fun BatteryLabel(state: Availability<BatteryState>, color: Color, large
 }
 
 @Composable
-private fun MonthCalendar(month: YearMonth, today: java.time.LocalDate, firstDay: DayOfWeek, color: Color, scale: Float, monthOffset: Int, onMonthChange: ((Int) -> Unit)?) {
+private fun MonthCalendar(month: YearMonth, today: java.time.LocalDate, firstDay: DayOfWeek, color: Color, scale: Float, monthOffset: Int, onMonthChange: ((Int) -> Unit)?, profile: DockProfile) {
     val grid = monthGrid(month, firstDay)
     BoxWithConstraints(Modifier.fillMaxSize().testTag("calendar")) {
-        val daySize = minOf(maxWidth.value / 7f, (maxHeight.value - 60f).coerceAtLeast(84f) / (grid.cells.size / 7 + 1))
-        Column(Modifier.align(Alignment.Center), horizontalAlignment = Alignment.CenterHorizontally) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
+        val headerHeight = if (onMonthChange != null) 48f else 32f
+        val daySize = minOf(maxWidth.value / 7f, (maxHeight.value - headerHeight - if (profile.appearance == DockAppearance.STUDIO) 8f else 0f).coerceAtLeast(0f) / (grid.cells.size / 7 + 1))
+        Column(Modifier.fillMaxWidth().align(Alignment.Center), horizontalAlignment = Alignment.CenterHorizontally) {
+            Row(Modifier.fillMaxWidth().height(headerHeight.dp), verticalAlignment = Alignment.CenterVertically) {
                 if (onMonthChange != null) MonthButton(false, color) { onMonthChange(monthOffset - 1) }
-                BasicText(month.format(DateTimeFormatter.ofPattern("LLLL yyyy", Locale.getDefault())).replaceFirstChar { it.titlecase(Locale.getDefault()) }, Modifier.weight(1f).padding(bottom = 8.dp), style = TextStyle(color = color, fontWeight = FontWeight.Medium, textAlign = TextAlign.Center), maxLines = 1, autoSize = TextAutoSize.StepBased(8.sp, (20 * scale).sp))
+                BasicText(month.format(DateTimeFormatter.ofPattern("LLLL yyyy", Locale.getDefault())).replaceFirstChar { it.titlecase(Locale.getDefault()) }, Modifier.weight(1f), style = TextStyle(color = color, fontWeight = FontWeight.Medium, textAlign = TextAlign.Center), maxLines = 1, autoSize = TextAutoSize.StepBased(8.sp, (20 * scale).sp))
                 if (onMonthChange != null) MonthButton(true, color) { onMonthChange(monthOffset + 1) }
             }
+            if (profile.appearance == DockAppearance.STUDIO) Box(Modifier.fillMaxWidth().padding(vertical = 3.dp).height(1.dp).background(color.copy(alpha = .28f)))
             Row {
                 grid.weekdays.forEach { weekday ->
                     Box(Modifier.size(daySize.dp), contentAlignment = Alignment.Center) {
-                        BasicText(weekday.getDisplayName(DateTextStyle.SHORT_STANDALONE, Locale.getDefault()), Modifier.fillMaxWidth(), style = TextStyle(color = color.copy(alpha = .7f), textAlign = TextAlign.Center), maxLines = 1, autoSize = TextAutoSize.StepBased(6.sp, (12 * scale).sp))
+                        BasicText(weekday.getDisplayName(DateTextStyle.SHORT_STANDALONE, Locale.getDefault()), Modifier.fillMaxWidth(), style = TextStyle(color = if (weekday == DayOfWeek.SATURDAY || weekday == DayOfWeek.SUNDAY) profile.calendarWeekendAccent?.color() ?: color.copy(alpha = .7f) else color.copy(alpha = .7f), textAlign = TextAlign.Center), maxLines = 1, autoSize = TextAutoSize.StepBased(6.sp, (12 * scale).sp))
                     }
                 }
             }
             grid.cells.chunked(7).forEach { week ->
                 Row {
                     week.forEach { date ->
-                        Box(Modifier.size(daySize.dp).padding(2.dp).background(if (date == today) color else Color.Transparent, CircleShape)
+                        val highlighted = date == today && profile.calendarHighlightToday
+                        val highlightColor = if (profile.appearance == DockAppearance.LEGACY || configAccentIsColored(color)) color else when (profile.appearance) {
+                            DockAppearance.STUDIO -> Color(0xFFD9C29B)
+                            DockAppearance.FLIP -> Color(0xFFCBA16A)
+                            else -> Color(0xFFFFCA80)
+                        }
+                        val dateColor = if (date?.dayOfWeek == DayOfWeek.SATURDAY || date?.dayOfWeek == DayOfWeek.SUNDAY) profile.calendarWeekendAccent?.color() ?: color else color
+                        Box(Modifier.size(daySize.dp).padding(2.dp).background(if (highlighted) highlightColor else Color.Transparent, if (profile.appearance == DockAppearance.FLIP) RoundedCornerShape(8.dp) else CircleShape)
                             .then(if (date == today) Modifier.testTag("today").semantics { contentDescription = "Сегодня, $date" } else Modifier), contentAlignment = Alignment.Center) {
-                            if (date != null) BasicText(date.dayOfMonth.toString(), Modifier.testTag("day-${date.dayOfMonth}"), style = TextStyle(color = if (date == today) Color.Black else color, textAlign = TextAlign.Center), maxLines = 1, autoSize = TextAutoSize.StepBased(6.sp, (16 * scale).sp))
+                            if (date != null) BasicText(date.dayOfMonth.toString(), Modifier.testTag("day-${date.dayOfMonth}"), style = TextStyle(color = if (highlighted) Color.Black else dateColor, textAlign = TextAlign.Center), maxLines = 1, autoSize = TextAutoSize.StepBased(8.sp, ((if (profile.appearance == DockAppearance.LEGACY) 16 else 20) * scale).sp))
                         }
                     }
                 }
@@ -193,3 +183,5 @@ private fun MonthButton(next: Boolean, color: Color, onClick: () -> Unit) {
         }
     }
 }
+
+private fun configAccentIsColored(color: Color) = color == DockAccent.AMBER.color() || color == DockAccent.RED.color()
